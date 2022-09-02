@@ -7,6 +7,12 @@ const List = () => {
       <Item/>
       <Item/>
       <Item/>
+      <Item/>
+      <Item/>
+      <Item/>
+      <Item/>
+      <Item/>
+      <Item/>
     </div>
   );
 };

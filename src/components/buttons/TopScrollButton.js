@@ -15,10 +15,10 @@ export default TopScrollButton;
 const StyledTopScrollButton = styled.button`
   position: fixed;
   right: 20px;
-  top: 20px;
+  bottom: 20px;
   margin: 5px 2px;
-  height: 55px;
-  width: 55px;
+  height: 60px;
+  width: 60px;
   background-color: transparent;
   width: "100px";
   font-size: 20px;

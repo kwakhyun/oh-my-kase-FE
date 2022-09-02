@@ -8,7 +8,7 @@ const Item = () => {
   return (
     <StyledDiv onClick={()=>{navigate('/detail')}}>
       <StyledFavorite onClick={()=>{setLike(!like)}}>{like ? <TiStar /> : <TiStarOutline />}</StyledFavorite>
-      <StyledImg />
+      <StyledImg src='https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg' alt='img'/>
       <StyledText>스시오마카세</StyledText>
       <StyledText size="18px">대한민국 서울특별시 강남구 학동로 426</StyledText>
       <StyledText size="30px">4.8</StyledText>
@@ -42,12 +42,7 @@ const StyledText = styled.h1`
 const StyledFavorite = styled.div`
   margin: 5px;
   font-size: 30px;
-  height: 33px;
-  width: 33px;
-  border-radius: 50%;
   color: #ffcc33;
   position: absolute;
   align-items: center;
-  background-color: transparent;
-  box-shadow: 1px 1px 15px #ccc;
 `;
