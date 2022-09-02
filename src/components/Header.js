@@ -21,17 +21,16 @@ width: 300px;
 margin: 30px auto;
 `;
 const StyledLogo = styled.img`
-  height: 120px;
+  width: 160px;
 `;
 const StyledText = styled.h1`
 position: absolute;
-font-family: 'Bungee Hairline', cursive;
-font-size: 40px;
-top: 38px;
-transform: translateX(40px);
+font-family: 'Stick No Bills', sans-serif;
+font-size: 20px;
+top: 30px;
+transform: translateX(105px);
 color: white;
-font-weight: bold;
-text-shadow: 1px 1px 7px black;
+text-shadow: 2px 2px 7px black;
 transition: .4s;
 &:hover{
   text-shadow: 2px 2px 20px white;
