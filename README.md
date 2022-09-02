@@ -1,3 +1,5 @@
+![ohmykase](https://user-images.githubusercontent.com/78805018/188068986-61819eee-a14d-4a9b-a1d2-8f20caa5f269.png)
+
 - 곽현 ([kwakhyun](https://github.com/kwakhyun))
 - 준묵 ([dan-studio](https://github.com/dan-studio))
 
