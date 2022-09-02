@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { TiStar, TiStarOutline } from "react-icons/ti";
-
+import { useNavigate } from "react-router-dom";
 const Item = () => {
+  const navigate = useNavigate()
   const [like, setLike] = useState(false);
   return (
-    <StyledDiv>
+    <StyledDiv onClick={()=>{navigate('/detail')}}>
       <StyledFavorite onClick={()=>{setLike(!like)}}>{like ? <TiStar /> : <TiStarOutline />}</StyledFavorite>
       <StyledImg />
       <StyledText>스시오마카세</StyledText>
@@ -41,7 +42,12 @@ const StyledText = styled.h1`
 const StyledFavorite = styled.div`
   margin: 5px;
   font-size: 30px;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
   color: #ffcc33;
   position: absolute;
   align-items: center;
+  background-color: transparent;
+  box-shadow: 1px 1px 15px #ccc;
 `;

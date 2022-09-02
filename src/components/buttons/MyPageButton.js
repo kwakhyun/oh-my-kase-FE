@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 const MyPageButton = () => {
-  return <StyledMyPageButton></StyledMyPageButton>;
+  const navigate = useNavigate()
+  return <StyledMyPageButton onClick={()=>{navigate('/mypage')}}></StyledMyPageButton>;
 };
 
 export default MyPageButton;

@@ -7,13 +7,13 @@ import MyPageButton from '../components/buttons/MyPageButton';
 
 const Main = () => {
   return (
-    <div>
+    <>
       <MyPageButton/>
       <TopScrollButton/>
       <Header/>
       <Filter/>
       <List/>
-    </div>
+    </>
   );
 };
 
