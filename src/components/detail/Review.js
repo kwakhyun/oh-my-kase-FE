@@ -5,6 +5,7 @@ import ReviewItem from './ReviewItem';
 const Review = () => {
   return (
     <>
+    <StyledText size="22px">리뷰</StyledText>
     <ReviewItem/>
     <ReviewItem/>
     <ReviewItem/>
@@ -15,6 +16,6 @@ const Review = () => {
 export default Review;
 const StyledText = styled.h1`
   font-size: ${(props) => props.size || "25px"};
-  margin: 40px;
+  margin: 30px auto 30px;
   line-height: ${(props) => props.line || "30px"};
 `;
