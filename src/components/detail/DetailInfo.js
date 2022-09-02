@@ -9,7 +9,7 @@ const DetailInfo = () => {
   return (
     <StyledDiv>
       <StyledText size="25px">오마카세 오사이초밥 홍대점</StyledText>
-      <StyledText size="35px">
+      <StyledText size="18px">
         <StyledStars>
         <TiStarFullOutline />
         <TiStarFullOutline />
@@ -17,7 +17,7 @@ const DetailInfo = () => {
         <TiStarFullOutline />
         <TiStarHalfOutline />
         </StyledStars>
-        <h3>4.8</h3>
+        <h1>4.8</h1>
       </StyledText>
     </StyledDiv>
   );

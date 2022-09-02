@@ -115,7 +115,7 @@ const StyledImg = styled.img`
 `;
 
 const StyledFavorite = styled.div`
-  font-size: 60px;
+  font-size: 30px;
   left: 10px;
   top: 150px;
   color: #ffcc33;
@@ -141,5 +141,5 @@ const StyledSelectedTabItem = styled.div`
   font-size: 25px;
   margin: auto;
   text-decoration-line: underline;
-  text-decoration-thickness: 5px;
+  text-decoration-thickness: 3px;
 `;
