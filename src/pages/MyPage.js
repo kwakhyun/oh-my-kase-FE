@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Header from "../components/Header";
-import Like from "../components/myPage/Like";
-import Comment from "../components/myPage/Comment";
+import Liked from "../components/myPage/Liked";
+import Comments from "../components/myPage/Comments";
 import Edit from "../components/myPage/Edit";
 
 const MyPage = () => {
@@ -15,10 +15,10 @@ const MyPage = () => {
           className={tabIndex === 0 ? "select" : ""}
           onClick={() => setTabIndex(0)}
         >
-          Like
+          Liked
         </span>
       ),
-      tabContent: <Like />,
+      tabContent: <Liked />,
     },
     {
       tabTitle: (
@@ -26,10 +26,10 @@ const MyPage = () => {
           className={tabIndex === 1 ? "select" : ""}
           onClick={() => setTabIndex(1)}
         >
-          Comment
+          Comments
         </span>
       ),
-      tabContent: <Comment />,
+      tabContent: <Comments />,
     },
     {
       tabTitle: (
