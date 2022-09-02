@@ -7,8 +7,6 @@ const Filter = () => {
       <FilterItem />
       <FilterItem />
       <FilterItem />
-      <FilterItem />
-      <FilterItem />
     </StyledFilter>
   );
 };
@@ -17,8 +15,8 @@ export default Filter;
 
 const StyledFilter = styled.div`
   display: flex;
-  max-width: 700px;
-  width: 700px;
+  max-width: 400px;
+  width: 400px;
   margin: auto;
   word-break: break-all;
 `;

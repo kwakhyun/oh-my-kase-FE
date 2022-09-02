@@ -35,8 +35,6 @@ const StyledImg = styled.img`
   width: 90vw;
   height: 220px;
   margin: 0 auto 0;
-  overflow: hidden;
-  background-color: #eeeeee;
 `;
 const StyledText = styled.h1`
   font-size: ${(props) => props.size || "20px"};
