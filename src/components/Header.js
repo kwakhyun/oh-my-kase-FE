@@ -8,7 +8,7 @@ const Header = () => {
         alt="img"
       />
       <StyledText>
-      ohMyKase
+      OhMyKase
       </StyledText>
     </StyledHeader>
   );
@@ -22,12 +22,16 @@ const StyledLogo = styled.img`
 `;
 const StyledText = styled.h1`
 position: absolute;
-font-size: 60px;
-width: 300;
-top: 73px;
-transform: translateX(80px);
-margin: auto;
+font-family: 'Bungee Hairline', cursive;
+font-size: 40px;
+top: 58px;
+transform: translateX(40px);
 color: white;
-text-shadow: 2px 2px 15px black;
+font-weight: bold;
+text-shadow: 1px 1px 7px black;
+transition: .4s;
+&:hover{
+  text-shadow: 2px 2px 20px white;
+}
 `
 export default Header;
