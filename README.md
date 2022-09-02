@@ -1,6 +1,26 @@
 ![ohmykase](https://user-images.githubusercontent.com/78805018/188122251-16068eba-6562-49c8-9669-086f68e2b3fe.png)
 ![oh-mykase](https://user-images.githubusercontent.com/78805018/188122219-aab02d58-46cf-4504-835f-f1c0b8817b88.png)
 
+## 📢 프로젝트 소개
+서울내 오마카세 리스트
+
+## 🗓 프로젝트 기간
+2022.09.02 - 2022.09.08
+
+## 📝 프로젝트 노트
+- Done
+  
+  9.2
+    - UI 구현
+    
+- Todo
+    - UI 모바일 최적화
+  - 
+## 🛠 포함된 프레임워크/라이브러리
+- REACT
+- REDUX
+--------------------
+## 👥 팀원 소개
 - 곽현 ([kwakhyun](https://github.com/kwakhyun))
 - 준묵 ([dan-studio](https://github.com/dan-studio))
 
