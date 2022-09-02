@@ -11,7 +11,7 @@ const Item = () => {
       <div>
       <StyledFavorite onClick={()=>{setLike(!like)}}>{like ? <TiStar /> : <TiStarOutline />}</StyledFavorite>
       <StyledText  onClick={()=>{navigate('/detail')}}>스시오마카세</StyledText>
-      <StyledText size="18px">대한민국 서울특별시 강남구 학동로 426</StyledText>
+      <StyledText size="15px">대한민국 서울특별시 강남구 학동로 426</StyledText>
       <StyledText size="30px">4.8</StyledText>
       </div>
     </StyledDiv>
@@ -23,7 +23,7 @@ export default Item;
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 90vw;
   height: 350px;
   margin: 20px auto;
   border-radius: 5px;
@@ -32,18 +32,19 @@ const StyledDiv = styled.div`
 `;
 const StyledImg = styled.img`
   object-fit: cover;
-  width: 600px;
+  width: 90vw;
   height: 220px;
   margin: 0 auto 0;
   overflow: hidden;
   background-color: #eeeeee;
 `;
 const StyledText = styled.h1`
-  font-size: ${(props) => props.size || "25px"};
+  font-size: ${(props) => props.size || "20px"};
+  margin: 15px;
 `;
 const StyledFavorite = styled.div`
-  margin: 15px;
-  right:0;
+  margin: 10px;
+  right: 25px;
   font-size: 30px;
   height: 33px;
   width: 33px;
