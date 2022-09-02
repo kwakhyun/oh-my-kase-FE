@@ -6,12 +6,14 @@ const Item = () => {
   const navigate = useNavigate()
   const [like, setLike] = useState(false);
   return (
-    <StyledDiv onClick={()=>{navigate('/detail')}}>
+    <StyledDiv>
+      <StyledImg src='https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg' alt='img' onClick={()=>{navigate('/detail')}}/>
+      <div>
       <StyledFavorite onClick={()=>{setLike(!like)}}>{like ? <TiStar /> : <TiStarOutline />}</StyledFavorite>
-      <StyledImg src='https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg' alt='img'/>
-      <StyledText>스시오마카세</StyledText>
+      <StyledText  onClick={()=>{navigate('/detail')}}>스시오마카세</StyledText>
       <StyledText size="18px">대한민국 서울특별시 강남구 학동로 426</StyledText>
       <StyledText size="30px">4.8</StyledText>
+      </div>
     </StyledDiv>
   );
 };
