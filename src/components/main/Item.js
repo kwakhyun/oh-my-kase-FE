@@ -42,9 +42,15 @@ const StyledText = styled.h1`
   font-size: ${(props) => props.size || "25px"};
 `;
 const StyledFavorite = styled.div`
-  margin: 5px;
+  margin: 15px;
+  right:0;
   font-size: 30px;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
   color: #ffcc33;
   position: absolute;
   align-items: center;
+  background-color: transparent;
+  box-shadow: 1px 1px 15px #ccc;
 `;
