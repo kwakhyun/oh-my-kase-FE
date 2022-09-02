@@ -19,6 +19,6 @@ const Information = () => {
 export default Information;
 const StyledText = styled.h1`
   font-size: ${(props) => props.size || "25px"};
-  margin: 40px;
-  line-height: ${(props) => props.line || "30px"};
+  margin: 40px 45px 20px;
+  line-height: ${(props) => props.line || "0"};
 `;
