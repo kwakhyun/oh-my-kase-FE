@@ -2,21 +2,35 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 const MyPageButton = () => {
-  const [isLoggedIn, setIsLoggedIn]=useState(false) //테스트용 코드
-  const navigate = useNavigate()
-  return isLoggedIn?<StyledMyPageButton onClick={()=>{navigate('/mypage')}}></StyledMyPageButton>:<StyledMyPageButton onClick={()=>{navigate('/login')}}>Login</StyledMyPageButton>
+  const [isLoggedIn, setIsLoggedIn] = useState(false); //테스트용 코드
+  const navigate = useNavigate();
+  return isLoggedIn ? (
+    <StyledMyPageButton
+      onClick={() => {
+        navigate("/mypage");
+      }}
+    ></StyledMyPageButton>
+  ) : (
+    <StyledMyPageButton
+      onClick={() => {
+        navigate("/login");
+      }}
+    >
+      Login
+    </StyledMyPageButton>
+  );
 };
 
 export default MyPageButton;
 
 const StyledMyPageButton = styled.button`
   position: fixed;
+  top: 20px;
   right: 20px;
-  margin: auto;
   background-color: #fff;
   width: 50px;
   height: 50px;
-  font-size: 15px;
+  font-size: 10px;
   color: #aaa;
   border-radius: 50%;
   border: none;

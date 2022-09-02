@@ -31,14 +31,13 @@ const Detail = () => {
       <DetailInfo />
       <StyledTab>
         {tabSelect === "menu" ? (
-          <StyledTabItem
-            style={{ boxShadow: "1px 1px 15px #999" }}
+          <StyledSelectedTabItem
             onClick={() => {
               setTabSelect("menu");
             }}
           >
             메뉴
-          </StyledTabItem>
+          </StyledSelectedTabItem>
         ) : (
           <StyledTabItem
             onClick={() => {
@@ -49,14 +48,13 @@ const Detail = () => {
           </StyledTabItem>
         )}
         {tabSelect === "information" ? (
-          <StyledTabItem
-            style={{ boxShadow: "1px 1px 15px #999" }}
+          <StyledSelectedTabItem
             onClick={() => {
               setTabSelect("information");
             }}
           >
             정보
-          </StyledTabItem>
+          </StyledSelectedTabItem>
         ) : (
           <StyledTabItem
             onClick={() => {
@@ -67,14 +65,13 @@ const Detail = () => {
           </StyledTabItem>
         )}
         {tabSelect === "review" ? (
-          <StyledTabItem
-            style={{ boxShadow: "1px 1px 15px #999" }}
+          <StyledSelectedTabItem
             onClick={() => {
               setTabSelect("review");
             }}
           >
             리뷰
-          </StyledTabItem>
+          </StyledSelectedTabItem>
         ) : (
           <StyledTabItem
             onClick={() => {
@@ -85,6 +82,7 @@ const Detail = () => {
           </StyledTabItem>
         )}
       </StyledTab>
+      <hr />
       <StyledDiv>
         {tabSelect === "menu" ? (
           <Menu />
@@ -117,16 +115,12 @@ const StyledImg = styled.img`
 `;
 
 const StyledFavorite = styled.div`
-  font-size: 30px;
-  right: 25px;
-  height: 33px;
-  width: 33px;
-  border-radius: 50%;
+  font-size: 60px;
+  left: 10px;
+  top: 150px;
   color: #ffcc33;
   position: absolute;
-  align-items: center;
-  background-color: transparent;
-  box-shadow: 1px 1px 15px #ccc;
+  transform: translateY(-20px);
   z-index: 1;
 `;
 
@@ -140,4 +134,12 @@ const StyledTabItem = styled.div`
   padding: 5px;
   font-size: 25px;
   margin: auto;
+`;
+const StyledSelectedTabItem = styled.div`
+  width: 200px;
+  padding: 5px;
+  font-size: 25px;
+  margin: auto;
+  text-decoration-line: underline;
+  text-decoration-thickness: 5px;
 `;

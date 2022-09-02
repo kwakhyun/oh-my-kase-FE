@@ -8,7 +8,7 @@ import {
 const DetailInfo = () => {
   return (
     <StyledDiv>
-      <StyledText size="22px">오마카세 오사이초밥 홍대점</StyledText>
+      <StyledText size="25px">오마카세 오사이초밥 홍대점</StyledText>
       <StyledText size="35px">
         <StyledStars>
         <TiStarFullOutline />
@@ -38,7 +38,7 @@ const StyledDiv = styled.div`
 `;
 const StyledText = styled.div`
   font-size: ${(props) => props.size || "25px"};
-  margin: 30px auto 0;
+  margin: 20px auto 0;
 `;
 const StyledStars = styled.div`
 color: #ffcc33
