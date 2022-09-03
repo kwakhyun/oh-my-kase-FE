@@ -24,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "kh-server": "json-server --watch kh.json --port 3001",
+    "jm-server": "json-server --watch jm.json --port 3001"
   },
   "eslintConfig": {
     "extends": [
