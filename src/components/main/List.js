@@ -3,6 +3,8 @@ import Item from "./Item";
 import { useInView } from "react-intersection-observer";
 import { getDataScroll } from "../../redux/modules/mainSlice";
 import Skeleton from "./Skeleton";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 
 const List = () => {
   const [items, setItems] = useState([]);
@@ -11,7 +13,11 @@ const List = () => {
   const [ref, inView] = useInView({
     threshold: 1,
   });
-  console.log(items);
+  const {district} = useParams()
+  const districts = useSelector(state=>state.main.data)
+  const filterDistrict = districts.filter((item)=>item.address.split(' ')[1]===district)
+  console.log(filterDistrict)
+
   const loadItems = useCallback(async () => {
     setLoading(true);
     await getDataScroll(page, 2).then((res) => {
@@ -41,13 +47,8 @@ const List = () => {
 
   return (
     <>
-      {items.map((item) =>
-        item.map((item, idx) => (
-          <div key={idx}>
+      {filterDistrict.map((item) =>
             <Item {...item} key={item.id} ref={ref} />
-            {console.log(item)}
-          </div>
-        ))
       )}
       {}
     </>

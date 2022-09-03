@@ -1,0 +1,300 @@
+{
+  "data": [
+    {
+      "id":"asdwaq",
+      "name": "오마카세 오사이초밥 건대본점",
+      "address": "서울 광진구 군자로 14 1층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/1.jfif",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaaq",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaasdq",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqqwe",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqqwajosdh",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqqwdkjl",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqasdqw",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaasdwqq",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqasdqw",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqqgwad",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq12ewd",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqadw",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq12wed",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq12eewf",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq2t4e",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqqwadsc",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq12wed",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq12eqwdwfgrt",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqqw2ee",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq21edw",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqes4tgr",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq12dew",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq23r",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqy45h",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqrfw3",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq234r5rt6y",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwadad12ed",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq34tge55re",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaw4frerwsq",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq34t",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqfewsdf",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqwgrre",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqe4t",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq7r6ity",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaqaq2ed",
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwaq23",
+      "name": "한우 오마카세 압도",
+      "address": "서울 용산구 독막로5길 33 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/5.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "id":"asdwa234rfgt5rq",
+      "name": "고래소년 오마카세",
+      "address": "서울 성동구 왕십리로 241 서울숲 더샵 파크에비뉴 B1층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "avg_star": 3.0,
+      "favorite": false
+    }
+  ]
+}
