@@ -17,11 +17,11 @@ const StyledTopScrollButton = styled.button`
   right: 20px;
   bottom: 20px;
   margin: 5px 2px;
-  height: 60px;
-  width: 60px;
-  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  background-color: white;
   width: "100px";
-  font-size: 20px;
+  font-size: 10px;
   color: #aaa;
   border-radius: 50%;
   border: none;

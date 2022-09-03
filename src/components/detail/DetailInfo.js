@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 import Rating from "./Rating";
 const DetailInfo = ({name, address, star_num}) => {
   console.log(address)
