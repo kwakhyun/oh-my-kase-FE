@@ -7,7 +7,7 @@ import Join from "./pages/Join";
 import Login from "./pages/Login";
 import { useMediaQuery } from "react-responsive";
 const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 767 });
+  const isDesktop = useMediaQuery({ minWidth: 768 });
   return isDesktop ? children : null;
 };
 const Mobile = ({ children }) => {
@@ -22,7 +22,7 @@ function App() {
         <Mobile>
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="/detail" element={<Detail />} />
+            <Route path="/detail/:id" element={<Detail />} />
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/join" element={<Join />} />
             <Route path="/login" element={<Login />} />

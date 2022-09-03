@@ -1,24 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  TiStarFullOutline,
-  TiStarHalfOutline,
-  TiStarHalf,
-} from "react-icons/ti";
-const DetailInfo = () => {
+
+import Rating from "./Rating";
+const DetailInfo = ({name, address, star_num}) => {
+  console.log(address)
+  console.log(name)
+  console.log(star_num)
   return (
     <StyledDiv>
-      <StyledText size="25px">오마카세 오사이초밥 홍대점</StyledText>
-      <StyledText size="18px">
-        <StyledStars>
-        <TiStarFullOutline />
-        <TiStarFullOutline />
-        <TiStarFullOutline />
-        <TiStarFullOutline />
-        <TiStarHalfOutline />
-        </StyledStars>
-        <h1>4.8</h1>
-      </StyledText>
+      <StyledText size="25px">{name}</StyledText>
+      <Rating star_num={star_num}/>
     </StyledDiv>
   );
 };

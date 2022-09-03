@@ -12,14 +12,14 @@ const Join = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <>
       <Header />
       <StyledImgDiv>
-      <img
-        src="https://i.pinimg.com/originals/4e/4f/da/4e4fda126c6778bfc2b2a678b58342df.jpg"
-        alt="logo"
-      />
-      <input type="file" />
+        <img
+          src="https://i.pinimg.com/originals/4e/4f/da/4e4fda126c6778bfc2b2a678b58342df.jpg"
+          alt="logo"
+        />
+        <input type="file" />
       </StyledImgDiv>
       <StyledInputDiv>
         <input type="text" ref={email} placeholder="Email" />
@@ -55,7 +55,7 @@ const Join = () => {
         </Button>
         <Button onClick={() => navigate("/login")}>초기화</Button>
       </StyledButtonDiv>
-    </div>
+    </>
   );
 };
 

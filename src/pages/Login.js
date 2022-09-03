@@ -12,7 +12,7 @@ const Login = () => {
   // const dispatch = useDispatch();
 
   return (
-    <div>
+    <>
       <Header />
       <StyledH2>Login</StyledH2>
       <StyledInputDiv>
@@ -37,7 +37,7 @@ const Login = () => {
         </Button>
         <Button onClick={() => navigate("/join")}>Join</Button>
       </StyledButtonDiv>
-    </div>
+    </>
   );
 };
 
