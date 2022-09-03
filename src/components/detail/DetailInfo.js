@@ -31,6 +31,3 @@ const StyledText = styled.div`
   font-size: ${(props) => props.size || "25px"};
   margin: 20px auto 0;
 `;
-const StyledStars = styled.div`
-color: #ffcc33
-`

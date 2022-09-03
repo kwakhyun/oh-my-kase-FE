@@ -14,10 +14,10 @@ const Detail = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const [like, setLike] = useState(false);
-  const item = useSelector((state) =>
-    state.main.data.find((item) => item.id === id)
+  const items = useSelector((state) =>
+    state.main.data
   );
-
+  const item = items.find((item) => item.id === id)
   // const item = items.
   console.log(item);
 
@@ -46,30 +46,4 @@ const StyledFavorite = styled.div`
   position: absolute;
   transform: translateY(-20px);
   z-index: 1;
-`;
-
-const StyledTab = styled.div`
-  display: flex;
-  width: 80vw;
-  margin: auto;
-`;
-const StyledTabItem = styled.div`
-  width: 200px;
-  padding: 5px;
-  font-size: 25px;
-  margin: auto;
-`;
-const StyledSelectedTabItem = styled.div`
-  width: 200px;
-  padding: 5px;
-  font-size: 25px;
-  margin: auto;
-  text-decoration-line: underline;
-  text-decoration-thickness: 3px;
-`;
-const StyledImg = styled.h1`
-  object-fit: cover;
-  width: 100vw;
-  height: 400px;
-  margin: 0 auto 0;
 `;

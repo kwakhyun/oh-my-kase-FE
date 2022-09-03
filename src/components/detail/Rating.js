@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {
   TiStarFullOutline,
-  TiStarHalfOutline,
+
   TiStarHalf,
 } from "react-icons/ti";
 const Rating = ({ star_num }) => {
