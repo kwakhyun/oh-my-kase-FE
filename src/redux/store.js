@@ -1,10 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { combineReducers } from "redux";
-import info from './modules/infoSlice'
-const rootReducer = combineReducers({
-  info: info
-});
+import main from './modules/mainSlice'
+
 const store = configureStore({
-  reducer: rootReducer
+  reducer: {main}
 });
 export default store;

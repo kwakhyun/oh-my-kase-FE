@@ -6,7 +6,7 @@ import MyPageButton from "../components/buttons/MyPageButton";
 import DetailInfo from "../components/detail/DetailInfo";
 import DetailImage from "../components/detail/DetailImage";
 import { useDispatch, useSelector } from "react-redux";
-import { __getData } from "../redux/modules/infoSlice";
+import { __getData } from "../redux/modules/mainSlice";
 import { useParams } from "react-router-dom";
 import Tabs from "../components/detail/Tabs";
 
@@ -14,13 +14,15 @@ const Detail = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const [like, setLike] = useState(false);
-  const item = useSelector((state) =>
-    state.info.data.find((item) => item.id === id)
+  const items = useSelector((state) =>
+    state.main.data
   );
+  const item = items.find(item=>item.id === id)
+  console.log(item)
+
   useEffect(() => {
     dispatch(__getData());
   }, [dispatch]);
-
   return (
     <>
       <Header />
