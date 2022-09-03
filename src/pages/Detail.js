@@ -1,36 +1,47 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Header from "../components/Header";
 import { TiStar, TiStarOutline } from "react-icons/ti";
 import MyPageButton from "../components/buttons/MyPageButton";
 import DetailInfo from "../components/detail/DetailInfo";
-import Tabs from "../components/detail/Tabs";
+
 import DetailImage from "../components/detail/DetailImage";
+import { useDispatch, useSelector } from "react-redux";
+import { __getData } from "../redux/modules/mainSlice";
+import { useParams } from "react-router-dom";
+import Tabs from "../components/detail/Tabs";
 
 const Detail = () => {
+  const dispatch = useDispatch();
+  const { id } = useParams();
   const [like, setLike] = useState(false);
+
+  const items = useSelector((state) =>
+    state.main.data
+  );
+  const item = items.find(item=>item.id === id)
+  console.log(item)
+
+  useEffect(() => {
+    dispatch(__getData());
+  }, [dispatch]);
   return (
     <>
       <Header />
-      <DetailImage/>
-      <MyPageButton />
+      <DetailImage img = {item.img} />
 
-      <StyledFavorite
-        onClick={() => {
-          setLike(!like);
-        }}
-      >
+      <MyPageButton />
+      <StyledFavorite>
         {like ? <TiStar /> : <TiStarOutline />}
       </StyledFavorite>
-      <DetailInfo />
+      <DetailInfo {...item} />
+
       <Tabs />
     </>
   );
 };
 
 export default Detail;
-
-
 
 const StyledFavorite = styled.div`
   font-size: 30px;

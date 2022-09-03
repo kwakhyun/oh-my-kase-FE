@@ -1,38 +1,34 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import axios from 'axios'
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const getItem = createAsyncThunk("main/getItem", async () => {
-  const response = await axios.get(`/api/items`);
-  return response.data;
-});
 
-export const likedItem = createAsyncThunk("main/likedItem", async (item) => {
-  await axios.patch(`/api/items/${item.id}`, {
-    liked: !item.liked,
-  });
-});
+const initialState = {
+  data: [],
+  success: true,
+  error: null,
+}
 
-const mainSlice = createSlice({
-  name: "main",
-  initialState: {
-    items: [],
-  },
-  reducers: {
-    setLikedItem: (state, action) => {
-      state.items.reduce((acc, cur) => {
-        if (cur.id === action.payload.id) {
-          cur.liked = action.payload.liked;
-        }
-        return acc;
-      }, []);
+export const __getData = createAsyncThunk(
+  "data/GET_DATA",
+  async(payload, thunkAPI)=>{
+    try{
+      const data = await axios.get("http://localhost:3001/data")
+      return thunkAPI.fulfillWithValue(data.data)
+    }catch(error){
+      return thunkAPI.fulfillWithValue(error)
+    }
+  }
+)
+
+const info = createSlice({
+  name:"info",
+  initialState,
+  reducers:{},
+  extraReducers:{
+    [__getData.fulfilled]: (state, action) => {
+      state.data = [...action.payload]; // Store에 있는 list에 서버에서 가져온 music를 넣음
     },
-  },
-  extraReducers: {
-    [getItem.fulfilled]: (state, action) => {
-      state.items = action.payload;
-    },
-  },
-});
+  }
+})
 
-export const { setLikedItem } = mainSlice.actions;
-export default mainSlice.reducer;
+export default info.reducer
