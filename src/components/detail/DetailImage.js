@@ -1,12 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-const DetailImage = () => {
-  return (
-      <StyledImg
-        src="https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg"
-        alt="img"
-      />
-  );
+import React from "react";
+import styled from "styled-components";
+
+const DetailImage = ({ img }) => {
+  return <StyledImg src={img} alt="img" />;
 };
 
 export default DetailImage;

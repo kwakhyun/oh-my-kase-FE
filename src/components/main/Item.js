@@ -2,21 +2,24 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { TiStar, TiStarOutline } from "react-icons/ti";
 import { useNavigate } from "react-router-dom";
-const Item = () => {
+
+const Item = React.forwardRef((item,ref) => {
+  const {id, name, address, img, star_num} = item
   const navigate = useNavigate()
   const [like, setLike] = useState(false);
   return (
     <StyledDiv>
-      <StyledImg src='https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg' alt='img' onClick={()=>{navigate('/detail')}}/>
+      <StyledImg src={img} alt='img' onClick={()=>{navigate('/detail/'+id)}}/>
       <div>
       <StyledFavorite onClick={()=>{setLike(!like)}}>{like ? <TiStar /> : <TiStarOutline />}</StyledFavorite>
-      <StyledText  onClick={()=>{navigate('/detail')}}>스시오마카세</StyledText>
-      <StyledText size="15px">대한민국 서울특별시 강남구 학동로 426</StyledText>
-      <StyledText size="30px">4.8</StyledText>
+      <StyledText  onClick={()=>{navigate('/detail'+id)}}>{name}</StyledText>
+      <StyledText size="15px">{address}</StyledText>
+      <StyledText size="30px">{star_num}</StyledText>
       </div>
+      <div ref={ref}/>
     </StyledDiv>
   );
-};
+});
 
 export default Item;
 
