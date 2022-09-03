@@ -14,20 +14,34 @@ const Join = () => {
 
   const signup = () => {
     axios
-      .post("http://3.34.48.111/api/member/signup", {
-        email: email.current.value,
-        nickname: nickname.current.value,
-        password: password.current.value,
-        profile_image: "test",
-      }, {
-        withCredentials: true,
-      })
+      .post(
+        "http://3.34.48.111/api/member/signup",
+        {
+          email: email.current.value,
+          nickname: nickname.current.value,
+          password: password.current.value,
+          profile_image: "test",
+        },
+        {
+          withCredentials: true,
+        }
+      )
       .then((response) => {
         console.log(response);
         console.log(response.payload);
       })
       .catch((error) => {
         console.log(error);
+      });
+  };
+
+  const getTest = () => {
+    axios
+      .get("http://3.34.48.111/api/restaurant", {
+        withCredentials: true,
+      })
+      .then((response) => {
+        console.log(response);
       });
   };
 
@@ -75,6 +89,7 @@ const Join = () => {
           Submit
         </Button>
         <Button onClick={() => navigate("/login")}>초기화</Button>
+        <Button onClick={() => getTest()}>getTest() call</Button>
       </StyledButtonDiv>
     </div>
   );
