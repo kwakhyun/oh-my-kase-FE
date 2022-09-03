@@ -18,6 +18,10 @@ const Detail = () => {
     state.main.data
   );
   const item = items.find((item) => item.id === id)
+
+  const test = useSelector(state=>state)
+  console.log(test)
+
   // const item = items.
   useEffect(() => {
     dispatch(__getData());
