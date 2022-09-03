@@ -19,11 +19,10 @@ const Detail = () => {
   );
   const item = items.find((item) => item.id === id)
   // const item = items.
-  console.log(item);
-
   useEffect(() => {
     dispatch(__getData());
   }, [dispatch]);
+
   return (
     <>
       <Header />

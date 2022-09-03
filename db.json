@@ -1,44 +1,41 @@
 {
   "data": [
     {
-      "id":"1",
-      "name": "오마카세 오사이초밥 홍대점",
-      "gu": "마포구",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "star_num": 4.9
+      "name": "오마카세 오사이초밥 건대본점",
+      "address": "서울 광진구 군자로 14 1층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/1.jfif",
+      "avg_star": 4.0,
+      "favorite": false
     },
     {
-      "id":"2",
-      "name": "한우 오마카세 압도",
-      "gu": "송파구",
-      "address": "서울 마포구 독막로5길 33 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/5.jpg",
-      "star_num": 4.7
-    },
-    {
-      "id":"3",
-      "name": "카메스시",
-      "gu": "강남구",
-      "address": "서울특별시 강남구 선릉로121길 7",
-      "img": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20220831_279%2F1661936766916TGqn2_JPEG%2Fimage.jpg",
-      "star_num": 4.4
-    },
-    {
-      "id":"4",
-      "name": "스시카와",
-      "gu": "강남구",
-      "address": "대한민국 서울특별시 강남구 도곡2동 424-8",
-      "img": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzA3MzBfMTc0%2FMDAxNTAxNDIzNjkwNjI0.EdE1uCbs7AP1HQpQOjJlvOa9iLrIMtiCDREOigTbz74g.JwvsA5w3Jf-bbxVQjb-BavVw59udTVLtZyEnEHlREPQg.JPEG.cindy0516%2FIMG_8404.jpg",
-      "star_num": 4.5
-    },
-    {
-      "id":"5",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "gu": "마포구",
+      "name": "오모테나시 오마카세",
+      "address": "서울 마포구 월드컵북로2길 82",
       "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "star_num": 4.2
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "name": "오마카세 오사이초밥 홍대점",
+      "address": "서울 마포구 연희로1길 11 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "name": "한우 오마카세 압도",
+      "address": "서울 마포구 독막로5길 33 2층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/5.jpg",
+      "avg_star": 4.0,
+      "favorite": false
+    },
+    {
+      "name": "고래소년 오마카세",
+      "address": "서울 성동구 왕십리로 241 서울숲 더샵 파크에비뉴 B1층",
+      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "avg_star": 3.0,
+      "favorite": false
     }
-  ]
+  ],
+  "error": null,
+  "success": true
 }

@@ -8,14 +8,12 @@ const Filter = () => {
   const sets = gus.map(item=>item.gu)
   const set = new Set(sets)
   const guArr = [...set]
-  console.log(selectGu)
   return (
     <StyledFilter>
       <FilterItem setSelectGu={setSelectGu} item={"전체"}/>
       {guArr.map((item, idx)=>(
         <FilterItem setSelectGu={setSelectGu} key={idx} item={item}/>
       ))}
-    {console.log(selectGu)}
     </StyledFilter>
   );
 };

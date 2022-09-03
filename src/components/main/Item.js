@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { TiStar, TiStarOutline } from "react-icons/ti";
 import { useNavigate } from "react-router-dom";
-const Item = ({id, name, address, img, star_num}) => {
+
+const Item = React.forwardRef((item,ref) => {
+  const {id, name, address, img, star_num} = item
   const navigate = useNavigate()
   const [like, setLike] = useState(false);
   return (
@@ -14,9 +16,10 @@ const Item = ({id, name, address, img, star_num}) => {
       <StyledText size="15px">{address}</StyledText>
       <StyledText size="30px">{star_num}</StyledText>
       </div>
+      <div ref={ref}/>
     </StyledDiv>
   );
-};
+});
 
 export default Item;
 
