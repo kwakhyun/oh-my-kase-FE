@@ -1,3 +1,4 @@
+import axios, { Axios } from "axios";
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 // import { useDispatch } from "react-redux";
@@ -10,6 +11,50 @@ const Login = () => {
   const password = useRef(null);
   const navigate = useNavigate();
   // const dispatch = useDispatch();
+
+  // 로그인 요청 테스트
+  const loginTest = () => {
+    axios
+      .post("api/login", {
+        email: email.current.value,
+        password: password.current.value,
+      })
+      .then((response) => {
+        // if (response.payload.success) {
+        console.log(response.payload);
+
+        localStorage.setItem("token", response.payload.accessToken);
+
+        axios.defaults.headers.common[
+          "Authorization"
+        ] = `Bearer ${response.payload.accessToken}`;
+
+        axios.get("api/user").then((response) => {
+          console.log(response);
+        });
+        // }
+      });
+  };
+
+  const postTest = () => {
+    axios
+      .post(
+        "api/post",
+        {
+          title: "test",
+        },
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        }
+      )
+      .then((response) => {
+        console.log(response);
+        console.log(response.payload);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div>
@@ -29,14 +74,17 @@ const Login = () => {
               alert("비밀번호를 입력해주세요.");
               return;
             }
-            alert("로그인 성공!");
-            navigate("/");
+            // alert("로그인 성공!");
+            // navigate("/");
+
+            loginTest();
           }}
         >
           Login
         </Button>
         <Button onClick={() => navigate("/join")}>Join</Button>
       </StyledButtonDiv>
+      <button onClick={() => postTest()}>postTest</button>
     </div>
   );
 };

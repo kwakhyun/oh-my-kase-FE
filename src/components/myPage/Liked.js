@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Edit = () => {
+const Like = () => {
   return (
-    <h1>Edit 입니다.</h1>
+    <h1>like 입니다.</h1>
   );
 };
 
-export default Edit;
+export default Like;
