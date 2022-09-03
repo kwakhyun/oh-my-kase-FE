@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
@@ -11,15 +12,34 @@ const Join = () => {
   const passwordConfirm = useRef(null);
   const navigate = useNavigate();
 
+  const signup = () => {
+    axios
+      .post("http://3.34.48.111/api/member/signup", {
+        email: email.current.value,
+        nickname: nickname.current.value,
+        password: password.current.value,
+        profile_image: "test",
+      }, {
+        withCredentials: true,
+      })
+      .then((response) => {
+        console.log(response);
+        console.log(response.payload);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div>
       <Header />
       <StyledImgDiv>
-      <img
-        src="https://i.pinimg.com/originals/4e/4f/da/4e4fda126c6778bfc2b2a678b58342df.jpg"
-        alt="logo"
-      />
-      <input type="file" />
+        <img
+          src="https://i.pinimg.com/originals/4e/4f/da/4e4fda126c6778bfc2b2a678b58342df.jpg"
+          alt="logo"
+        />
+        <input type="file" />
       </StyledImgDiv>
       <StyledInputDiv>
         <input type="text" ref={email} placeholder="Email" />
@@ -47,8 +67,9 @@ const Join = () => {
               alert("비밀번호 확인을 입력해주세요.");
               return;
             }
-            alert("회원가입 성공!");
-            navigate("/login");
+            // alert("회원가입 성공!");
+            // navigate("/login");
+            signup();
           }}
         >
           Submit
