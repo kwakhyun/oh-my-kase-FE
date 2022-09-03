@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-const DetailImage = () => {
+const DetailImage = ({img}) => {
   return (
       <StyledImg
-        src="https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg"
+      src={img}
         alt="img"
       />
   );
