@@ -1,13 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const DetailImage = ({img}) => {
-  return (
-      <StyledImg
-      src={img}
-        alt="img"
-      />
-  );
+const DetailImage = ({ img }) => {
+  return <StyledImg src={img} alt="img" />;
 };
 
 export default DetailImage;
