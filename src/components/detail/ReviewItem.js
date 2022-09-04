@@ -1,9 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-const ReviewItem = () => {
+const ReviewItem = ({commentList}) => {
+  const nickname = commentList.map(item=>item.nickname)
+  const profile_img = commentList.map(item=>item.profile_img)
+  const star = commentList.map(item=>item.star)
+  const content = commentList.map(item=>item.content)
+  const createdAt = commentList.map(item=>item.createdAt)
   return (
     <StyledDiv>
-      <h3>time</h3>
       <h1>name</h1>
       <div>
         <h1>rating</h1>

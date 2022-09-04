@@ -23,7 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/:district" element={<Main />} />
-            <Route path="/detail/:id" element={<Detail />} />
+            <Route path="/detail/:restaurant_id" element={<Detail />} />
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/join" element={<Join />} />
             <Route path="/login" element={<Login />} />

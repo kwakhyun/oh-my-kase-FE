@@ -4,17 +4,17 @@ import { TiStar, TiStarOutline } from "react-icons/ti";
 import { useNavigate } from "react-router-dom";
 
 const Item = React.forwardRef((item,ref) => {
-  const {id, name, address, img, star_num} = item
+  const {restaurant_id, name, address, restaurant_img, avg_star, favorite} = item
   const navigate = useNavigate()
   const [like, setLike] = useState(false);
   return (
     <StyledDiv>
-      <StyledImg src={img} alt='img' onClick={()=>{navigate('/detail/'+id)}}/>
+      <StyledImg src={restaurant_img} alt='img' onClick={()=>{navigate('/detail/'+restaurant_id)}}/>
       <div>
-      <StyledFavorite onClick={()=>{setLike(!like)}}>{like ? <TiStar /> : <TiStarOutline />}</StyledFavorite>
-      <StyledText  onClick={()=>{navigate('/detail'+id)}}>{name}</StyledText>
+      <StyledFavorite onClick={()=>{setLike(!like)}}>{favorite ? <TiStar /> : <TiStarOutline />}</StyledFavorite>
+      <StyledText  onClick={()=>{navigate('/detail'+restaurant_id)}}>{name}</StyledText>
       <StyledText size="15px">{address}</StyledText>
-      <StyledText size="30px">{star_num}</StyledText>
+      <StyledText size="30px">{avg_star}</StyledText>
       </div>
       <div ref={ref}/>
     </StyledDiv>

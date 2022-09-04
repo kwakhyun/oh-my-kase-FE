@@ -16,8 +16,6 @@ const List = () => {
   const {district} = useParams()
   const districts = useSelector(state=>state.main.data)
   const filterDistrict = districts.filter((item)=>item.address.split(' ')[1]===district)
-  console.log(filterDistrict)
-
   const loadItems = useCallback(async () => {
     setLoading(true);
     await getDataScroll(page, 2).then((res) => {
@@ -47,10 +45,13 @@ const List = () => {
 
   return (
     <>
-      {filterDistrict.map((item) =>
-            <Item {...item} key={item.id} ref={ref} />
-      )}
-      {}
+      {district==='전체'? districts.map((item,idx)=>
+      <Item {...item} key={idx} ref={ref}/>
+      ):
+      filterDistrict.map((item, idx) =>
+        <Item {...item} key={idx} ref={ref} />
+        )
+      }
     </>
   );
 };
