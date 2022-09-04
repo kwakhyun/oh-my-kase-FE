@@ -2,7 +2,7 @@ import axios from "axios";
 
 // axios 객체 생성
 const instance = axios.create({
-  baseURL: "요청할 서버의 URL",
+  baseURL: "http://3.34.48.111:8080",
   headers: {
     "Content-Type": "application/json;charset=UTF-8",
   },
