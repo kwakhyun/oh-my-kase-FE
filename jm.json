@@ -6,8 +6,8 @@
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 강남구 강남대로123",
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
-      "lat": 7.55679520000029,
-      "lon": 127.04003899999987,
+      "lat": 37.55965,
+      "lon": 126.92578,
       "avg_star": 3.0,
       "favorite": true,
       "menuList": [
@@ -25,6 +25,15 @@
           "content": "게시글 2번의댓글",
           "createdAt": "2022-09-03T10:56:07.8041751",
           "modifiedAt": "2022-09-03T10:56:07.8041751"
+        },
+        {
+          "comment_id": "2123r45",
+          "nickname": "Daniel",
+          "profile_img": "https://velog.velcdn.com/images/danchoi/profile/56f31c7c-29d1-4496-bc0c-6f084d8c2fcb/image.png",
+          "star": 3,
+          "content": "맛있어요",
+          "createdAt": "2022-09-05T10:56:07.8041751",
+          "modifiedAt": "2022-09-05T10:56:07.8041751"
         }
       ]
     },
@@ -34,8 +43,176 @@
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 성동구 서울숲 더샵 파크에비뉴 B1층",
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
-      "lat": 7.55679520000029,
-      "lon": 127.04003899999987,
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 3.0,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 영등포구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 3.0,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 노원구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 3.0,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 서대문구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 3.0,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 중구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 3.0,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 동대문구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 3.0,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 은평구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
       "avg_star": 3.0,
       "favorite": true,
       "menuList": [
@@ -62,8 +239,8 @@
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 송파구 방이동 213 2층",
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
-      "lat": 7.55679520000029,
-      "lon": 127.04003899999987,
+      "lat": 37.55965,
+      "lon": 126.92578,
       "avg_star": 3.0,
       "favorite": false,
       "menuList": [
@@ -90,8 +267,8 @@
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 용산구 이태원 더샵 파크에비뉴 B1층",
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
-      "lat": 7.55679520000029,
-      "lon": 127.04003899999987,
+      "lat": 37.55965,
+      "lon": 126.92578,
       "avg_star": 3.0,
       "favorite": true,
       "menuList": [

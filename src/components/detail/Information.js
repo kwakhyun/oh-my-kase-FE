@@ -1,16 +1,15 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import styled from "styled-components";
 import Map from "./Map";
 
-const Information = ({introduce}) => {
+const Information = ({introduce, address, lat, lon}) => {
   return (
     <>
       <StyledText size="22px">Information</StyledText>
       <StyledText size="16px">{introduce}</StyledText>
-      <StyledText size="18px" line='10px'>Location</StyledText>
-      <StyledText size="15px">서울 마포구 연희로1길 11 2층</StyledText>
-      <Map/>
+      <StyledText size="18px" line='10px'>{address}</StyledText>
+      <StyledText size="15px"></StyledText>
+      <Map lat={lat} lon={lon}/>
     </>
   );
 };

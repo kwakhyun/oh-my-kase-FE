@@ -6,7 +6,7 @@ const DetailInfo = ({name, avg_star}) => {
   return (
     <StyledDiv>
       <StyledText size="25px">{name}</StyledText>
-      <Rating star_num={avg_star}/>
+      <Rating star={avg_star}/>
     </StyledDiv>
   );
 };

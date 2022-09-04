@@ -1,59 +1,57 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Information from "./Information";
 import Menu from "./Menu";
 import Review from "./Review";
 
-const Tabs = ({item}) => {
+const Tabs = ({ item }) => {
   const [tabIndex, setTabIndex] = useState(0);
-  
+
   const tabArray = [
     {
       tabTitle: (
-        <span
+        <div
           className={tabIndex === 0 ? "select" : ""}
           onClick={() => setTabIndex(0)}
         >
           메뉴
-        </span>
+        </div>
       ),
-      tabContent: <Menu {...item}/>,
+      tabContent: <Menu {...item} />,
     },
     {
       tabTitle: (
-        <span
+        <div
           className={tabIndex === 1 ? "select" : ""}
           onClick={() => setTabIndex(1)}
         >
           정보
-        </span>
+        </div>
       ),
-      tabContent: <Information {...item}/>,
+      tabContent: <Information {...item} />,
     },
     {
       tabTitle: (
-        <span
+        <div
           className={tabIndex === 2 ? "select" : ""}
           onClick={() => setTabIndex(2)}
         >
           리뷰
-        </span>
+        </div>
       ),
-      tabContent: <Review/>,
+      tabContent: <Review {...item} />,
     },
   ];
 
   return (
     <>
-      <StyledTabTitle>
-        {tabArray.map((tab) => {
-          return tab.tabTitle;
-        })}
-      </StyledTabTitle>
-      <StyledDiv>{tabArray[tabIndex].tabContent}</StyledDiv>
-    </>
+    <StyledTab>
+      {tabArray.map((tab, idx) => 
+         <StyledTabTitle key={idx}>{tab.tabTitle}</StyledTabTitle>
+      )}
+    </StyledTab>
+    <StyledDiv>{tabArray[tabIndex].tabContent}</StyledDiv>
+  </>
   );
 };
 
@@ -68,13 +66,16 @@ const StyledDiv = styled.div`
   font-size: 0.7em;
   box-shadow: 2px 80px 30px grey;
 `;
-const StyledTabTitle = styled.div`
+const StyledTab = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  span {
+  div {
     padding: 10px 0;
   }
   .select {
     border-bottom: 1px solid black;
   }
 `;
+const StyledTabTitle = styled.div`
+
+`

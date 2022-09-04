@@ -1,30 +1,40 @@
-/* global kakao */
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
+/*global kakao */
+import React, { useEffect } from "react";
+import styled from "styled-components";
 
-  const Map = () => {
+function Map({lat, lon}) {
+  console.log(lat)
+  console.log(lon)
+  useEffect(() => {
 
-    useEffect(() => {
-      let container = document.getElementById("map");
-  
-      let options = {
-        center: new window.kakao.maps.LatLng(35.85133, 127.734086),
-        level: 13,
-      };
-  
-      let map = new window.kakao.maps.Map(container, options);
-  
-      console.log("loading kakaomap");
-    }, []);
-  return (
-    <StyledMap id="map">
-    </StyledMap>
-  );
-};
+    let container = document.getElementById("map");
+    let options = {
+      center: new kakao.maps.LatLng(lat, lon),
+      level: 3,
+    };
+    //map
+    const map = new kakao.maps.Map(container, options);
 
+    //마커가 표시 될 위치
+    let markerPosition = new kakao.maps.LatLng(
+      lat,lon
+    );
+
+    // 마커를 생성
+    let marker = new kakao.maps.Marker({
+      position: markerPosition,
+    });
+
+    // 마커를 지도 위에 표시
+    marker.setMap(map);
+  }, []);
+
+
+  return <StyledMap id="map"></StyledMap>;
+}
 export default Map;
 
 const StyledMap = styled.div`
-width: 90vw;
-height:400px;
-`
+  width: 90vw;
+  height: 400px;
+`;

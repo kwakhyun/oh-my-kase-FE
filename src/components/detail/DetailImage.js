@@ -11,5 +11,5 @@ const StyledImg = styled.img`
   width: 100vw;
   height: 400px;
   margin: 0 auto 0;
-  box-shadow: 20px 1px 20px grey;
+  box-shadow: 1px 1px 40px grey;
 `;

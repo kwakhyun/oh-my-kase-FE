@@ -4,13 +4,14 @@ import styled from "styled-components";
 import ReviewItem from './ReviewItem';
 
 const Review = ({commentList}) => {
+console.log(commentList)
   
   return (
     <>
     <StyledText size="22px">Review</StyledText>
-    <ReviewItem commentList={commentList}/>
-    <ReviewItem/>
-    <ReviewItem/>
+    {commentList.map((review,idx)=>
+    <ReviewItem key={idx} {...review}/>
+    )}
   </>
   );
 };

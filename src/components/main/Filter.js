@@ -25,5 +25,5 @@ const StyledFilter = styled.div`
   display: flex;
   max-width: 90vw;
   margin: auto;
-  width:100%; word-break:break-all;word-wrap:break-word;
+  flex-wrap: wrap;
 `;
