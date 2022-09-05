@@ -17,13 +17,13 @@ const myPageSlice = createSlice({
     liked: [],
     comments: [],
   },
-  extraReducers: {
-    [getLiked.fulfilled]: (state, action) => {
+  extraReducers: (builder) => {
+    builder.addCase(getLiked.fulfilled, (state, action) => {
       state.liked = action.payload;
-    },
-    [getComments.fulfilled]: (state, action) => {
+    });
+    builder.addCase(getComments.fulfilled, (state, action) => {
       state.comments = action.payload;
-    },
+    });
   },
 });
 

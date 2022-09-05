@@ -1,0 +1,41 @@
+{
+    "liked": [
+        {
+            "id": "asdwaq",
+            "name": "오마카세 오사이초밥 건대본점",
+            "address": "서울 광진구 군자로 14 1층",
+            "img": "https://postimagestorage.s3.amazonaws.com/mini_project/1.jfif",
+            "avg_star": 4.0,
+            "favorite": true
+        },
+        {
+            "id": "asdwaasdq",
+            "name": "오마카세 오사이초밥 홍대점",
+            "address": "서울 마포구 연희로1길 11 2층",
+            "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
+            "avg_star": 4.0,
+            "favorite": true
+        }
+    ],
+    "comments": [
+        {
+            "email":"test@naver.com",
+            "nickname": "김씨",
+            "content": "맛있어요",
+            "star": 5.0
+        },
+        {
+            "email":"test2@naver.com",
+            "nickname": "박씨",
+            "content": "맛있어요",
+            "star": 5.0
+        }
+    ],
+    "member": [
+        {
+            "email": "test@naver.com",
+            "nickname": "김씨",
+            "password": "1234"
+        }
+    ]
+}

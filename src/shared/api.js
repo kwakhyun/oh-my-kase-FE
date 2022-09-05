@@ -2,7 +2,7 @@ import axios from "axios";
 
 // axios 객체 생성
 const instance = axios.create({
-  baseURL: "http://3.34.48.111:8080",
+  baseURL: "http://3.34.48.111/",
   headers: {
     "Content-Type": "application/json;charset=UTF-8",
   },
@@ -30,22 +30,33 @@ export const authAPI = {
 };
 
 export const likedAPI = {
-  getLiked: () => instance.get("api/liked"),
+  getMyLiked: () => instance.get("api/auth/member/mypage/favorite"),
 
-  addLiked: (restaurantId) => instance.post("api/liked", { restaurantId }),
+  cancelMyLiked: (restaurantId) =>
+    instance.delete(`api/auth/member/mypage/favorite/${restaurantId}`),
 
-  deleteLiked: (restaurantId) => instance.delete("api/liked", { restaurantId }),
+  getLiked: () => instance.get("api/auth/favorite"),
+
+  cancelLiked: (restaurantId) =>
+    instance.delete(`api/auth/favorite/${restaurantId}`),
 };
 
 export const commentsAPI = {
-  getComments: (restaurantId) => instance.get(`api/comments/${restaurantId}`),
+  getMyComments: () => instance.get("api/auth/memeber/mypage/comment"),
 
   postComment: (restaurantId, comment) =>
-    instance.post(`api/comments/${restaurantId}`, { comment }),
+    instance.post(`api/auth/restaurant/${restaurantId}/comment`, { comment }),
 
-  editComment: (restaurantId, commentId, comment) =>
-    instance.put(`api/comments/${restaurantId}/${commentId}`, { comment }),
+  editComment: (commentId, comment) =>
+    instance.put(`/api/auth/restaurant/comment/${commentId}`, { comment }),
 
-  deleteComment: (restaurantId, commentId) =>
-    instance.delete(`api/comments/${restaurantId}/${commentId}`),
+  deleteComment: (commentId) =>
+    instance.delete(`api/auth/restaurant/comment/${commentId}`),
+};
+
+export const userAPI = {
+  getMyInfo: () => instance.get("api/auth/member/mypage/update"),
+
+  editMyInfo: (nickname) =>
+    instance.put("api/auth/member/mypage/update", { nickname }),
 };

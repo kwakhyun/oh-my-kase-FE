@@ -1,9 +1,29 @@
-import React from 'react';
-import styled from "styled-components";
+import { useQuery } from "react-query";
+import axios from "axios";
+import CommentsItem from "./CommentsItem";
 
 const Comment = () => {
+  const getMyComments = () => {
+    return axios.get("http://localhost:3001/comments");
+  };
+
+  const { data } = useQuery("myComments", getMyComments, {
+    onSuccess: (data) => {
+      console.log(data);
+    },
+    onError: (error) => {
+      console.log(error);
+    },
+  });
+
+  const myComments = data?.data;
+
   return (
-    <h1>Comment 입니다.</h1>
+    <div>
+      {myComments?.map((item) => {
+        return <CommentsItem key={item.email} item={item} />;
+      })}
+    </div>
   );
 };
 
