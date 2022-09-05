@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TiStar } from "react-icons/ti";
+import { RiHeartFill, RiHeartAddLine } from "react-icons/ri";
 
 const LikedItem = ({ item }) => {
   return (
@@ -10,8 +10,8 @@ const LikedItem = ({ item }) => {
           onClick={() => {
             // 즐겨찾기 해제 기능
           }}
-        >
-          <TiStar />
+        >   
+          {item.favorite ? <RiHeartFill /> : <RiHeartAddLine />}
         </StyledFavorite>
         <StyledText>{item.name}</StyledText>
       </div>
@@ -29,27 +29,25 @@ const StyledDiv = styled.div`
   font-size: 0.7em;
   box-shadow: 1px 1px 15px grey;
 `;
-
 const StyledImg = styled.img`
   object-fit: cover;
   width: 90vw;
   height: 220px;
   margin: 0 auto 0;
 `;
-
-const StyledText = styled.h1`
+const StyledText = styled.p`
   font-size: ${(props) => props.size || "20px"};
   margin: 15px;
 `;
-
 const StyledFavorite = styled.div`
   margin: 10px;
   right: 25px;
-  font-size: 30px;
-  height: 33px;
-  width: 33px;
+  padding: 2px;
+  font-size: 28px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
-  color: #ffcc33;
+  color: #f44336;
   position: absolute;
   align-items: center;
   background-color: transparent;

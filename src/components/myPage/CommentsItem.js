@@ -8,6 +8,7 @@ const CommentsItem = ({ item }) => {
         <span>{item.star}</span>
       </StyledSpanDiv>
       <p>{item.content}</p>
+      <span>{item.createdAt}</span>
     </StyledDiv>
   );
 };

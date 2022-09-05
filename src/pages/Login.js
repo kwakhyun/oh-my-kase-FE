@@ -78,7 +78,6 @@ const Login = () => {
         </Button>
         <Button onClick={() => navigate("/join")}>Join</Button>
       </StyledButtonDiv>
-      <button onClick={() => postTest(1)}>postTest</button>
     </div>
   );
 };

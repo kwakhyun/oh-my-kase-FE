@@ -12,6 +12,9 @@ const Join = () => {
   const passwordConfirm = useRef(null);
   const navigate = useNavigate();
 
+  const token = localStorage.getItem("accessToken");
+  console.log(token);
+
   const signup = () => {
     axios
       .post(
