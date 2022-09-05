@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { RiHeartFill, RiHeartAddLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import Rating from "../detail/Rating";
-import { useDispatch } from "react-redux";
-import { updateData } from "../../redux/modules/mainSlice";
 
 const Item = React.forwardRef((item, ref) => {
-  const { restaurant_id, name, address, img, avg_star, favorite } =
+  const { restaurant_id, name, address, img, avg_star } =
     item;
   const navigate = useNavigate();
-  const dispatch = useDispatch();
  
   return (
     <StyledDiv>
