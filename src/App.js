@@ -6,6 +6,7 @@ import MyPage from "./pages/MyPage";
 import Join from "./pages/Join";
 import Login from "./pages/Login";
 import { useMediaQuery } from "react-responsive";
+import Contact from "./pages/Contact";
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 768 });
   return isDesktop ? children : null;
@@ -27,6 +28,7 @@ function App() {
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/join" element={<Join />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Mobile>
       </div>

@@ -8,7 +8,7 @@ const Review = ({commentList}) => {
   const [editReview, setEditReview] = useState(false)
   const [postReview, setPostReview] = useState(false)
 
-  if(editReview === true){         //review edit 작성 component
+if(editReview === true){         //review edit 작성 component
     return <>
     <StyledText size="22px">Review</StyledText>
     <ReviewEdit editReview={editReview} setEditReview={setEditReview}/>  
@@ -27,18 +27,6 @@ else{                         //review list component
     {commentList.map((review,idx)=> (<ReviewItem key={idx} {...review} setEditReview={setEditReview} editReview={editReview}/> ))}
     </>
 }
-// return (
-//   <>
-//   <StyledText size="22px">Review</StyledText>
-//   {editReview?null:postReview?null:<StyledText weight="bold" color="#4488F7" size="16px" line="5px" onClick={()=>{setPostReview(!postReview)}}>리뷰 작성하기</StyledText>}
-//   {postReview?<ReviewPost postReview={postReview} setPostReview={setPostReview}/>: null}
-//   {editReview?<ReviewEdit editReview={editReview} setEditReview={setEditReview}/>: null}
-//   {(postReview||editReview)?null:commentList.map((review,idx)=>
-//       <ReviewItem key={idx} {...review} setEditReview={setEditReview} editReview={editReview}/>
-//       )
-//     }
-// </>
-// );
 };
 
 

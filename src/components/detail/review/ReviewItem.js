@@ -17,12 +17,13 @@ const ReviewItem = ({
         <StyledSpan style={{ float: "left" }}>{postedAt}</StyledSpan>
       </div>
       <StyledAuthorDiv>
-        {profile_img ? (
-          <StyledImg src={profile_img} alt=":"></StyledImg>
+        {profile_img?(
+          <StyledImg src={profile_img} onerror="this.style.display='none';" alt=""></StyledImg>
         ) : (
           <StyledImg
             src="https://velog.velcdn.com/images/danchoi/post/fac9c456-b1d5-41fd-b7e0-21a3feb2149f/image.png"
-            alt=":"
+            onerror="this.src='https://velog.velcdn.com/images/danchoi/post/fac9c456-b1d5-41fd-b7e0-21a3feb2149f/image.png';"
+            alt=""
           ></StyledImg>
         )}
         <div>
