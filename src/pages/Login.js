@@ -15,41 +15,35 @@ const Login = () => {
   // 로그인 요청 테스트
   const loginTest = () => {
     axios
-      .post("api/login", {
+      .post("http://3.34.48.111/api/member/login", {
         email: email.current.value,
         password: password.current.value,
       })
       .then((response) => {
         // if (response.payload.success) {
-        console.log(response.payload);
+        console.log("로그인 성공!");
+        console.log(response);
 
-        localStorage.setItem("token", response.payload.accessToken);
+        localStorage.setItem("accessToken", response.headers["authorization"]);
+        localStorage.setItem("refreshToken", response.headers["refresh-token"]);
 
-        axios.defaults.headers.common[
-          "Authorization"
-        ] = `Bearer ${response.payload.accessToken}`;
+        axios.defaults.headers.common["Authorization"] =
+          localStorage.getItem("accessToken");
 
-        axios.get("api/user").then((response) => {
-          console.log(response);
-        });
+        // axios.get("api/user").then((response) => {
+        //   console.log(response);
+        // });
         // }
       });
   };
 
-  const postTest = () => {
+  const postTest = (restaurant_id) => {
     axios
-      .post(
-        "api/post",
-        {
-          title: "test",
-        },
-        {
-          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        }
-      )
+      .post(`http://3.34.48.111/api/auth/favorite/`, {
+        restaurant_id: restaurant_id,
+      })
       .then((response) => {
         console.log(response);
-        console.log(response.payload);
       })
       .catch((error) => {
         console.log(error);
@@ -84,7 +78,7 @@ const Login = () => {
         </Button>
         <Button onClick={() => navigate("/join")}>Join</Button>
       </StyledButtonDiv>
-      <button onClick={() => postTest()}>postTest</button>
+      <button onClick={() => postTest(1)}>postTest</button>
     </div>
   );
 };

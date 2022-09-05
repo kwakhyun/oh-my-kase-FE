@@ -35,16 +35,6 @@ const Join = () => {
       });
   };
 
-  const getTest = () => {
-    axios
-      .get("http://3.34.48.111/api/restaurant", {
-        withCredentials: true,
-      })
-      .then((response) => {
-        console.log(response);
-      });
-  };
-
   return (
     <div>
       <Header />
@@ -89,7 +79,6 @@ const Join = () => {
           Submit
         </Button>
         <Button onClick={() => navigate("/login")}>초기화</Button>
-        <Button onClick={() => getTest()}>getTest() call</Button>
       </StyledButtonDiv>
     </div>
   );
