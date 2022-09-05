@@ -1,5 +1,9 @@
-![ohmykase](https://user-images.githubusercontent.com/78805018/188122251-16068eba-6562-49c8-9669-086f68e2b3fe.png)
+# 로고의 변천사
 ![oh-mykase](https://user-images.githubusercontent.com/78805018/188122219-aab02d58-46cf-4504-835f-f1c0b8817b88.png)
+
+![ohmykase](https://user-images.githubusercontent.com/78805018/188122251-16068eba-6562-49c8-9669-086f68e2b3fe.png)
+
+![o-mykase](https://user-images.githubusercontent.com/78805018/188503427-f69409f8-15b6-4fd7-aa2b-13eab0c19ec0.png)
 
 ## 📢 프로젝트 소개
 서울내 오마카세 리스트 
