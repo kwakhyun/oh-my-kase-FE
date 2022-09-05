@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
-import { RiHeartFill, RiHeartAddLine } from "react-icons/ri";
-import MyPageButton from "../components/buttons/MyPageButton";
+import LogInOutButton from "../components/buttons/LogInOutButton";
 import DetailInfo from "../components/detail/DetailInfo";
 import DetailImage from "../components/detail/DetailImage";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetailData } from "../redux/modules/detailSlice";
 import { useParams } from "react-router-dom";
 import Tabs from "../components/detail/Tabs";
+import MyPageButton from "../components/buttons/MyPageButton";
 
 const Detail = () => {
   const dispatch = useDispatch();
@@ -22,8 +21,8 @@ const Detail = () => {
     <>
       <Header />
       <DetailImage {...item} />
+      <LogInOutButton />
       <MyPageButton />
-      
       <DetailInfo {...item} />
       <Tabs item={item} />
     </>

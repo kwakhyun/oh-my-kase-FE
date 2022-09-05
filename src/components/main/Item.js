@@ -4,10 +4,9 @@ import { useNavigate } from "react-router-dom";
 import Rating from "../detail/Rating";
 
 const Item = React.forwardRef((item, ref) => {
-  const { restaurant_id, name, address, img, avg_star } =
-    item;
+  const { restaurant_id, name, address, img, avg_star } = item;
   const navigate = useNavigate();
- 
+
   return (
     <StyledDiv>
       <StyledImg
@@ -18,7 +17,6 @@ const Item = React.forwardRef((item, ref) => {
         }}
       />
       <div>
-        
         <StyledText
           onClick={() => {
             navigate("/detail" + restaurant_id);
