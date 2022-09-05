@@ -2,15 +2,17 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import LikedItem from "./LikedItem";
 
-const Like = () => {
-  const getMyLiked = () => {
-    // return axios.get("http://localhost:3001/api/auth/member/mypage/favorite");
-    return axios.get("http://localhost:3001/liked");
-  };
+axios.defaults.headers.common["Authorization"] =
+  localStorage.getItem("accessToken");
+axios.defaults.headers.common["refresh-token"] =
+  localStorage.getItem("refreshToken");
 
+const getMyLiked = () => {
+  return axios.get("http://3.34.48.111/api/auth/member/mypage/favorite");
+};
+
+const Like = () => {
   const { data } = useQuery("myLiked", getMyLiked, {
-    // retry: 0,
-    // refetchOnWindowFocus: false,
     onSuccess: (data) => {
       console.log(data);
     },
@@ -22,7 +24,7 @@ const Like = () => {
   // console.log(data);
   // console.log(data.data);
 
-  const myLiked = data?.data;
+  const myLiked = data?.data.data;
 
   return (
     <div>
