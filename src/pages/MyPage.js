@@ -10,7 +10,8 @@ const MyPage = () => {
 
   const tabArray = [
     {
-      tabTitle: (
+      key: "liked",
+      title: (
         <span
           className={tabIndex === 0 ? "select" : ""}
           onClick={() => setTabIndex(0)}
@@ -18,10 +19,11 @@ const MyPage = () => {
           Liked
         </span>
       ),
-      tabContent: <Liked />,
+      content: <Liked />,
     },
     {
-      tabTitle: (
+      key: "comments",
+      title: (
         <span
           className={tabIndex === 1 ? "select" : ""}
           onClick={() => setTabIndex(1)}
@@ -29,10 +31,11 @@ const MyPage = () => {
           Comments
         </span>
       ),
-      tabContent: <Comments />,
+      content: <Comments />,
     },
     {
-      tabTitle: (
+      key: "edit",
+      title: (
         <span
           className={tabIndex === 2 ? "select" : ""}
           onClick={() => setTabIndex(2)}
@@ -40,7 +43,7 @@ const MyPage = () => {
           Edit
         </span>
       ),
-      tabContent: <Edit />,
+      content: <Edit />,
     },
   ];
 
@@ -49,10 +52,10 @@ const MyPage = () => {
       <Header />
       <StyledTabTitle>
         {tabArray.map((tab) => {
-          return tab.tabTitle;
+          return <div key={tab.key}>{tab.title}</div>;
         })}
       </StyledTabTitle>
-      <StyledTabContent>{tabArray[tabIndex].tabContent}</StyledTabContent>
+      <StyledTabContent>{tabArray[tabIndex].content}</StyledTabContent>
     </>
   );
 };
