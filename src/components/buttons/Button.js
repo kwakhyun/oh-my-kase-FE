@@ -5,21 +5,12 @@ const Button = ({ children, onClick }) => {
 };
 
 const StyledButton = styled.button`
-  width: 40vw;
-  height: 30px;
-  margin: 5px 0;
+  font-size: 15px;
+  width: 100px;
+  height: 40px;
   border: none;
-  border-radius: 15px;
-  background-color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  &:hover {
-    background-color: #000;
-    color: #fff;
-    transition: 0.5s;
-  }
+  background-color: transparent;
+  margin: 10px;
 `;
 
 export default Button;
