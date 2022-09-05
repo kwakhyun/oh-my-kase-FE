@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import Liked from "../components/myPage/Liked";
 import Comments from "../components/myPage/Comments";
 import Edit from "../components/myPage/Edit";
+import MyPageButton from "../components/buttons/MyPageButton";
+import LogInOutButton from "../components/buttons/LogInOutButton";
 
 const MyPage = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -50,6 +52,7 @@ const MyPage = () => {
   return (
     <>
       <Header />
+      <LogInOutButton/>
       <StyledTabTitle>
         {tabArray.map((tab) => {
           return <div key={tab.key}>{tab.title}</div>;
