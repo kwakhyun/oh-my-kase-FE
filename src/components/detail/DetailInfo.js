@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { RiHeartFill } from "react-icons/ri";
+import { RiHeartFill, RiHeartAddLine } from "react-icons/ri";
 import Rating from "./Rating";
-const DetailInfo = ({ name, avg_star }) => {
+import { updateData } from "../../redux/modules/mainSlice";
+import { useDispatch } from "react-redux";
+
+const DetailInfo = ({ name, avg_star, restaurant_id, favorite }) => {
+  const dispatch = useDispatch()
+  const [like, setLike] = useState(false);
+  const favoriteClickHandler = (e) => {
+    const updateFavorite = {
+      restaurant_id,
+      favorite: !favorite,
+    };
+    dispatch(updateData(updateFavorite));
+    console.log(restaurant_id);
+    console.log(favorite);
+  };
+
   return (
     <StyledDiv>
       <StyledText size="25px" margin="20px auto 10px">
@@ -16,6 +31,13 @@ const DetailInfo = ({ name, avg_star }) => {
         <StyledText size="15px" margin="0">
           (15)
         </StyledText>
+        <StyledFavorite
+          onClick={() => {
+            setLike(favoriteClickHandler);
+          }}
+        >
+          {favorite ? <RiHeartFill /> : <RiHeartAddLine />}
+        </StyledFavorite>
       </StyledFavoriteDiv>
     </StyledDiv>
   );
@@ -43,3 +65,17 @@ const StyledFavoriteDiv = styled.div`
   justify-content: center;
   margin: 20px auto;
 `;
+const StyledFavorite = styled.div`
+  right: 10px;
+  padding: 2px;
+  font-size: 25px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  color: #f44336;
+  position: absolute;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: 1px 1px 15px #ccc;
+`;
+

@@ -10,18 +10,8 @@ const Item = React.forwardRef((item, ref) => {
   const { restaurant_id, name, address, img, avg_star, favorite } =
     item;
   const navigate = useNavigate();
-  const [like, setLike] = useState(false);
   const dispatch = useDispatch();
-  const favoriteClickHandler = (e) => {
-    const updateFavorite = {
-      restaurant_id,
-      favorite: !favorite,
-    };
-    dispatch(updateData(updateFavorite));
-    console.log(restaurant_id);
-    console.log(favorite);
-  };
-
+ 
   return (
     <StyledDiv>
       <StyledImg
@@ -32,13 +22,7 @@ const Item = React.forwardRef((item, ref) => {
         }}
       />
       <div>
-        <StyledFavorite
-          onClick={() => {
-            setLike(favoriteClickHandler);
-          }}
-        >
-          {favorite ? <RiHeartFill /> : <RiHeartAddLine />}
-        </StyledFavorite>
+        
         <StyledText
           onClick={() => {
             navigate("/detail" + restaurant_id);
@@ -49,7 +33,6 @@ const Item = React.forwardRef((item, ref) => {
         <StyledText size="15px">{address}</StyledText>
         <Rating star={avg_star} />
       </div>
-      <div ref={ref} />
     </StyledDiv>
   );
 });
@@ -75,18 +58,4 @@ const StyledImg = styled.img`
 const StyledText = styled.p`
   font-size: ${(props) => props.size || "20px"};
   margin: 15px;
-`;
-const StyledFavorite = styled.div`
-  margin: 10px;
-  right: 25px;
-  padding: 2px;
-  font-size: 28px;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  color: #f44336;
-  position: absolute;
-  align-items: center;
-  background-color: transparent;
-  box-shadow: 1px 1px 15px #ccc;
 `;

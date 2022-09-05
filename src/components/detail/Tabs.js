@@ -6,7 +6,7 @@ import Review from "./Review";
 
 const Tabs = ({ item }) => {
   const [tabIndex, setTabIndex] = useState(0);
-  // const commentLength = item.commentList.length
+  const commentLength = item.commentList?.length
   useEffect(()=>{
 
   },[])
@@ -39,8 +39,7 @@ const Tabs = ({ item }) => {
           className={tabIndex === 2 ? "select" : ""}
           onClick={() => setTabIndex(2)}
         >
-          리뷰
-          {/* 리뷰 {item.commentList.length} */}
+          리뷰 ({commentLength})
         </div>
       ),
       tabContent: <Review {...item} />,

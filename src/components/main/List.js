@@ -13,10 +13,9 @@ const List = () => {
   const [ref, inView] = useInView({
     threshold: 1,
   });
-
-  const test = useSelector(state=>state.main.data)
-  console.log(test)
-
+  //infinite scroll =useEffect와 useState를 통해 배열에 추가
+  // 로드되는 요소의 마지막 데이터 아이디를 같이 넘기는 방식으로 page => x
+ 
   const {district} = useParams()
   const districts = useSelector(state=>state.main.data)
   const filterDistrict = districts.filter((item)=>item.address.split(' ')[1]===district)
@@ -31,6 +30,8 @@ const List = () => {
   useEffect(() => {
     loadItems();
   }, [loadItems]);
+
+
   useEffect(() => {
     if (inView && !loading) {
       setTimeout(() => {

@@ -13,7 +13,6 @@ const Header = () => {
       <StyledText>
       OhMyKase
       </StyledText>
-      <hr></hr>
     </StyledHeader>
   );
 };
