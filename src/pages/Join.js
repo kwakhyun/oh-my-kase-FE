@@ -42,21 +42,39 @@ const Join = () => {
     <div>
       <Header />
       <StyledImgDiv>
-        <img
-          src="https://i.pinimg.com/originals/4e/4f/da/4e4fda126c6778bfc2b2a678b58342df.jpg"
-          alt="logo"
-        />
-        <input type="file" />
+        <div class="image-upload">
+          <label for="file-input">
+            <img
+              src="https://velog.velcdn.com/images/danchoi/post/fac9c456-b1d5-41fd-b7e0-21a3feb2149f/image.png"
+              alt=""
+            />
+          </label>
+
+          <input id="file-input" type="file" />
+        </div>
       </StyledImgDiv>
+      <StyledSpan>Upload Image</StyledSpan>
       <StyledInputDiv>
-        <input type="text" ref={email} placeholder="Email" />
-        <input type="text" ref={nickname} placeholder="Ninkname" />
-        <input type="password" ref={password} placeholder="Password" />
+      <div>
+        <StyledSpan>Email*</StyledSpan>
+        <input type="text" ref={email} placeholder="Enter your email" />
+      </div>
+      <div>
+        <StyledSpan>Name*</StyledSpan>
+        <input type="text" ref={nickname} placeholder="Enter yout name" />
+      </div>
+      <div>
+        <StyledSpan>Password*</StyledSpan>
+        <input type="password" ref={password} placeholder="Create a password" />
+      </div>
+      <div>
+        <StyledSpan>Confirm Password*</StyledSpan>
         <input
           type="password"
           ref={passwordConfirm}
-          placeholder="Password Confirm"
+          placeholder="Confirm Password"
         />
+      </div>
       </StyledInputDiv>
       <StyledButtonDiv>
         <Button
@@ -81,7 +99,7 @@ const Join = () => {
         >
           Submit
         </Button>
-        <Button onClick={() => navigate("/login")}>초기화</Button>
+        <Button onClick={() => navigate("/login")}>Go Back</Button>
       </StyledButtonDiv>
     </div>
   );
@@ -97,30 +115,35 @@ const StyledImgDiv = styled.div`
     border-radius: 50%;
     margin-bottom: 10px;
   }
-`;
-
-const StyledInputDiv = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 5vh;
-  margin-bottom: 20px;
-
-  input {
-    width: 50vw;
-    height: 40px;
-    margin: 5px 0;
-    border: none;
-    border-bottom: 1px solid #000;
-    font-size: 16px;
-    font-weight: 600;
+  .image-upload > input {
+    display: none;
   }
 `;
 
+const StyledInputDiv = styled.div`
+  font-family: Arial, Helvetica, sans-serif;
+  color: #aaa;
+  margin-top: 5vh;
+  margin-bottom: 20px;
+  
+  input {
+    width: 50vw;
+    height: 30px;
+    margin: 10px 0;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+`;
+const StyledSpan = styled.p`
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+`;
 const StyledButtonDiv = styled.div`
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  width: 220px;
+  margin: auto;
 `;
 
 export default Join;

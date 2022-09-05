@@ -53,10 +53,16 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <StyledH2>Login</StyledH2>
+      <StyledSpan>Login</StyledSpan>
       <StyledInputDiv>
-        <input type="text" ref={email} placeholder="Email" />
-        <input type="password" ref={password} placeholder="Password" />
+        <div className="emailInput">
+        <p>Email*</p>
+        <input type="text" ref={email} placeholder="Enter your email" />
+        </div>
+        <div className="passwordInput">
+        <p>Passwords*</p>
+        <input type="password" ref={password} placeholder="Enter your password" />
+        </div>
       </StyledInputDiv>
       <StyledButtonDiv>
         <Button
@@ -82,13 +88,14 @@ const Login = () => {
   );
 };
 
-const StyledH2 = styled.h2`
+const StyledSpan = styled.span`
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
-  font-weight: 600;
-  margin-top: 10vh;
 `;
 
 const StyledInputDiv = styled.div`
+  font-family: Arial, Helvetica, sans-serif;
+  color: #aaa;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -97,20 +104,24 @@ const StyledInputDiv = styled.div`
 
   input {
     width: 50vw;
-    height: 40px;
-    margin: 5px 0;
-    border: none;
-    border-bottom: 1px solid #000;
+    height: 30px;
+    margin: 10px 0;
     font-size: 16px;
-    font-weight: 600;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .emailInput{
+    margin-bottom: 10px;
+  }
+  .passwordInput{
+    margin-bottom: 10px;
   }
 `;
 
 const StyledButtonDiv = styled.div`
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 20px;
+  width: 220px;
+  margin: auto;
 `;
-
 export default Login;
