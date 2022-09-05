@@ -5,59 +5,60 @@ import {
 
   TiStarHalf,
 } from "react-icons/ti";
-const Rating = ({ star_num }) => {
+const Rating = ({ star, size, margin }) => {
   return (
-    <StyledText size="18px">
+    <StyledText size={size} margin={margin}>
+      <StarDiv>
       <StyledStars>
-        {star_num < 0.7 ? (
+        {star < 0.7 ? (
           <TiStarHalf />
-        ) : star_num < 1.3 ? (
+        ) : star < 1.3 ? (
           <TiStarFullOutline />
-        ) : star_num < 1.8 ? (
+        ) : star < 1.8 ? (
           <>
             <TiStarFullOutline />
             <TiStarHalf />
           </>
-        ) : star_num < 2.3 ? (
+        ) : star < 2.3 ? (
           <>
             <TiStarFullOutline />
             <TiStarFullOutline />
           </>
-        ) : star_num < 2.8 ? (
+        ) : star < 2.8 ? (
           <>
             <TiStarFullOutline />
             <TiStarFullOutline />
             <TiStarHalf />
           </>
-        ) : star_num < 3.3 ? (
+        ) : star < 3.3 ? (
           <>
             <TiStarFullOutline />
             <TiStarFullOutline />
             <TiStarFullOutline />
           </>
-        ) : star_num < 3.8 ? (
+        ) : star < 3.8 ? (
           <>
-            <TiStarFullOutline />
-            <TiStarFullOutline />
-            <TiStarFullOutline />
-            <TiStarHalf />
-          </>
-        ) : star_num < 4.3 ? (
-          <>
-            <TiStarFullOutline />
-            <TiStarFullOutline />
-            <TiStarFullOutline />
-            <TiStarFullOutline />
-          </>
-        ) : star_num < 4.8 ? (
-          <>
-            <TiStarFullOutline />
             <TiStarFullOutline />
             <TiStarFullOutline />
             <TiStarFullOutline />
             <TiStarHalf />
           </>
-        ) : star_num <= 5 ? (
+        ) : star < 4.3 ? (
+          <>
+            <TiStarFullOutline />
+            <TiStarFullOutline />
+            <TiStarFullOutline />
+            <TiStarFullOutline />
+          </>
+        ) : star < 4.8 ? (
+          <>
+            <TiStarFullOutline />
+            <TiStarFullOutline />
+            <TiStarFullOutline />
+            <TiStarFullOutline />
+            <TiStarHalf />
+          </>
+        ) : star <= 5 ? (
           <>
             <TiStarFullOutline />
             <TiStarFullOutline />
@@ -66,19 +67,26 @@ const Rating = ({ star_num }) => {
             <TiStarFullOutline />
           </>
         ) : (
-          star_num
+          star
         )}
       </StyledStars>
-      <h1>{star_num}</h1>
+      <span>{star}</span>
+      </StarDiv>
     </StyledText>
   );
 };
 
 export default Rating;
 const StyledText = styled.div`
-  font-size: ${(props) => props.size || "25px"};
-  margin: 20px auto 0;
+  font-size: ${(props) => props.size || "18px"};
+  margin: ${(props) => props.margin || "10px auto"};
 `;
 const StyledStars = styled.div`
   color: #ffcc33;
+  margin: 0 10px;
 `;
+const StarDiv = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+`

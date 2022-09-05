@@ -1,19 +1,26 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Menu = () => {
+const Menu = ({menuList}) => {
   return (
     <>
-      <StyledText size="22px">메뉴</StyledText>
-      <StyledText size="18px">런치 50,000</StyledText>
-      <StyledText size="18px">디너 80,000</StyledText>
+      <StyledText size="22px">Menu</StyledText>
+      {menuList&&menuList.map((menu, idx)=>
+      (
+        <div key={idx}>
+        <StyledText size="20px">{menu.name}</StyledText>
+        <StyledText size="20px">{menu.price}</StyledText>
+        </div>
+      ))}
     </>
   );
 };
 
 export default Menu;
-const StyledText = styled.h1`
+
+
+const StyledText = styled.p`
   font-size: ${(props) => props.size || "25px"};
-  margin: 30px auto 30px;
+  margin: 30px auto 40px;
   line-height: ${(props) => props.line || "30px"};
 `;

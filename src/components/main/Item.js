@@ -1,22 +1,54 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { TiStar, TiStarOutline } from "react-icons/ti";
+import { RiHeartFill, RiHeartAddLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
+import Rating from "../detail/Rating";
+import { useDispatch } from "react-redux";
+import { updateData } from "../../redux/modules/mainSlice";
 
-const Item = React.forwardRef((item,ref) => {
-  const {id, name, address, img, star_num} = item
-  const navigate = useNavigate()
+const Item = React.forwardRef((item, ref) => {
+  const { restaurant_id, name, address, restaurant_img, avg_star, favorite } =
+    item;
+  const navigate = useNavigate();
   const [like, setLike] = useState(false);
+  const dispatch = useDispatch();
+  const favoriteClickHandler = (e) => {
+    const updateFavorite = {
+      restaurant_id,
+      favorite: !favorite,
+    };
+    dispatch(updateData(updateFavorite));
+    console.log(restaurant_id)
+    console.log(favorite)
+  };
   return (
     <StyledDiv>
-      <StyledImg src={img} alt='img' onClick={()=>{navigate('/detail/'+id)}}/>
+      <StyledImg
+        src={restaurant_img}
+        alt="img"
+        onClick={() => {
+          navigate("/detail/" + restaurant_id);
+        }}
+      />
       <div>
-      <StyledFavorite onClick={()=>{setLike(!like)}}>{like ? <TiStar /> : <TiStarOutline />}</StyledFavorite>
-      <StyledText  onClick={()=>{navigate('/detail'+id)}}>{name}</StyledText>
-      <StyledText size="15px">{address}</StyledText>
-      <StyledText size="30px">{star_num}</StyledText>
+        <StyledFavorite
+          onClick={() => {
+            setLike(favoriteClickHandler);
+          }}
+        >
+          {favorite ? <RiHeartFill /> : <RiHeartAddLine />}
+        </StyledFavorite>
+        <StyledText
+          onClick={() => {
+            navigate("/detail" + restaurant_id);
+          }}
+        >
+          {name}
+        </StyledText>
+        <StyledText size="15px">{address}</StyledText>
+        <Rating star={avg_star} />
       </div>
-      <div ref={ref}/>
+      <div ref={ref} />
     </StyledDiv>
   );
 });
@@ -39,18 +71,19 @@ const StyledImg = styled.img`
   height: 220px;
   margin: 0 auto 0;
 `;
-const StyledText = styled.h1`
+const StyledText = styled.p`
   font-size: ${(props) => props.size || "20px"};
   margin: 15px;
 `;
 const StyledFavorite = styled.div`
   margin: 10px;
   right: 25px;
-  font-size: 30px;
-  height: 33px;
-  width: 33px;
+  padding: 2px;
+  font-size: 28px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
-  color: #ffcc33;
+  color: #f44336;
   position: absolute;
   align-items: center;
   background-color: transparent;

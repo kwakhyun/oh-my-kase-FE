@@ -6,25 +6,23 @@ import MyPageButton from "../components/buttons/MyPageButton";
 import DetailInfo from "../components/detail/DetailInfo";
 import DetailImage from "../components/detail/DetailImage";
 import { useDispatch, useSelector } from "react-redux";
-import { __getData } from "../redux/modules/mainSlice";
+import { getData } from "../redux/modules/mainSlice";
 import { useParams } from "react-router-dom";
 import Tabs from "../components/detail/Tabs";
 
 const Detail = () => {
   const dispatch = useDispatch();
-  const { id } = useParams();
+  const { restaurant_id } = useParams();
   const [like, setLike] = useState(false);
   const items = useSelector((state) =>
     state.main.data
   );
-  const item = items.find((item) => item.id === id)
+  const item = items.find((item) => item.restaurant_id === restaurant_id)
 
-  const test = useSelector(state=>state)
-  console.log(test)
 
   // const item = items.
   useEffect(() => {
-    dispatch(__getData());
+    dispatch(getData());
   }, [dispatch]);
 
   return (
@@ -34,7 +32,7 @@ const Detail = () => {
       <MyPageButton />
       <StyledFavorite>{like ? <TiStar /> : <TiStarOutline />}</StyledFavorite>
       <DetailInfo {...item} />
-      <Tabs />
+      <Tabs item={item}/>
     </>
   );
 };
