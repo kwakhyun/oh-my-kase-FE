@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const URL = 'http://localhost:3001/data';
+const URL = process.env.REACT_APP_SERVER_URL;
 
 const instance = axios.create({ baseURL: URL});
 
@@ -16,12 +16,23 @@ export const getDataScroll = async (page, limit) => {
   return response.data;
 };
 
-export const __getData = createAsyncThunk(
+export const getData = createAsyncThunk(
   "data/GET_DATA",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://localhost:3001/data");
-      return thunkAPI.fulfillWithValue(data.data);
+      const response = await axios.get(URL);
+      return thunkAPI.fulfillWithValue(response.data);
+    } catch (error) {
+      return thunkAPI.fulfillWithValue(error);
+    }
+  }
+);
+export const updateData = createAsyncThunk(
+  "data/UPDATE_DATA",
+  async (payload, thunkAPI) => {
+    try {
+      const response = await axios.patch(URL+`/${payload.restaurant_id}`, payload);
+      return thunkAPI.fulfillWithValue(response.data);
     } catch (error) {
       return thunkAPI.fulfillWithValue(error);
     }
@@ -33,8 +44,13 @@ const main = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [__getData.fulfilled]: (state, action) => {
-      state.data = [...action.payload]; // Store에 있는 list에 서버에서 가져온 music를 넣음
+    [getData.fulfilled]: (state, action) => {
+      state.data = [...action.payload]; // Store에 있는 list에 서버에서 가져온 restaurant 넣음
+    },
+    [updateData.fulfilled]: (state, action) => {
+      state.data = state.data.map((item) =>
+      item.id === action.payload.restaurant_id ? { ...action.payload } : item
+      );
     },
   },
 });

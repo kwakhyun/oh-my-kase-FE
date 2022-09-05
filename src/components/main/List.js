@@ -14,7 +14,10 @@ const List = () => {
     threshold: 1,
   });
   const {district} = useParams()
+  const test = useSelector(state=>state)
+  console.log(test)
   const districts = useSelector(state=>state.main.data)
+  console.log(districts)
   const filterDistrict = districts.filter((item)=>item.address.split(' ')[1]===district)
   const loadItems = useCallback(async () => {
     setLoading(true);
@@ -23,11 +26,11 @@ const List = () => {
     });
     setLoading(false);
   }, [page]);
+  console.log(items)
   // `getDataScroll` 이 바뀔 때 마다 함수 실행
   useEffect(() => {
     loadItems();
   }, [loadItems]);
-
   useEffect(() => {
     if (inView && !loading) {
       setTimeout(() => {

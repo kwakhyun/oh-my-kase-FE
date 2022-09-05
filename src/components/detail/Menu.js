@@ -5,7 +5,7 @@ const Menu = ({menuList}) => {
   return (
     <>
       <StyledText size="22px">Menu</StyledText>
-      {menuList.map((menu, idx)=>
+      {menuList&&menuList.map((menu, idx)=>
       (
         <div key={idx}>
         <StyledText size="20px">{menu.name}</StyledText>

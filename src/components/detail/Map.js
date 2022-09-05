@@ -3,8 +3,6 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 
 function Map({lat, lon}) {
-  console.log(lat)
-  console.log(lon)
   useEffect(() => {
 
     let container = document.getElementById("map");
