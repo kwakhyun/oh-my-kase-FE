@@ -29,13 +29,13 @@
           "comment_id": "23r45",
           "nickname": "ohmy",
           "profile_img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
-          "star": 5.0,
+          "star": 5,
           "content": "압구정 번화가보다는 여기가 훨조용하고 분위기도 좋고 맛도 좋은듯 ㅎㅎㅎㅎ",
           "createdAt": "2022-09-03T10:56:07.8041751",
           "modifiedAt": "2022-09-03T10:56:07.8041751"
         },
         {
-          "comment_id": "23r45",
+          "comment_id": "2213r45",
           "nickname": "Kase",
           "profile_img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
           "star": 4.2,
@@ -44,7 +44,7 @@
           "modifiedAt": "2022-09-03T10:56:07.8041751"
         },
         {
-          "comment_id": "23r45",
+          "comment_id": "231233r45",
           "nickname": "sushi",
           "profile_img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
           "star": 4.8,
@@ -53,7 +53,7 @@
           "modifiedAt": "2022-09-03T10:56:07.8041751"
         },
         {
-          "comment_id": "23r45",
+          "comment_id": "23r1245",
           "nickname": "sashimi",
           "profile_img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
           "star": 4.8,
@@ -65,7 +65,7 @@
           "comment_id": "2123r45",
           "nickname": "Daniel",
           "profile_img": "https://velog.velcdn.com/images/danchoi/profile/56f31c7c-29d1-4496-bc0c-6f084d8c2fcb/image.png",
-          "star": 5.0,
+          "star": 5,
           "content": "맛있어요",
           "createdAt": "2022-09-05T10:56:07.8041751",
           "modifiedAt": "2022-09-05T10:56:07.8041751"
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "restaurant_id": "113cdfr",
+      "restaurant_id": "113c123dfr",
       "name": "고래소년 오마카세",
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 성동구 서울숲 더샵 파크에비뉴 B1층",
@@ -90,7 +90,7 @@
       ],
       "commentList": [
         {
-          "comment_id": "124r23fwe",
+          "comment_id": "124r223fwe",
           "nickname": "jeeyeon",
           "profile_img": "",
           "star": 3,
@@ -108,7 +108,7 @@
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
       "lat": 37.55965,
       "lon": 126.92578,
-      "avg_star": 3.0,
+      "avg_star": 3,
       "favorite": true,
       "menuList": [
         {
@@ -118,7 +118,7 @@
       ],
       "commentList": [
         {
-          "comment_id": "124r23fwe",
+          "comment_id": "124r23123fwe",
           "nickname": "jeeyeon",
           "profile_img": "",
           "star": 3,
@@ -129,14 +129,14 @@
       ]
     },
     {
-      "restaurant_id": "113cdfr",
+      "restaurant_id": "114123c2313dfr",
       "name": "고래소년 오마카세",
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 노원구 서울숲 더샵 파크에비뉴 B1층",
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
       "lat": 37.55965,
       "lon": 126.92578,
-      "avg_star": 3.0,
+      "avg_star": 3,
       "favorite": true,
       "menuList": [
         {
@@ -146,7 +146,7 @@
       ],
       "commentList": [
         {
-          "comment_id": "124r23fwe",
+          "comment_id": "124r2323fwe",
           "nickname": "jeeyeon",
           "profile_img": "",
           "star": 3,
@@ -157,14 +157,14 @@
       ]
     },
     {
-      "restaurant_id": "113cdfr",
+      "restaurant_id": "113c412dfr",
       "name": "고래소년 오마카세",
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 서대문구 서울숲 더샵 파크에비뉴 B1층",
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
       "lat": 37.55965,
       "lon": 126.92578,
-      "avg_star": 3.0,
+      "avg_star": 3,
       "favorite": true,
       "menuList": [
         {
@@ -174,7 +174,7 @@
       ],
       "commentList": [
         {
-          "comment_id": "124r23fwe",
+          "comment_id": "124r23135fwe",
           "nickname": "jeeyeon",
           "profile_img": "",
           "star": 3,
@@ -185,14 +185,14 @@
       ]
     },
     {
-      "restaurant_id": "113cdfr",
+      "restaurant_id": "113c153dfr",
       "name": "고래소년 오마카세",
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 중구 서울숲 더샵 파크에비뉴 B1층",
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
       "lat": 37.55965,
       "lon": 126.92578,
-      "avg_star": 3.0,
+      "avg_star": 3,
       "favorite": true,
       "menuList": [
         {
@@ -202,7 +202,7 @@
       ],
       "commentList": [
         {
-          "comment_id": "124r23fwe",
+          "comment_id": "124r23124fwe",
           "nickname": "jeeyeon",
           "profile_img": "",
           "star": 3,
@@ -213,7 +213,7 @@
       ]
     },
     {
-      "restaurant_id": "113cdfr",
+      "restaurant_id": "113cd235fr",
       "name": "고래소년 오마카세",
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 동대문구 서울숲 더샵 파크에비뉴 B1층",
@@ -230,7 +230,7 @@
       ],
       "commentList": [
         {
-          "comment_id": "124r23fwe",
+          "comment_id": "124r23135fwe",
           "nickname": "jeeyeon",
           "profile_img": "",
           "star": 3.6,
@@ -241,14 +241,14 @@
       ]
     },
     {
-      "restaurant_id": "113cdfr",
+      "restaurant_id": "113c5132436dfr",
       "name": "고래소년 오마카세",
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 은평구 서울숲 더샵 파크에비뉴 B1층",
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
       "lat": 37.55965,
       "lon": 126.92578,
-      "avg_star": 3.0,
+      "avg_star": 3,
       "favorite": true,
       "menuList": [
         {
@@ -258,7 +258,7 @@
       ],
       "commentList": [
         {
-          "comment_id": "124r23fwe",
+          "comment_id": "124r23246fwe",
           "nickname": "jeeyeon",
           "profile_img": "",
           "star": 3,
@@ -269,14 +269,14 @@
       ]
     },
     {
-      "restaurant_id": "1435235",
+      "restaurant_id": "1435264243235",
       "name": "A 오마카세",
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 송파구 방이동 213 2층",
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
       "lat": 37.55965,
       "lon": 126.92578,
-      "avg_star": 3.0,
+      "avg_star": 3,
       "favorite": false,
       "menuList": [
         {
@@ -286,7 +286,7 @@
       ],
       "commentList": [
         {
-          "comment_id": "123451233",
+          "comment_id": "12345121fwe33",
           "nickname": "jeeyeon",
           "profile_img": "",
           "star": 3,
@@ -297,14 +297,14 @@
       ]
     },
     {
-      "restaurant_id": "1132",
+      "restaurant_id": "11waef32",
       "name": "B 오마카세",
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 용산구 이태원 더샵 파크에비뉴 B1층",
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
       "lat": 37.55965,
       "lon": 126.92578,
-      "avg_star": 3.0,
+      "avg_star": 3,
       "favorite": true,
       "menuList": [
         {
@@ -314,7 +314,7 @@
       ],
       "commentList": [
         {
-          "comment_id": "1324q",
+          "comment_id": "13waefwef24q",
           "nickname": "jeeyeon",
           "profile_img": "",
           "star": 3,
@@ -325,14 +325,14 @@
       ]
     },
     {
-      "restaurant_id": "2",
+      "restaurant_id": "142123sdaf2",
       "name": "고래소년 오마카세",
       "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
       "address": "서울 관악구 신림동 952 1층",
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
       "lat": 7.55679520000029,
       "lon": 127.04003899999987,
-      "avg_star": 3.0,
+      "avg_star": 3,
       "favorite": false,
       "menuList": [
         {
@@ -342,7 +342,7 @@
       ],
       "commentList": [
         {
-          "comment_id": "124",
+          "comment_id": "12faw3fw4",
           "nickname": "jeeyeon",
           "profile_img": "",
           "star": 3,

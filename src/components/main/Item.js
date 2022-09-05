@@ -1,23 +1,54 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import {RiHeartFill, RiHeartAddLine} from'react-icons/ri'
+import { RiHeartFill, RiHeartAddLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import Rating from "../detail/Rating";
+import { useDispatch } from "react-redux";
+import { updateData } from "../../redux/modules/mainSlice";
 
-const Item = React.forwardRef((item,ref) => {
-  const {restaurant_id, name, address, restaurant_img, avg_star, favorite} = item
-  const navigate = useNavigate()
+const Item = React.forwardRef((item, ref) => {
+  const { restaurant_id, name, address, restaurant_img, avg_star, favorite } =
+    item;
+  const navigate = useNavigate();
   const [like, setLike] = useState(false);
+  const dispatch = useDispatch();
+  const favoriteClickHandler = (e) => {
+    const updateFavorite = {
+      restaurant_id,
+      favorite: !favorite,
+    };
+    dispatch(updateData(updateFavorite));
+    console.log(restaurant_id)
+    console.log(favorite)
+  };
   return (
     <StyledDiv>
-      <StyledImg src={restaurant_img} alt='img' onClick={()=>{navigate('/detail/'+restaurant_id)}}/>
+      <StyledImg
+        src={restaurant_img}
+        alt="img"
+        onClick={() => {
+          navigate("/detail/" + restaurant_id);
+        }}
+      />
       <div>
-      <StyledFavorite onClick={()=>{setLike(!like)}}>{favorite ? <RiHeartFill /> : <RiHeartAddLine />}</StyledFavorite>
-      <StyledText  onClick={()=>{navigate('/detail'+restaurant_id)}}>{name}</StyledText>
-      <StyledText size="15px">{address}</StyledText>
-      <Rating star={avg_star}/>
+        <StyledFavorite
+          onClick={() => {
+            setLike(favoriteClickHandler);
+          }}
+        >
+          {favorite ? <RiHeartFill /> : <RiHeartAddLine />}
+        </StyledFavorite>
+        <StyledText
+          onClick={() => {
+            navigate("/detail" + restaurant_id);
+          }}
+        >
+          {name}
+        </StyledText>
+        <StyledText size="15px">{address}</StyledText>
+        <Rating star={avg_star} />
       </div>
-      <div ref={ref}/>
+      <div ref={ref} />
     </StyledDiv>
   );
 });
@@ -52,7 +83,7 @@ const StyledFavorite = styled.div`
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  color: #F44336;
+  color: #f44336;
   position: absolute;
   align-items: center;
   background-color: transparent;

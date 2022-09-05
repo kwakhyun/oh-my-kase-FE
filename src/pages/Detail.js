@@ -6,7 +6,7 @@ import MyPageButton from "../components/buttons/MyPageButton";
 import DetailInfo from "../components/detail/DetailInfo";
 import DetailImage from "../components/detail/DetailImage";
 import { useDispatch, useSelector } from "react-redux";
-import { __getData } from "../redux/modules/mainSlice";
+import { getData } from "../redux/modules/mainSlice";
 import { useParams } from "react-router-dom";
 import Tabs from "../components/detail/Tabs";
 
@@ -22,7 +22,7 @@ const Detail = () => {
 
   // const item = items.
   useEffect(() => {
-    dispatch(__getData());
+    dispatch(getData());
   }, [dispatch]);
 
   return (
