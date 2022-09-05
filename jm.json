@@ -2,27 +2,62 @@
   "data": [
     {
       "restaurant_id": "45454531",
-      "name": "고래소년 오마카세",
-      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
-      "address": "서울 강남구 강남대로123",
-      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
-      "lat": 37.55965,
-      "lon": 126.92578,
-      "avg_star": 3.0,
+      "name": "류 오마카세",
+      "introduce": "오마카세 경력 25년의 셰프 와 산지직송 제철 식자재 의 정성이 담긴 요리",
+      "address": "서울 강남구 논현로150길 35 1층 102호",
+      "restaurant_img": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200227_234%2F1582746081024W1rx6_JPEG%2Fce7vUbW_uZBvbUWa79ueoSE4.JPG.jpg",
+      "lat": 37.520065,
+      "lon": 127.031324,
+      "avg_star": 4.5,
       "favorite": true,
       "menuList": [
         {
-          "name": "스시 오마카세(런치)",
-          "price": 55000
+          "name": "류 오마카세 (1인)",
+          "price": 90000
+        },
+        {
+          "name": "사케 오마카세 (1인)",
+          "price": 70000
+        },
+        {
+          "name": "모둠회",
+          "price": 60000
         }
       ],
       "commentList": [
         {
           "comment_id": "23r45",
-          "nickname": "jeeyeon",
-          "profile_img": "",
-          "star": 3,
-          "content": "게시글 2번의댓글",
+          "nickname": "ohmy",
+          "profile_img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+          "star": 5.0,
+          "content": "압구정 번화가보다는 여기가 훨조용하고 분위기도 좋고 맛도 좋은듯 ㅎㅎㅎㅎ",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        },
+        {
+          "comment_id": "23r45",
+          "nickname": "Kase",
+          "profile_img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+          "star": 4.2,
+          "content": "여기안주 진짜맛있어요 ㅎㅎ 오마카세집인줄 알았는데 알고보니 안주맛집…!! 혼술하기도 좋네요~! 사장님도 친절하시고 안주가 엄청푸짐해요 ㅋㅋㅋㅋ골뱅이무침먹다가 남는거있냐고 물어볼정도,,여긴 아지트예정입니다 ㅎㅎ",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        },
+        {
+          "comment_id": "23r45",
+          "nickname": "sushi",
+          "profile_img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+          "star": 4.8,
+          "content": "굿",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        },
+        {
+          "comment_id": "23r45",
+          "nickname": "sashimi",
+          "profile_img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+          "star": 4.8,
+          "content": "맛있네요",
           "createdAt": "2022-09-03T10:56:07.8041751",
           "modifiedAt": "2022-09-03T10:56:07.8041751"
         },
@@ -30,7 +65,7 @@
           "comment_id": "2123r45",
           "nickname": "Daniel",
           "profile_img": "https://velog.velcdn.com/images/danchoi/profile/56f31c7c-29d1-4496-bc0c-6f084d8c2fcb/image.png",
-          "star": 3,
+          "star": 5.0,
           "content": "맛있어요",
           "createdAt": "2022-09-05T10:56:07.8041751",
           "modifiedAt": "2022-09-05T10:56:07.8041751"
@@ -45,8 +80,8 @@
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
       "lat": 37.55965,
       "lon": 126.92578,
-      "avg_star": 3.0,
-      "favorite": true,
+      "avg_star": 4.2,
+      "favorite": false,
       "menuList": [
         {
           "name": "스시 오마카세(런치)",
@@ -185,7 +220,7 @@
       "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
       "lat": 37.55965,
       "lon": 126.92578,
-      "avg_star": 3.0,
+      "avg_star": 4.2,
       "favorite": true,
       "menuList": [
         {
@@ -198,7 +233,7 @@
           "comment_id": "124r23fwe",
           "nickname": "jeeyeon",
           "profile_img": "",
-          "star": 3,
+          "star": 3.6,
           "content": "게시글 2번의댓글",
           "createdAt": "2022-09-03T10:56:07.8041751",
           "modifiedAt": "2022-09-03T10:56:07.8041751"

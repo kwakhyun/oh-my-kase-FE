@@ -7,16 +7,15 @@ const Information = ({introduce, address, lat, lon}) => {
     <>
       <StyledText size="22px">Information</StyledText>
       <StyledText size="16px">{introduce}</StyledText>
-      <StyledText size="18px" line='10px'>{address}</StyledText>
-      <StyledText size="15px"></StyledText>
+      <StyledText size="16px" line='20px'>{address}</StyledText>
       <Map lat={lat} lon={lon}/>
     </>
   );
 };
 
 export default Information;
-const StyledText = styled.h1`
+const StyledText = styled.div`
   font-size: ${(props) => props.size || "25px"};
-  margin: 30px 45px 40px;
+  margin: 30px 45px 30px;
   line-height: ${(props) => props.line || "30px"};
 `;

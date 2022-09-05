@@ -17,7 +17,7 @@ console.log(commentList)
 };
 
 export default Review;
-const StyledText = styled.h1`
+const StyledText = styled.div`
   font-size: ${(props) => props.size || "25px"};
   margin: 30px auto 40px;
   line-height: ${(props) => props.line || "30px"};

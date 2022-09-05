@@ -10,10 +10,10 @@ const ReviewItem = ({nickname, profile_img, star, content, createdAt}) => {
       <StyledSpan style={{"float":"left"}}>{postedAt}</StyledSpan>
       </div>
       <StyledAuthorDiv>
-      <StyledImg src={profile_img} alt="(img) :"></StyledImg>
+      <StyledImg src={profile_img} alt=":"></StyledImg>
       <div>
       <StyledSpan>{nickname}</StyledSpan>
-      <Rating star={star}/>
+      <Rating star={star} size={"12px"} margin={"25px auto 10px"}/>
       </div>
       <StyledSpan>{content}</StyledSpan>
       </StyledAuthorDiv>
@@ -32,12 +32,14 @@ font-size: 15px;
 `
 const StyledImg = styled.img`
 height: 50px;
+width: 50px;
+object-fit: cover;
 border-radius: 50%;
 margin: 10px;
 float: left;
 `
 const StyledAuthorDiv = styled.div`
 display: grid;
-grid-template-columns: 1fr 2fr 7fr;
+grid-template-columns: 2fr 5fr 9fr;
 word-break:break-all;
 `

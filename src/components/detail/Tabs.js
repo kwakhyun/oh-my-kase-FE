@@ -45,13 +45,13 @@ const Tabs = ({ item }) => {
 
   return (
     <>
-    <StyledTab>
-      {tabArray.map((tab, idx) => 
-         <StyledTabTitle key={idx}>{tab.tabTitle}</StyledTabTitle>
-      )}
-    </StyledTab>
-    <StyledDiv>{tabArray[tabIndex].tabContent}</StyledDiv>
-  </>
+      <StyledTab>
+        {tabArray.map((tab, idx) => (
+          <StyledTabTitle key={idx}>{tab.tabTitle}</StyledTabTitle>
+        ))}
+      </StyledTab>
+      <StyledDiv>{tabArray[tabIndex].tabContent}</StyledDiv>
+    </>
   );
 };
 
@@ -65,6 +65,7 @@ const StyledDiv = styled.div`
   border-radius: 5px;
   font-size: 0.7em;
   box-shadow: 2px 80px 30px grey;
+  word-break: break-all;
 `;
 const StyledTab = styled.div`
   display: grid;
@@ -76,6 +77,4 @@ const StyledTab = styled.div`
     border-bottom: 1px solid black;
   }
 `;
-const StyledTabTitle = styled.div`
-
-`
+const StyledTabTitle = styled.div``;

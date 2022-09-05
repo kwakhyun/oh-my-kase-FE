@@ -5,9 +5,9 @@ import {
 
   TiStarHalf,
 } from "react-icons/ti";
-const Rating = ({ star }) => {
+const Rating = ({ star, size, margin }) => {
   return (
-    <StyledText size="18px">
+    <StyledText size={size} margin={margin}>
       <StarDiv>
       <StyledStars>
         {star < 0.7 ? (
@@ -70,7 +70,7 @@ const Rating = ({ star }) => {
           star
         )}
       </StyledStars>
-      <h4>{star}</h4>
+      <span>{star}</span>
       </StarDiv>
     </StyledText>
   );
@@ -78,8 +78,8 @@ const Rating = ({ star }) => {
 
 export default Rating;
 const StyledText = styled.div`
-  font-size: ${(props) => props.size || "25px"};
-  margin: 0 auto 0;
+  font-size: ${(props) => props.size || "18px"};
+  margin: ${(props) => props.margin || "10px auto"};
 `;
 const StyledStars = styled.div`
   color: #ffcc33;
