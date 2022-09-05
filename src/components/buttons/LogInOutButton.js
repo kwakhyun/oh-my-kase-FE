@@ -1,25 +1,32 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-const MyPageButton = () => {
+const LogInOutButton = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); //테스트용 코드
   const navigate = useNavigate();
-  return (
-    //TODO:로그인시에만 보이도록 조건문 
-    <StyledMyPageButton src="https://velog.velcdn.com/images/danchoi/post/fac9c456-b1d5-41fd-b7e0-21a3feb2149f/image.png"
+  return isLoggedIn ? (
+    <StyledMyPageButton
       onClick={() => {
-        navigate("/mypage");
+        //navigate("/logout");
       }}
-    />
-  )
+    ></StyledMyPageButton>
+  ) : (
+    <StyledMyPageButton
+      onClick={() => {
+        navigate("/login");
+      }}
+    >
+      Login
+    </StyledMyPageButton>
+  );
 };
 
-export default MyPageButton;
+export default LogInOutButton;
 
-const StyledMyPageButton = styled.img`
+const StyledMyPageButton = styled.button`
   position: fixed;
   top: 20px;
-  left: 20px;
+  right: 20px;
   background-color: #fff;
   width: 50px;
   height: 50px;

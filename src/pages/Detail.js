@@ -1,50 +1,33 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
-import { TiStar, TiStarOutline } from "react-icons/ti";
-import MyPageButton from "../components/buttons/MyPageButton";
+import LogInOutButton from "../components/buttons/LogInOutButton";
 import DetailInfo from "../components/detail/DetailInfo";
 import DetailImage from "../components/detail/DetailImage";
 import { useDispatch, useSelector } from "react-redux";
-import { getData } from "../redux/modules/mainSlice";
+import { getDetailData } from "../redux/modules/detailSlice";
 import { useParams } from "react-router-dom";
 import Tabs from "../components/detail/Tabs";
+import MyPageButton from "../components/buttons/MyPageButton";
 
 const Detail = () => {
   const dispatch = useDispatch();
   const { restaurant_id } = useParams();
-  const [like, setLike] = useState(false);
-  const items = useSelector((state) =>
-    state.main.data
-  );
-  const item = items.find((item) => item.restaurant_id === restaurant_id)
-
-
-  // const item = items.
+  const item = useSelector((state) => state.detail.data);
   useEffect(() => {
-    dispatch(getData());
-  }, [dispatch]);
-
+    dispatch(getDetailData(restaurant_id));
+  }, [dispatch, restaurant_id]);
+ 
   return (
     <>
       <Header />
       <DetailImage {...item} />
+      <LogInOutButton />
       <MyPageButton />
-      <StyledFavorite>{like ? <TiStar /> : <TiStarOutline />}</StyledFavorite>
       <DetailInfo {...item} />
-      <Tabs item={item}/>
+      <Tabs item={item} />
     </>
   );
 };
 
 export default Detail;
 
-const StyledFavorite = styled.div`
-  font-size: 30px;
-  left: 10px;
-  top: 150px;
-  color: #ffcc33;
-  position: absolute;
-  transform: translateY(-20px);
-  z-index: 1;
-`;

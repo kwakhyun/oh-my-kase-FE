@@ -13,11 +13,11 @@ const List = () => {
   const [ref, inView] = useInView({
     threshold: 1,
   });
+  //infinite scroll =useEffect와 useState를 통해 배열에 추가
+  // 로드되는 요소의 마지막 데이터 아이디를 같이 넘기는 방식으로 page => x
+ 
   const {district} = useParams()
-  const test = useSelector(state=>state)
-  console.log(test)
   const districts = useSelector(state=>state.main.data)
-  console.log(districts)
   const filterDistrict = districts.filter((item)=>item.address.split(' ')[1]===district)
   const loadItems = useCallback(async () => {
     setLoading(true);
@@ -26,11 +26,12 @@ const List = () => {
     });
     setLoading(false);
   }, [page]);
-  console.log(items)
   // `getDataScroll` 이 바뀔 때 마다 함수 실행
   useEffect(() => {
     loadItems();
   }, [loadItems]);
+
+
   useEffect(() => {
     if (inView && !loading) {
       setTimeout(() => {

@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Information from "./Information";
 import Menu from "./Menu";
-import Review from "./Review";
+import Review from "./review/Review";
 
 const Tabs = ({ item }) => {
   const [tabIndex, setTabIndex] = useState(0);
+  const commentLength = item.commentList?.length
+  useEffect(()=>{
 
+  },[])
   const tabArray = [
     {
       tabTitle: (
@@ -36,7 +39,7 @@ const Tabs = ({ item }) => {
           className={tabIndex === 2 ? "select" : ""}
           onClick={() => setTabIndex(2)}
         >
-          리뷰
+          리뷰 ({commentLength})
         </div>
       ),
       tabContent: <Review {...item} />,
