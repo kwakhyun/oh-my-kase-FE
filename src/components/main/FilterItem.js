@@ -15,7 +15,7 @@ const FilterItem = ({ item, setSelectDistrict }) => {
 };
 export default FilterItem;
 const StyledDiv = styled.div`
-  width: 70px;
+  width: 65px;
   height: 25px;
   padding: 5px;
 `;

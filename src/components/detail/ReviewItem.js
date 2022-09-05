@@ -10,7 +10,10 @@ const ReviewItem = ({nickname, profile_img, star, content, createdAt}) => {
       <StyledSpan style={{"float":"left"}}>{postedAt}</StyledSpan>
       </div>
       <StyledAuthorDiv>
-      <StyledImg src={profile_img} alt=":"></StyledImg>
+        {profile_img?
+        <StyledImg src={profile_img} alt=":"></StyledImg>:
+        <StyledImg src="https://velog.velcdn.com/images/danchoi/post/fac9c456-b1d5-41fd-b7e0-21a3feb2149f/image.png" alt=":"></StyledImg>
+      }
       <div>
       <StyledSpan>{nickname}</StyledSpan>
       <Rating star={star} size={"12px"} margin={"25px auto 10px"}/>

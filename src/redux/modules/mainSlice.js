@@ -2,6 +2,7 @@ import axios from "axios";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const URL = process.env.REACT_APP_SERVER_URL;
+const ServerURL = process.env.REACT_APP_RESTAURANT_URL;
 
 const instance = axios.create({ baseURL: URL});
 
@@ -20,8 +21,8 @@ export const getData = createAsyncThunk(
   "data/GET_DATA",
   async (payload, thunkAPI) => {
     try {
-      const response = await axios.get(URL);
-      return thunkAPI.fulfillWithValue(response.data);
+      const response = await axios.get("http://3.34.48.111/api/restaurant");
+      return thunkAPI.fulfillWithValue(response.data.data);
     } catch (error) {
       return thunkAPI.fulfillWithValue(error);
     }

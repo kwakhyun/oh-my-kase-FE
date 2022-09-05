@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { updateData } from "../../redux/modules/mainSlice";
 
 const Item = React.forwardRef((item, ref) => {
-  const { restaurant_id, name, address, restaurant_img, avg_star, favorite } =
+  const { restaurant_id, name, address, img, avg_star, favorite } =
     item;
   const navigate = useNavigate();
   const [like, setLike] = useState(false);
@@ -18,13 +18,14 @@ const Item = React.forwardRef((item, ref) => {
       favorite: !favorite,
     };
     dispatch(updateData(updateFavorite));
-    console.log(restaurant_id)
-    console.log(favorite)
+    console.log(restaurant_id);
+    console.log(favorite);
   };
+
   return (
     <StyledDiv>
       <StyledImg
-        src={restaurant_img}
+        src={img}
         alt="img"
         onClick={() => {
           navigate("/detail/" + restaurant_id);
