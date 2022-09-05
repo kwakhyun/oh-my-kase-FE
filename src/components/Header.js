@@ -6,13 +6,18 @@ const Header = () => {
   
   return (
     <StyledHeader onClick={()=>{navigate('/전체')}}>
-      <StyledLogo
-        src="https://user-images.githubusercontent.com/78805018/188070700-b0229f3f-85f6-4f0f-a5be-dd5a05ef3da8.png"
+      {/* <StyledLogo
+        src="https://user-images.githubusercontent.com/78805018/188504828-ba2652ca-038f-44c9-a66d-5ca8ed85cf81.png"
         alt="img"
       />
-      <StyledText>
-      OhMyKase
-      </StyledText>
+      <StyledLogo
+        src="https://user-images.githubusercontent.com/78805018/188503427-f69409f8-15b6-4fd7-aa2b-13eab0c19ec0.png"
+        alt="img"
+      /> */}
+      <StyledLogo
+        src="https://user-images.githubusercontent.com/78805018/188122251-16068eba-6562-49c8-9669-086f68e2b3fe.png"
+        alt="img"
+      />
     </StyledHeader>
   );
 };
@@ -21,7 +26,8 @@ width: 300px;
 margin: 30px auto;
 `;
 const StyledLogo = styled.img`
-  width: 160px;
+  width: 250px;
+  transition: .5s
 `;
 const StyledText = styled.h1`
 position: absolute;
