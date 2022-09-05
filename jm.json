@@ -1,300 +1,356 @@
 {
   "data": [
     {
-      "id":"asdwaq",
-      "name": "오마카세 오사이초밥 건대본점",
-      "address": "서울 광진구 군자로 14 1층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/1.jfif",
-      "avg_star": 4.0,
-      "favorite": false
+      "restaurant_id": "45454531",
+      "name": "류 오마카세",
+      "introduce": "오마카세 경력 25년의 셰프 와 산지직송 제철 식자재 의 정성이 담긴 요리",
+      "address": "서울 강남구 논현로150길 35 1층 102호",
+      "restaurant_img": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200227_234%2F1582746081024W1rx6_JPEG%2Fce7vUbW_uZBvbUWa79ueoSE4.JPG.jpg",
+      "lat": 37.520065,
+      "lon": 127.031324,
+      "avg_star": 4.5,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "류 오마카세 (1인)",
+          "price": 90000
+        },
+        {
+          "name": "사케 오마카세 (1인)",
+          "price": 70000
+        },
+        {
+          "name": "모둠회",
+          "price": 60000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "23r45",
+          "nickname": "ohmy",
+          "profile_img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+          "star": 5.0,
+          "content": "압구정 번화가보다는 여기가 훨조용하고 분위기도 좋고 맛도 좋은듯 ㅎㅎㅎㅎ",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        },
+        {
+          "comment_id": "23r45",
+          "nickname": "Kase",
+          "profile_img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+          "star": 4.2,
+          "content": "여기안주 진짜맛있어요 ㅎㅎ 오마카세집인줄 알았는데 알고보니 안주맛집…!! 혼술하기도 좋네요~! 사장님도 친절하시고 안주가 엄청푸짐해요 ㅋㅋㅋㅋ골뱅이무침먹다가 남는거있냐고 물어볼정도,,여긴 아지트예정입니다 ㅎㅎ",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        },
+        {
+          "comment_id": "23r45",
+          "nickname": "sushi",
+          "profile_img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+          "star": 4.8,
+          "content": "굿",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        },
+        {
+          "comment_id": "23r45",
+          "nickname": "sashimi",
+          "profile_img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+          "star": 4.8,
+          "content": "맛있네요",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        },
+        {
+          "comment_id": "2123r45",
+          "nickname": "Daniel",
+          "profile_img": "https://velog.velcdn.com/images/danchoi/profile/56f31c7c-29d1-4496-bc0c-6f084d8c2fcb/image.png",
+          "star": 5.0,
+          "content": "맛있어요",
+          "createdAt": "2022-09-05T10:56:07.8041751",
+          "modifiedAt": "2022-09-05T10:56:07.8041751"
+        }
+      ]
     },
     {
-      "id":"asdwaaq",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 성동구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 4.2,
+      "favorite": false,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
     },
     {
-      "id":"asdwaasdq",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqqwe",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqqwajosdh",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqqwdkjl",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqasdqw",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaasdwqq",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqasdqw",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqqgwad",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq12ewd",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqadw",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq12wed",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq12eewf",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq2t4e",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqqwadsc",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq12wed",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq12eqwdwfgrt",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqqw2ee",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq21edw",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqes4tgr",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq12dew",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq23r",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqy45h",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqrfw3",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq234r5rt6y",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwadad12ed",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq34tge55re",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaw4frerwsq",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq34t",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqfewsdf",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqwgrre",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqe4t",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq7r6ity",
-      "name": "오모테나시 오마카세",
-      "address": "서울 마포구 월드컵북로2길 82",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/3.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaqaq2ed",
-      "name": "오마카세 오사이초밥 홍대점",
-      "address": "서울 마포구 연희로1길 11 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/4.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwaq23",
-      "name": "한우 오마카세 압도",
-      "address": "서울 용산구 독막로5길 33 2층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/5.jpg",
-      "avg_star": 4.0,
-      "favorite": false
-    },
-    {
-      "id":"asdwa234rfgt5rq",
-      "name": "고래소년 오마카세",
-      "address": "서울 성동구 왕십리로 241 서울숲 더샵 파크에비뉴 B1층",
-      "img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 영등포구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
       "avg_star": 3.0,
-      "favorite": false
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 노원구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 3.0,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 서대문구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 3.0,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 중구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 3.0,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 동대문구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 4.2,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3.6,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "113cdfr",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 은평구 서울숲 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 3.0,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124r23fwe",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "1435235",
+      "name": "A 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 송파구 방이동 213 2층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 3.0,
+      "favorite": false,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "123451233",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "1132",
+      "name": "B 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 용산구 이태원 더샵 파크에비뉴 B1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 37.55965,
+      "lon": 126.92578,
+      "avg_star": 3.0,
+      "favorite": true,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "1324q",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
+    },
+    {
+      "restaurant_id": "2",
+      "name": "고래소년 오마카세",
+      "introduce": "넓은 바다의 푸르름 사계절이 만드는 신서함 음식에 가치를 담다.",
+      "address": "서울 관악구 신림동 952 1층",
+      "restaurant_img": "https://postimagestorage.s3.amazonaws.com/mini_project/2.jfif",
+      "lat": 7.55679520000029,
+      "lon": 127.04003899999987,
+      "avg_star": 3.0,
+      "favorite": false,
+      "menuList": [
+        {
+          "name": "스시 오마카세(런치)",
+          "price": 55000
+        }
+      ],
+      "commentList": [
+        {
+          "comment_id": "124",
+          "nickname": "jeeyeon",
+          "profile_img": "",
+          "star": 3,
+          "content": "게시글 2번의댓글",
+          "createdAt": "2022-09-03T10:56:07.8041751",
+          "modifiedAt": "2022-09-03T10:56:07.8041751"
+        }
+      ]
     }
   ]
 }

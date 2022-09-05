@@ -12,15 +12,13 @@ import Tabs from "../components/detail/Tabs";
 
 const Detail = () => {
   const dispatch = useDispatch();
-  const { id } = useParams();
+  const { restaurant_id } = useParams();
   const [like, setLike] = useState(false);
   const items = useSelector((state) =>
     state.main.data
   );
-  const item = items.find((item) => item.id === id)
+  const item = items.find((item) => item.restaurant_id === restaurant_id)
 
-  const test = useSelector(state=>state)
-  console.log(test)
 
   // const item = items.
   useEffect(() => {
@@ -34,7 +32,7 @@ const Detail = () => {
       <MyPageButton />
       <StyledFavorite>{like ? <TiStar /> : <TiStarOutline />}</StyledFavorite>
       <DetailInfo {...item} />
-      <Tabs />
+      <Tabs item={item}/>
     </>
   );
 };

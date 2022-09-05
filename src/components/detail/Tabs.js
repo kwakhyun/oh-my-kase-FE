@@ -4,73 +4,53 @@ import Information from "./Information";
 import Menu from "./Menu";
 import Review from "./Review";
 
-const Tabs = () => {
-  const [tabSelect, setTabSelect] = useState("menu");
+const Tabs = ({ item }) => {
+  const [tabIndex, setTabIndex] = useState(0);
+
+  const tabArray = [
+    {
+      tabTitle: (
+        <div
+          className={tabIndex === 0 ? "select" : ""}
+          onClick={() => setTabIndex(0)}
+        >
+          메뉴
+        </div>
+      ),
+      tabContent: <Menu {...item} />,
+    },
+    {
+      tabTitle: (
+        <div
+          className={tabIndex === 1 ? "select" : ""}
+          onClick={() => setTabIndex(1)}
+        >
+          정보
+        </div>
+      ),
+      tabContent: <Information {...item} />,
+    },
+    {
+      tabTitle: (
+        <div
+          className={tabIndex === 2 ? "select" : ""}
+          onClick={() => setTabIndex(2)}
+        >
+          리뷰
+        </div>
+      ),
+      tabContent: <Review {...item} />,
+    },
+  ];
+
   return (
     <>
       <StyledTab>
-        {tabSelect === "menu" ? (
-          <StyledSelectedTabItem
-            onClick={() => {
-              setTabSelect("menu");
-            }}
-          >
-            메뉴
-          </StyledSelectedTabItem>
-        ) : (
-          <StyledTabItem
-            onClick={() => {
-              setTabSelect("menu");
-            }}
-          >
-            메뉴
-          </StyledTabItem>
-        )}
-        {tabSelect === "information" ? (
-          <StyledSelectedTabItem
-            onClick={() => {
-              setTabSelect("information");
-            }}
-          >
-            정보
-          </StyledSelectedTabItem>
-        ) : (
-          <StyledTabItem
-            onClick={() => {
-              setTabSelect("information");
-            }}
-          >
-            정보
-          </StyledTabItem>
-        )}
-        {tabSelect === "review" ? (
-          <StyledSelectedTabItem
-            onClick={() => {
-              setTabSelect("review");
-            }}
-          >
-            리뷰
-          </StyledSelectedTabItem>
-        ) : (
-          <StyledTabItem
-            onClick={() => {
-              setTabSelect("review");
-            }}
-          >
-            리뷰
-          </StyledTabItem>
-        )}
+        {tabArray.map((tab, idx) => (
+          <StyledTabTitle key={idx}>{tab.tabTitle}</StyledTabTitle>
+        ))}
       </StyledTab>
-      <hr />
-      <StyledDiv>
-        {tabSelect === "menu" ? (
-          <Menu />
-        ) : tabSelect === "information" ? (
-          <Information />
-        ) : tabSelect === "review" ? (
-          <Review />
-        ) : null}
-      </StyledDiv>
+      <StyledDiv>{tabArray[tabIndex].tabContent}</StyledDiv>
     </>
   );
 };
@@ -84,25 +64,17 @@ const StyledDiv = styled.div`
   margin: 20px auto;
   border-radius: 5px;
   font-size: 0.7em;
-  box-shadow: 1px 1px 15px grey;
+  box-shadow: 2px 80px 30px grey;
+  word-break: break-all;
 `;
-
 const StyledTab = styled.div`
-  display: flex;
-  width: 80vw;
-  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  div {
+    padding: 10px 0;
+  }
+  .select {
+    border-bottom: 1px solid black;
+  }
 `;
-const StyledTabItem = styled.div`
-  width: 200px;
-  padding: 5px;
-  font-size: 25px;
-  margin: auto;
-`;
-const StyledSelectedTabItem = styled.div`
-  width: 200px;
-  padding: 5px;
-  font-size: 25px;
-  margin: auto;
-  text-decoration-line: underline;
-  text-decoration-thickness: 3px;
-`;
+const StyledTabTitle = styled.div``;

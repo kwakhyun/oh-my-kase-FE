@@ -1,19 +1,45 @@
 import React from "react";
 import styled from "styled-components";
-const ReviewItem = () => {
+import Rating from "./Rating";
+const ReviewItem = ({nickname, profile_img, star, content, createdAt}) => {
+
+  const postedAt = createdAt.slice(0,10)
   return (
     <StyledDiv>
-      <h3>time</h3>
-      <h1>name</h1>
       <div>
-        <h1>rating</h1>
-        <h1>star</h1>
+      <StyledSpan style={{"float":"left"}}>{postedAt}</StyledSpan>
       </div>
-      <h1>content</h1>
+      <StyledAuthorDiv>
+      <StyledImg src={profile_img} alt=":"></StyledImg>
+      <div>
+      <StyledSpan>{nickname}</StyledSpan>
+      <Rating star={star} size={"12px"} margin={"25px auto 10px"}/>
+      </div>
+      <StyledSpan>{content}</StyledSpan>
+      </StyledAuthorDiv>
     </StyledDiv>
   );
 };
 export default ReviewItem;
 const StyledDiv = styled.div`
-margin: 20px;
+font-family: Arial, Helvetica, sans-serif;
+margin: 5px 20px;
+display: grid;
+grid-template-rows: 1fr 2fr;
+`
+const StyledSpan = styled.span`
+font-size: 15px;
+`
+const StyledImg = styled.img`
+height: 50px;
+width: 50px;
+object-fit: cover;
+border-radius: 50%;
+margin: 10px;
+float: left;
+`
+const StyledAuthorDiv = styled.div`
+display: grid;
+grid-template-columns: 2fr 5fr 9fr;
+word-break:break-all;
 `
