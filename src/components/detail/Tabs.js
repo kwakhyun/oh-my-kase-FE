@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Information from "./Information";
 import Menu from "./Menu";
-import Review from "./Review";
+import Review from "./review/Review";
 
 const Tabs = ({ item }) => {
   const [tabIndex, setTabIndex] = useState(0);
