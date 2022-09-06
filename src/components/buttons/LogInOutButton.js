@@ -1,15 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+
 const LogInOutButton = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); //테스트용 코드
   const navigate = useNavigate();
-  return isLoggedIn ? (
+  const token = localStorage.getItem("accessToken");
+
+  return token ? (
     <StyledMyPageButton
       onClick={() => {
-        //navigate("/logout");
+        localStorage.removeItem("accessToken");
+        localStorage.removeItem("refreshToken");
+        alert("로그아웃 되었습니다.");
+        navigate("/");
       }}
-    ></StyledMyPageButton>
+    >
+      Logout
+    </StyledMyPageButton>
   ) : (
     <StyledMyPageButton
       onClick={() => {
@@ -37,6 +44,7 @@ const StyledMyPageButton = styled.button`
   transition: 0.3s;
   box-shadow: 1px 1px 15px grey;
   z-index: 1;
+  cursor: pointer;
   &:hover {
     background-color: #ddd;
     color: white;
