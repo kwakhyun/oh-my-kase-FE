@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
-import { useQuery } from "react-query";
+import React, { useRef, useState } from "react";
+import { useQuery, useMutation, useQueryClient } from "react-query";
 import { userAPI } from "../../shared/api";
 import styled from "styled-components";
 import Button from "../buttons/Button";
+import axios from "axios";
 
 const Edit = () => {
   const nickname = useRef(null);
@@ -17,26 +18,51 @@ const Edit = () => {
   });
 
   const myInfo = data?.data.data;
-  console.log(myInfo);
+
+  const queryClient = useQueryClient();
+  const { mutate } = useMutation(userAPI.editMyInfo, {
+    onSuccess: () => {
+      alert("저장 완료!");
+      queryClient.invalidateQueries("myInfo");
+    },
+  });
+
+  const file = useRef(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("file", file.current.files[0]);
+    formData.append(
+      "editData",
+      new Blob([JSON.stringify({ nickname: nickname.current.value })], {
+        type: "application/json",
+      })
+    );
+    mutate(formData);
+  };
 
   return (
     <div>
-      <StyledImgDiv>
-        {myInfo?.profile_img !== "" ? (
-          <img src={myInfo?.profile_img} alt="logo" />
-        ) : (
-          <img
-            src="https://i.pinimg.com/originals/4e/4f/da/4e4fda126c6778bfc2b2a678b58342df.jpg"
-            alt="logo"
-          />
-        )}
-      </StyledImgDiv>
-      <StyledInputDiv>
-        <input type="text" ref={nickname} defaultValue={myInfo?.nickname} />
-      </StyledInputDiv>
-      <StyledButtonDiv>
-        <Button onClick={() => {}}>저장하기</Button>
-      </StyledButtonDiv>
+      <form name="file" encType="multipart/form-data" onSubmit={handleSubmit}>
+        <StyledImgDiv>
+          {myInfo?.profile_img !== "" ? (
+            <img src={myInfo?.profile_img} alt="logo" />
+          ) : (
+            <img
+              src="https://i.pinimg.com/originals/4e/4f/da/4e4fda126c6778bfc2b2a678b58342df.jpg"
+              alt="logo"
+            />
+          )}
+          <input type="file" name="file" ref={file} />
+        </StyledImgDiv>
+        <StyledInputDiv>
+          <input type="text" ref={nickname} defaultValue={myInfo?.nickname} />
+        </StyledInputDiv>
+        <StyledButtonDiv>
+          <Button type="submit">저장하기</Button>
+        </StyledButtonDiv>
+      </form>
     </div>
   );
 };

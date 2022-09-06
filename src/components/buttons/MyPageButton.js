@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 const MyPageButton = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); //테스트용 코드
   const navigate = useNavigate();
   return (
     //TODO:로그인시에만 보이도록 조건문 
