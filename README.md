@@ -3,10 +3,9 @@
 
 ![ohmykase](https://user-images.githubusercontent.com/78805018/188122251-16068eba-6562-49c8-9669-086f68e2b3fe.png)
 
-![omk2](https://user-images.githubusercontent.com/78805018/188541711-1d8a5e6e-8559-4c80-b5ee-fc5ea35b57d2.png)
-
 ![OMK](https://user-images.githubusercontent.com/78805018/188540340-1798ad46-ab7b-438d-8105-579376f3c43f.png)
 
+![OMKS](https://user-images.githubusercontent.com/78805018/188594860-c7225de1-176b-49b3-8a23-1a0145281468.png)
 
 
 ## 📢 프로젝트 소개
