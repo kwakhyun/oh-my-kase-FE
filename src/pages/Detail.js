@@ -8,6 +8,7 @@ import { getDetailData } from "../redux/modules/detailSlice";
 import { useParams } from "react-router-dom";
 import Tabs from "../components/detail/Tabs";
 import MyPageButton from "../components/buttons/MyPageButton";
+import Footer from "./Footer";
 
 const Detail = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const Detail = () => {
       <MyPageButton />
       <DetailInfo {...item} />
       <Tabs item={item} />
+      <Footer/>
     </>
   );
 };

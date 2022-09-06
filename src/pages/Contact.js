@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../components/Header";
+import Footer from "./Footer";
 const Contact = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const Contact = () => {
         <StyledParagraph>Email</StyledParagraph>
         <StyledParagraph>ohmykase.official@gmail.com</StyledParagraph>
       </StyledDiv>
+      <Footer/>
     </>
   );
 };
@@ -26,7 +28,7 @@ const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 70vw;
-  margin: 20px auto 0;
+  margin: 20px auto 50px;
   border-radius: 7px;
   font-size: 0.7em;
   box-shadow: 1px 1px 15px grey;

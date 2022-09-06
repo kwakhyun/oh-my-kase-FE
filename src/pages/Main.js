@@ -7,6 +7,7 @@ import { getData } from '../redux/modules/mainSlice';
 import MyPageButton from '../components/buttons/MyPageButton';
 import BestPick from '../components/main/Best/BestPick';
 import SideNav from '../components/main/sidemenu/SideNav';
+import Footer from './Footer';
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -17,11 +18,11 @@ const Main = () => {
   return (
     <>
       <Header/>
-      <MyPageButton/>
       <TopScrollButton/>
       <SideNav/>
       <BestPick/>
       <List/>
+      <Footer/>
     </>
   );
 };

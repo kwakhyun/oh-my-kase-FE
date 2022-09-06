@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { IoMdArrowDropupCircle } from "react-icons/io";
 const TopScrollButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -7,29 +8,22 @@ const TopScrollButton = () => {
       behavior: "smooth",
     });
   };
-  return <StyledTopScrollButton onClick={scrollToTop}>TOP</StyledTopScrollButton>;
+  return (
+    <StyledTopScrollButton onClick={scrollToTop}>
+      <IoMdArrowDropupCircle />
+    </StyledTopScrollButton>
+  );
 };
 
 export default TopScrollButton;
 
-const StyledTopScrollButton = styled.button`
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  margin: 5px 2px;
-  height: 30px;
-  width: 30px;
-  background-color: white;
-  width: "100px";
-  font-size: 10px;
+const StyledTopScrollButton = styled.div`
+  background-color: transparent;
+  text-align: center;
+  font-size: 45px;
   color: #aaa;
-  border-radius: 50%;
-  border: none;
-  transition: 0.3s;
-  box-shadow: 1px 1px 15px grey;
-
-  &:hover {
-    background-color: #bbb;
-    color: white;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
 `;

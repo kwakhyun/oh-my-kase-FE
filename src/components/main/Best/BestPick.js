@@ -22,7 +22,7 @@ const BestPick = () => {
 export default BestPick;
 const StyledDiv = styled.div`
 display: flex;
-width: 93vw;
+width: 95vw;
 height: 265px;
 margin: 10px 20px 5px;
 overflow-x: scroll;

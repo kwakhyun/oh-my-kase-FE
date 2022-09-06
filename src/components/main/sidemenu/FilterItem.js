@@ -1,11 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { getRegionData } from "../../../redux/modules/mainSlice";
 const FilterItem = ({ item, setSelectDistrict }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch()
   const sendData = () => {
-    navigate("/" + item);
-    setSelectDistrict(item);
+    navigate("/");
+    dispatch(getRegionData(item))
   };
   return (
     <>
