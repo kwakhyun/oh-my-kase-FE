@@ -1,7 +1,6 @@
-import axios, { Axios } from "axios";
+import axios from "axios";
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-// import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import Button from "../components/buttons/Button";
 import Header from "../components/Header";
@@ -10,43 +9,30 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
 
-  // 로그인 요청 테스트
-  const loginTest = () => {
+  const onLogin = () => {
     axios
       .post("http://3.34.48.111/api/member/login", {
         email: email.current.value,
         password: password.current.value,
       })
       .then((response) => {
-        // if (response.payload.success) {
-        console.log("로그인 성공!");
         console.log(response);
-
-        localStorage.setItem("accessToken", response.headers["authorization"]);
-        localStorage.setItem("refreshToken", response.headers["refresh-token"]);
-
-        axios.defaults.headers.common["Authorization"] =
-          localStorage.getItem("accessToken");
-
-        // axios.get("api/user").then((response) => {
-        //   console.log(response);
-        // });
-        // }
-      });
-  };
-
-  const postTest = (restaurant_id) => {
-    axios
-      .post(`http://3.34.48.111/api/auth/favorite/`, {
-        restaurant_id: restaurant_id,
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
+        if (response.data.success) {
+          localStorage.setItem(
+            "accessToken",
+            response.headers["authorization"]
+          );
+          localStorage.setItem(
+            "refreshToken",
+            response.headers["refresh-token"]
+          );
+          navigate("/");
+        } else if (response.status !== 200) {
+          alert("서버와 연결에 실패했습니다.");
+        } else {
+          alert("이메일과 비밀번호를 확인해주세요.");
+        }
       });
   };
 
@@ -55,29 +41,35 @@ const Login = () => {
       <Header />
       <StyledSpan>Login</StyledSpan>
       <StyledInputDiv>
-        <div className="emailInput">
-        <p>Email*</p>
-        <input type="text" ref={email} placeholder="Enter your email" />
-        </div>
-        <div className="passwordInput">
-        <p>Passwords*</p>
-        <input type="password" ref={password} placeholder="Enter your password" />
-        </div>
+        <span>Email*</span>
+        <input
+          type="email"
+          ref={email}
+          placeholder="Enter your email"
+          autoFocus
+        />
+        <span>Passwords*</span>
+        <input
+          type="password"
+          ref={password}
+          placeholder="Enter your password"
+        />
+        <div className="error_message"></div>
       </StyledInputDiv>
       <StyledButtonDiv>
         <Button
           onClick={() => {
             if (email.current.value === "") {
-              alert("이메일을 입력해주세요.");
-              return;
+              email.current.focus();
+              document.querySelector(".error_message").innerHTML =
+                "이메일을 입력해주세요.";
             } else if (password.current.value === "") {
-              alert("비밀번호를 입력해주세요.");
-              return;
+              password.current.focus();
+              document.querySelector(".error_message").innerHTML =
+                "비밀번호를 입력해주세요.";
+            } else {
+              onLogin();
             }
-            // alert("로그인 성공!");
-            // navigate("/");
-
-            loginTest();
           }}
         >
           Login
@@ -99,9 +91,8 @@ const StyledInputDiv = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 10vh;
+  margin-top: 8vh;
   margin-bottom: 20px;
-
   input {
     width: 50vw;
     height: 30px;
@@ -110,18 +101,17 @@ const StyledInputDiv = styled.div`
     outline: none;
     border: none;
     border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
   }
-  .emailInput{
-    margin-bottom: 10px;
-  }
-  .passwordInput{
-    margin-bottom: 10px;
+  .error_message {
+    color: red;
+    font-size: 12px;
   }
 `;
 
 const StyledButtonDiv = styled.div`
   display: flex;
-  width: 220px;
+  width: 200px;
   margin: auto;
 `;
 export default Login;
