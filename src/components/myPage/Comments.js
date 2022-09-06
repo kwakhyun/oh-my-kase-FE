@@ -25,8 +25,8 @@ const Comment = () => {
 
   return (
     <div>
-      {myComments?.map((item) => {
-        return <CommentsItem key={item.email} item={item} />;
+      {myComments?.map((item, idx) => {
+        return <CommentsItem key={idx} item={item} />;
       })}
     </div>
   );

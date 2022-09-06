@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Stars from './Stars';
+import Stars from './CountingStar';
 
 const ReviewEdit = ({setEditReview, editReview}) => {
   return (
