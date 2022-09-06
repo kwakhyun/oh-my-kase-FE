@@ -8,6 +8,9 @@ import { getDetailData } from "../redux/modules/detailSlice";
 import { useParams } from "react-router-dom";
 import Tabs from "../components/detail/Tabs";
 import MyPageButton from "../components/buttons/MyPageButton";
+import Footer from "./Footer";
+import TopScrollButton from "../components/buttons/TopScrollButton";
+import SideNav from "../components/main/sidemenu/SideNav";
 
 const Detail = () => {
   const dispatch = useDispatch();
@@ -21,10 +24,11 @@ const Detail = () => {
     <>
       <Header />
       <DetailImage {...item} />
-      <LogInOutButton />
-      <MyPageButton />
+      <TopScrollButton/>
+      <SideNav/>
       <DetailInfo {...item} />
       <Tabs item={item} />
+      <Footer/>
     </>
   );
 };

@@ -8,14 +8,15 @@ const instance = axios.create({ baseURL: URL});
 
 const initialState = {
   data: [],
+  region: [],
   isSuccess: true,
   error: null,
 };
 
-export const getDataScroll = async (page, limit) => {
-  const response = await instance.get(`/?_page=${page}&_limit=${limit}`);
-  return response.data;
-};
+// export const getDataScroll = async (page, limit) => {
+//   const response = await instance.get(`/?_page=${page}&_limit=${limit}`);
+//   return response.data;
+// };
 
 export const getData = createAsyncThunk(
   "data/GET_DATA",
@@ -40,6 +41,18 @@ export const updateData = createAsyncThunk(
   }
 );
 
+export const getRegionData = createAsyncThunk(
+  "data/GET_REGION_DATA",
+  async (region, thunkAPI) => {
+    try {
+      const response = await axios.get(`http://3.34.48.111/api/restaurant/region/${region}`);
+      return thunkAPI.fulfillWithValue(response.data.data);
+    } catch (error) {
+      return thunkAPI.fulfillWithValue(error);
+    }
+  }
+);
+
 const main = createSlice({
   name: "main",
   initialState,
@@ -52,6 +65,9 @@ const main = createSlice({
       state.data = state.data.map((item) =>
       item.id === action.payload.restaurant_id ? { ...action.payload } : item
       );
+    },
+    [getRegionData.fulfilled]: (state, action) => {
+      state.region = action.payload
     },
   },
 });

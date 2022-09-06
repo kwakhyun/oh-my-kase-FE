@@ -5,7 +5,7 @@ const Header = () => {
   const navigate = useNavigate()
   
   return (
-    <StyledHeader onClick={()=>{navigate('/전체')}}>
+    <StyledHeader onClick={()=>{navigate('/')}}>
       <StyledLogo
         src="https://user-images.githubusercontent.com/78805018/188594860-c7225de1-176b-49b3-8a23-1a0145281468.png"
         alt="img"
