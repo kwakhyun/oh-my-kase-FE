@@ -15,12 +15,8 @@ const List = () => {
   //infinite scroll =useEffect와 useState를 통해 배열에 추가
   // 로드되는 요소의 마지막 데이터 아이디를 같이 넘기는 방식으로 page => x
   const regions = useSelector((state) => state.main.region);
-  console.log(regions);
   const data = useSelector((state) => state.main.data);
-  console.log(data);
   const {district} = useParams();
-  console.log(district);
-  
 
   return (
     <>

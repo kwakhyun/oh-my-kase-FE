@@ -46,8 +46,6 @@ export const getRegionData = createAsyncThunk(
   async (region, thunkAPI) => {
     try {
       const response = await axios.get(`http://3.34.48.111/api/restaurant/region/${region}`);
-      console.log(response)
-      console.log(response.data)
       return thunkAPI.fulfillWithValue(response.data.data);
     } catch (error) {
       return thunkAPI.fulfillWithValue(error);
@@ -69,7 +67,6 @@ const main = createSlice({
       );
     },
     [getRegionData.fulfilled]: (state, action) => {
-      console.log(action.payload)
       state.region = action.payload
     },
   },

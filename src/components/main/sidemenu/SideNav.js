@@ -1,82 +1,98 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import { MdDehaze, MdClose} from "react-icons/md";
 import { RiArrowDropDownFill } from "react-icons/ri";
-import { FaBars } from "react-icons/fa";
 import Filter from "./Filter";
 import { useNavigate } from "react-router-dom";
-import useOutsideClick from "../../../hooks/useOutsideClick";
+
 const SideNav = () => {
   //로그인에 따른 버튼 변화 테스트 코드
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const ref = useRef()
-  const [openSideNav, setOpenSideNav] = useState(false)
-  const showSideNav = () => setOpenSideNav(!openSideNav)
-  const [openDropDown, setOpenDropDown] = useState(false)
-  // useOutsideClick(ref, ()=>{
-  //     setOpenNav(false)
-  // })
+  const ref = useRef();
+  const [openDropDown, setOpenDropDown] = useState(false);
+
   const navigate = useNavigate();
-  // const openNavHandler = () => {
-  //   setOpenNav(!openNav);
-  // };
-  // const openDropDownHandler = () => {
-  //   setOpenDropDown(!openDropDown);
-  // };
- 
+  const openDropDownHandler = () => {
+    setOpenDropDown(!openDropDown);
+  };
+  const [openNav, setOpenNav] = useState(false);
+
+  const openNavHandler = () => {
+    setOpenNav(!openNav);
+  };
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current?.contains(e.target)) {
+        setOpenNav(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+
   return (
     <>
       <StyledNavButton>
-        <FaBars onClick={showSideNav}/>
+        <MdDehaze onClick={openNavHandler} />
       </StyledNavButton>
-      {openSideNav && 
-      <StyledContainer active={setOpenSideNav}>
-        <StyledNavButton />
-        {isLoggedIn ? (
-          <>
-            <StyledMyPageButton
-              src="https://velog.velcdn.com/images/danchoi/post/fac9c456-b1d5-41fd-b7e0-21a3feb2149f/image.png"
+      {openNav ? (
+        <StyledContainer ref={menuRef}>
+          <StyledNavButton>
+            <MdClose onClick={openNavHandler} />
+          </StyledNavButton>
+          {isLoggedIn ? (
+            <>
+              <StyledMyPageButton
+                src="https://velog.velcdn.com/images/danchoi/post/fac9c456-b1d5-41fd-b7e0-21a3feb2149f/image.png"
+                onClick={() => {
+                  navigate("/mypage");
+                }}
+              />
+              <StyledItem size="20px">00님 환영합니다!</StyledItem>
+            </>
+          ) : (
+            <StyledLogin
               onClick={() => {
-                navigate("/mypage");
+                navigate("/login");
               }}
-            />
-            <StyledItem size="20px">00님 환영합니다!</StyledItem>
-          </>
-        ) : (
-          <StyledLogin
+            >
+              로그인
+            </StyledLogin>
+          )}
+          <StyledDropDown onClick={openDropDownHandler}>
+            지역별 찾기
+            <RiArrowDropDownFill />
+          </StyledDropDown>
+          {openDropDown ? <Filter /> : null}
+          <StyledItem
             onClick={() => {
-              navigate("/login");
+              navigate("/contact");
             }}
           >
-            로그인
-          </StyledLogin>
-        )}
-        <StyledDropDown>
-          지역별 찾기
-          <RiArrowDropDownFill />
-        </StyledDropDown>
-        {openDropDown ? <Filter /> : null}
-        <StyledItem
-          onClick={() => {
-            navigate("/contact");
-          }}
-        >
-          Contact
-        </StyledItem>
-      </StyledContainer>
-}
+            Contact
+          </StyledItem>
+        </StyledContainer>
+      ) : null}
     </>
   );
 };
+
 const StyledNavButton = styled.div`
   position: fixed;
   top: 20px;
   right: 20px;
   background-color: transparent;
-  font-size: 25px;
+  font-size: 35px;
   color: #aaa;
   border: none;
   transition: 0.5s;
-  z-index: 2;
+  z-index: 0;
 `;
 
 const StyledContainer = styled.div`
@@ -115,4 +131,5 @@ const StyledMyPageButton = styled.img`
   border-radius: 50%;
   border: none;
 `;
+
 export default SideNav;

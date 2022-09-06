@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { IoMdArrowDropupCircle } from "react-icons/io";
+import { TbArrowBigUpLines } from "react-icons/tb";
 const TopScrollButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -10,7 +10,7 @@ const TopScrollButton = () => {
   };
   return (
     <StyledTopScrollButton onClick={scrollToTop}>
-      <IoMdArrowDropupCircle />
+      <TbArrowBigUpLines />
     </StyledTopScrollButton>
   );
 };
@@ -20,10 +20,14 @@ export default TopScrollButton;
 const StyledTopScrollButton = styled.div`
   background-color: transparent;
   text-align: center;
-  font-size: 45px;
-  color: #aaa;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  border-radius: 50%;
+  color: black;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1000;
+  opacity: .6;
 `;
