@@ -3,7 +3,7 @@
 
 ![ohmykase](https://user-images.githubusercontent.com/78805018/188122251-16068eba-6562-49c8-9669-086f68e2b3fe.png)
 
-![o-mykase](https://user-images.githubusercontent.com/78805018/188503427-f69409f8-15b6-4fd7-aa2b-13eab0c19ec0.png)
+![omk2](https://user-images.githubusercontent.com/78805018/188541711-1d8a5e6e-8559-4c80-b5ee-fc5ea35b57d2.png)
 
 ![OMK](https://user-images.githubusercontent.com/78805018/188540340-1798ad46-ab7b-438d-8105-579376f3c43f.png)
 
