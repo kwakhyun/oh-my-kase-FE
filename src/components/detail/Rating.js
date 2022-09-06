@@ -7,7 +7,6 @@ import {
 } from "react-icons/ti";
 const Rating = ({ star, size, margin }) => {
   const avg = star?.toFixed(1)
-  console.log(avg)
   return (
     <StyledText size={size} margin={margin}>
       <StarDiv>

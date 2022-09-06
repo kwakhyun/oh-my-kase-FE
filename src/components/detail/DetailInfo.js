@@ -5,8 +5,8 @@ import Rating from "./Rating";
 import { updateData } from "../../redux/modules/mainSlice";
 import { useDispatch } from "react-redux";
 
-const DetailInfo = ({ name, avg_star, restaurant_id, favorite }) => {
-  const dispatch = useDispatch()
+const DetailInfo = ({ name, avg_star, restaurant_id, favorite, favorite_num }) => {
+  const dispatch = useDispatch();
   const [like, setLike] = useState(false);
   const favoriteClickHandler = (e) => {
     const updateFavorite = {
@@ -29,15 +29,15 @@ const DetailInfo = ({ name, avg_star, restaurant_id, favorite }) => {
           <RiHeartFill />
         </StyledText>
         <StyledText size="15px" margin="0">
-          (15)
+          ({favorite_num})
         </StyledText>
-        <StyledFavorite
-          onClick={() => {
-            setLike(favoriteClickHandler);
-          }}
-        >
-          {favorite ? <RiHeartFill /> : <RiHeartAddLine />}
-        </StyledFavorite>
+          <StyledFavorite
+            onClick={() => {
+              setLike(favoriteClickHandler);
+            }}
+          >
+            {favorite ? <RiHeartFill /> : <RiHeartAddLine />}
+          </StyledFavorite>
       </StyledFavoriteDiv>
     </StyledDiv>
   );
@@ -78,4 +78,3 @@ const StyledFavorite = styled.div`
   background-color: transparent;
   box-shadow: 1px 1px 15px #ccc;
 `;
-

@@ -23,7 +23,7 @@ else if(postReview === true){   //review 작성 component
 else{                         //review list component
     return <>                
     <StyledText size="22px">Review</StyledText>
-    <StyledText weight="bold" color="#4488F7" size="16px" line="5px" onClick={()=>{setPostReview(!postReview)}}>리뷰 작성하기</StyledText>
+    <StyledText weight="bold" color="#4488F7" size="16px" line="5px" onClick={()=>{setPostReview(!postReview)}}>{commentList?.length===0?"첫 리뷰를 작성해주세요!":"리뷰 작성하기"}</StyledText>
     {commentList.map((review,idx)=> (<ReviewItem key={idx} {...review} setEditReview={setEditReview} editReview={editReview}/> ))}
     </>
 }
