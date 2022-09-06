@@ -52,7 +52,7 @@ const MyPage = () => {
   return (
     <>
       <Header />
-      <LogInOutButton/>
+      <LogInOutButton />
       <StyledTabTitle>
         {tabArray.map((tab) => {
           return <div key={tab.key}>{tab.title}</div>;
@@ -74,6 +74,9 @@ const StyledTabTitle = styled.div`
   }
 `;
 
-const StyledTabContent = styled.div``;
+const StyledTabContent = styled.div`
+  width: 90vw;
+  margin: 40px 20px;
+`;
 
 export default MyPage;
