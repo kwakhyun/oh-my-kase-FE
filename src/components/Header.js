@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <StyledHeader onClick={()=>{navigate('/전체')}}>
       <StyledLogo
-        src="https://user-images.githubusercontent.com/78805018/188541711-1d8a5e6e-8559-4c80-b5ee-fc5ea35b57d2.png"
+        src="https://user-images.githubusercontent.com/78805018/188594860-c7225de1-176b-49b3-8a23-1a0145281468.png"
         alt="img"
       />
      
