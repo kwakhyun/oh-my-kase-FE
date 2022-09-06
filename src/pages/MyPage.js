@@ -66,10 +66,14 @@ const MyPage = () => {
 const StyledTabTitle = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  cursor: pointer;
   span {
     padding: 10px 0;
   }
   .select {
+    border-bottom: 1px solid black;
+  }
+  span:hover {
     border-bottom: 1px solid black;
   }
 `;
