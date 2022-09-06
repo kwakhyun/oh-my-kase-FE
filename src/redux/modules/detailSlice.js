@@ -14,6 +14,8 @@ export const getDetailData = createAsyncThunk(
   }
 );
 
+
+
 const detailSlice = createSlice({
   name: "detail",
   initialState:{data:[]},

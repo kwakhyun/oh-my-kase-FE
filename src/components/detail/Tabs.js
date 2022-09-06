@@ -64,7 +64,7 @@ const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 90vw;
-  margin: 20px auto;
+  margin: 20px auto 100px;
   border-radius: 5px;
   font-size: 0.7em;
   box-shadow: 2px 80px 30px grey;

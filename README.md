@@ -23,6 +23,15 @@
     
 - Todo
     - UI 모바일 최적화
+    9.7
+      kh
+        - main, detail, comment CRUD => server 연동
+      jm
+        - infinite scroll, filtering => 전체 문제 해결하기
+        
+      공통
+        - 바뀌거나 추가된 기능에 따른 UI 업데이트 하기
+     
   - 
 ## 🛠 포함된 프레임워크/라이브러리
 - REACT

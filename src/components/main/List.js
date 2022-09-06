@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Item from "./Item";
 import { useInView } from "react-intersection-observer";
-import { getDataScroll } from "../../redux/modules/mainSlice";
 import Skeleton from "./Skeleton";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -15,47 +14,15 @@ const List = () => {
   });
   //infinite scroll =useEffect와 useState를 통해 배열에 추가
   // 로드되는 요소의 마지막 데이터 아이디를 같이 넘기는 방식으로 page => x
- 
-  const {district} = useParams()
-  const districts = useSelector(state=>state.main.data)
-  const filterDistrict = districts.filter((item)=>item.address.split(' ')[1]===district)
-  const loadItems = useCallback(async () => {
-    setLoading(true);
-    await getDataScroll(page, 2).then((res) => {
-      setItems((prevState) => [...prevState, res]);
-    });
-    setLoading(false);
-  }, [page]);
-  // `getDataScroll` 이 바뀔 때 마다 함수 실행
-  useEffect(() => {
-    loadItems();
-  }, [loadItems]);
-
-
-  useEffect(() => {
-    if (inView && !loading) {
-      setTimeout(() => {
-        setPage((prevState) => prevState + 1);
-      }, 500);
-    }
-  }, [inView, loading]);
-
-  const loadSkeleton = () => {
-    <>
-      <Skeleton />
-      <Skeleton />
-    </>;
-  };
+  const regions = useSelector((state) => state.main.region);
+  const data = useSelector((state) => state.main.data);
+  const {district} = useParams();
 
   return (
     <>
-      {district==='전체'? districts.map((item,idx)=>
-      <Item {...item} key={idx} ref={ref}/>
-      ):
-      filterDistrict.map((item, idx) =>
-        <Item {...item} key={idx} ref={ref} />
-        )
-      }
+      {district === "전체"
+        ? data.map((item, idx) => <Item {...item} key={idx} ref={ref} />)
+        : regions.map((item, idx) => <Item {...item} key={idx} ref={ref} />)}
     </>
   );
 };
