@@ -15,7 +15,11 @@ const FilterItem = ({ item, setSelectDistrict }) => {
 };
 export default FilterItem;
 const StyledDiv = styled.div`
-  width: 65px;
+  font-size: 20px;
   height: 25px;
+  margin-top: 5px;
   padding: 5px;
+  &:hover{
+    color: #ccc;
+  }
 `;
