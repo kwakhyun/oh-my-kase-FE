@@ -5,7 +5,12 @@
 
 ![o-mykase](https://user-images.githubusercontent.com/78805018/188503427-f69409f8-15b6-4fd7-aa2b-13eab0c19ec0.png)
 
+![OMK](https://user-images.githubusercontent.com/78805018/188540340-1798ad46-ab7b-438d-8105-579376f3c43f.png)
+
+
+
 ## 📢 프로젝트 소개
+
 서울내 오마카세 리스트 
 
 ## 🗓 프로젝트 기간
