@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { RiHeartFill, RiHeartAddLine } from "react-icons/ri";
+import { RiHeartFill } from "react-icons/ri";
 
 const LikedItem = ({ item }) => {
   return (
@@ -11,7 +11,7 @@ const LikedItem = ({ item }) => {
             // 즐겨찾기 해제 기능
           }}
         >   
-          {item.favorite ? <RiHeartFill /> : <RiHeartAddLine />}
+          <RiHeartFill />
         </StyledFavorite>
         <StyledText>{item.name}</StyledText>
       </div>
@@ -52,6 +52,7 @@ const StyledFavorite = styled.div`
   align-items: center;
   background-color: transparent;
   box-shadow: 1px 1px 15px #ccc;
+  cursor: pointer;
 `;
 
 export default LikedItem;

@@ -1,25 +1,41 @@
 import axios from "axios";
 
-// axios 객체 생성
 const instance = axios.create({
-  baseURL: "http://3.34.48.111/",
-  headers: {
-    "Content-Type": "application/json;charset=UTF-8",
-  },
+  baseURL: "http://3.34.48.111/api",
+  // headers: {
+  //   "Content-Type": "application/json;charset=UTF-8",
+  //   Authorization: localStorage.getItem("accessToken"),
+  //   "refresh-token": localStorage.getItem("refreshToken"),
+  // },
 
-  withCredentials: true, // CORS 에러 방지
+  // withCredentials: true,
 });
+
+// instance.defaults.headers.common["Authorization"] =
+//   localStorage.getItem("accessToken");
+// instance.defaults.headers.common["refresh-token"] =
+//   localStorage.getItem("refreshToken");
 
 instance.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-  if (!token) {
-    config.headers.common["Authorization"] = null;
-  } else {
-    // config.headers.Authorization = `Bearer ${token}`;
-    config.headers.common["Authorization"] = `Bearer ${token}`;
-    return config;
-  }
+  const accessToken = localStorage.getItem("accessToken");
+  const refreshToken = localStorage.getItem("refreshToken");
+
+  // if (!accessToken) {
+  //   config.headers.common["Authorization"] = null;
+  // } else if (!refreshToken) {
+  //   config.headers.common["refresh-token"] = null;
+  // } else {
+  //   config.headers.common["Authorization"] = accessToken;
+  //   config.headers.common["refresh-token"] = refreshToken;
+  //   return config;
+  // }
+
+  config.headers.common["Authorization"] = accessToken;
+  config.headers.common["refresh-token"] = refreshToken;
+  return config;
 });
+
+// instance.interceptors.response.use(() => {});
 
 // axios 객체 사용
 export const authAPI = {
@@ -30,33 +46,33 @@ export const authAPI = {
 };
 
 export const likedAPI = {
-  getMyLiked: () => instance.get("api/auth/member/mypage/favorite"),
+  getMyLiked: () => instance.get("/auth/member/mypage/favorite"),
 
-  cancelMyLiked: (restaurantId) =>
-    instance.delete(`api/auth/member/mypage/favorite/${restaurantId}`),
+  // cancelMyLiked: (restaurantId) =>
+  //   instance.delete(`api/auth/member/mypage/favorite/${restaurantId}`),
 
-  getLiked: () => instance.get("api/auth/favorite"),
+  // getLiked: () => instance.get("api/auth/favorite"),
 
-  cancelLiked: (restaurantId) =>
-    instance.delete(`api/auth/favorite/${restaurantId}`),
+  // cancelLiked: (restaurantId) =>
+  //   instance.delete(`api/auth/favorite/${restaurantId}`),
 };
 
 export const commentsAPI = {
-  getMyComments: () => instance.get("api/auth/memeber/mypage/comment"),
+  getMyComments: () => instance.get("/auth/memeber/mypage/comment"),
 
-  postComment: (restaurantId, comment) =>
-    instance.post(`api/auth/restaurant/${restaurantId}/comment`, { comment }),
+  // postComment: (restaurantId, comment) =>
+  //   instance.post(`api/auth/restaurant/${restaurantId}/comment`, { comment }),
 
-  editComment: (commentId, comment) =>
-    instance.put(`/api/auth/restaurant/comment/${commentId}`, { comment }),
+  // editComment: (commentId, comment) =>
+  //   instance.put(`/api/auth/restaurant/comment/${commentId}`, { comment }),
 
-  deleteComment: (commentId) =>
-    instance.delete(`api/auth/restaurant/comment/${commentId}`),
+  // deleteComment: (commentId) =>
+  //   instance.delete(`api/auth/restaurant/comment/${commentId}`),
 };
 
 export const userAPI = {
-  getMyInfo: () => instance.get("api/auth/member/mypage/update"),
+  getMyInfo: () => instance.get("/auth/member/mypage/update"),
 
   editMyInfo: (nickname) =>
-    instance.put("api/auth/member/mypage/update", { nickname }),
+    instance.put("/auth/member/mypage/update", { nickname }),
 };
