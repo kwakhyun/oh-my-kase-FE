@@ -2,21 +2,19 @@ import styled from "styled-components";
 import Rating from "../detail/Rating";
 
 const CommentsItem = ({ item }) => {
-  const {editReview,
-    setEditReview,
-    nickname,
-    profile_img,
-    star,
-    content,
-    createdAt} = item
+  const { profile_img, star, content, createdAt } = item;
   const postedAt = createdAt.slice(0, 10);
+  
   return (
     <StyledDiv>
-      <div>
-      </div>
+      <div></div>
       <StyledAuthorDiv>
-        {profile_img?(
-          <StyledImg src={profile_img} onerror="this.style.display='none';" alt="업체이미지"></StyledImg>
+        {profile_img ? (
+          <StyledImg
+            src={profile_img}
+            onerror="this.style.display='none';"
+            alt="업체이미지"
+          ></StyledImg>
         ) : (
           <StyledImg
             src="https://velog.velcdn.com/images/danchoi/post/fac9c456-b1d5-41fd-b7e0-21a3feb2149f/image.png"
@@ -36,6 +34,7 @@ const CommentsItem = ({ item }) => {
     </StyledDiv>
   );
 };
+
 const StyledDiv = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   margin: 10px 20px;
@@ -58,10 +57,9 @@ const StyledAuthorDiv = styled.div`
 `;
 const StyledButton = styled.button`
   background-color: transparent;
-  color: #4488F7;
+  color: #4488f7;
   border: none;
   font-weight: bold;
 `;
-
 
 export default CommentsItem;

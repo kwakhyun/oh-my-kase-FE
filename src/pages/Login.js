@@ -17,7 +17,6 @@ const Login = () => {
         password: password.current.value,
       })
       .then((response) => {
-        console.log(response);
         if (response.data.success) {
           localStorage.setItem(
             "accessToken",
