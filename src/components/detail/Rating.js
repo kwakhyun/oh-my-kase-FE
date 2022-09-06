@@ -6,6 +6,8 @@ import {
   TiStarHalf,
 } from "react-icons/ti";
 const Rating = ({ star, size, margin }) => {
+  const avg = star?.toFixed(1)
+  console.log(avg)
   return (
     <StyledText size={size} margin={margin}>
       <StarDiv>
@@ -70,7 +72,7 @@ const Rating = ({ star, size, margin }) => {
           star
         )}
       </StyledStars>
-      <span>{star}</span>
+      <span>{avg}</span>
       </StarDiv>
     </StyledText>
   );
