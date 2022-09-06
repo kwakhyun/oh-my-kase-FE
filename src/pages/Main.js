@@ -7,6 +7,7 @@ import LogInOutButton from '../components/buttons/LogInOutButton';
 import { useDispatch } from 'react-redux';
 import { getData } from '../redux/modules/mainSlice';
 import MyPageButton from '../components/buttons/MyPageButton';
+import BestPick from '../components/main/Best/BestPick';
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const Main = () => {
       <LogInOutButton/>
       <MyPageButton/>
       <TopScrollButton/>
+      <BestPick/>
       <Filter/>
       <List/>
     </>

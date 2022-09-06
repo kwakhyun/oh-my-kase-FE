@@ -33,9 +33,9 @@ const ReviewItem = ({
           <StyledUsername>{nickname}</StyledUsername>
         </StyledAuthorDiv>
         <StyledContent>
-          <StyledContentInner>{content}</StyledContentInner>
+          <StyledContentInner className="content">{content}</StyledContentInner>
           <StyledContentInner>
-            <StyledContentInnerChild>{postedAt}</StyledContentInnerChild>
+            <StyledContentInnerChild className="content">{postedAt}</StyledContentInnerChild>
             {isAuthor?<StyledContentInnerChild><StyledButton
               onClick={() => {
                 setEditReview(!editReview);
@@ -56,11 +56,11 @@ const StyledDiv = styled.div`
   margin: 5px 40px 0 20px;
   word-break: break-all;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1.8fr 3fr;
   align-items: center;
   border-bottom: 1px solid #ccc;
-  div {
-    margin: 5px 0;
+  .content{
+    margin: 0 0 5px 10px;
   }
 `;
 const StyledContent = styled.div`
@@ -68,6 +68,7 @@ const StyledContent = styled.div`
   grid-template-rows: 3fr 1fr;
 `;
 const StyledContentInner = styled.div`
+font-size: 15px;
 `;
 const StyledContentInnerChild = styled.div`
 font-size: 13px;
