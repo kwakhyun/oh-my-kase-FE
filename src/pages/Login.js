@@ -75,6 +75,7 @@ const Login = () => {
         </Button>
         <Button onClick={() => navigate("/join")}>Join</Button>
       </StyledButtonDiv>
+        <Button onClick={() => {}}>Google 계정으로 로그인</Button>
     </div>
   );
 };
