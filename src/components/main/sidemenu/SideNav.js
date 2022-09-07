@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const SideNav = () => {
   //로그인에 따른 버튼 변화 테스트 코드
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const ref = useRef();
   const [openDropDown, setOpenDropDown] = useState(false);
 

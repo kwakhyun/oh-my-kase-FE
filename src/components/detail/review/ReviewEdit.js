@@ -52,7 +52,7 @@ export default ReviewEdit;
 
 const StyledDiv = styled.div``;
 const StyledTextArea = styled.textarea`
-  width: 70vw;
+  width: 80vw;
   border: none;
   height: 100px;
   border-radius: 10px;
