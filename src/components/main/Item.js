@@ -19,7 +19,7 @@ const Item = (item, ref) => {
       <div>
         <StyledText
           onClick={() => {
-            navigate("/detail" + restaurant_id);
+            navigate("/detail/" + restaurant_id);
           }}
         >
           {name} <span style={{"fontSize":"14px"}}>({comment_num})</span>

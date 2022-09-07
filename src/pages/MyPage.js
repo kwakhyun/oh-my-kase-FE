@@ -19,7 +19,7 @@ const MyPage = () => {
           className={tabIndex === 0 ? "select" : ""}
           onClick={() => setTabIndex(0)}
         >
-          Liked
+          찜 목록
         </span>
       ),
       content: <Liked />,
@@ -31,7 +31,7 @@ const MyPage = () => {
           className={tabIndex === 1 ? "select" : ""}
           onClick={() => setTabIndex(1)}
         >
-          Comments
+          내 댓글
         </span>
       ),
       content: <Comments />,
@@ -43,7 +43,7 @@ const MyPage = () => {
           className={tabIndex === 2 ? "select" : ""}
           onClick={() => setTabIndex(2)}
         >
-          Edit
+          정보 수정
         </span>
       ),
       content: <Edit />,
