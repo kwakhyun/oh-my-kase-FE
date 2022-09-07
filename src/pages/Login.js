@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../components/buttons/Button";
 import Header from "../components/Header";
+import Naver from "../img/naverButton.png";
+import Google from "../img/googleButton.png";
 
 const Login = () => {
   const email = useRef(null);
@@ -38,25 +40,30 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <StyledSpan>Login</StyledSpan>
+      <StyledSpan>로그인</StyledSpan>
       <StyledInputDiv>
-        <span>Email*</span>
-        <input
-          type="email"
-          ref={email}
-          placeholder="Enter your email"
-          autoFocus
-        />
-        <span>Passwords*</span>
-        <input
-          type="password"
-          ref={password}
-          placeholder="Enter your password"
-        />
-        <div className="error_message"></div>
+        <div>
+          <span>이메일</span>
+          <input
+            type="email"
+            ref={email}
+            placeholder="Enter your email"
+            autoFocus
+          />
+        </div>
+        <div>
+          <span>비밀번호</span>
+          <input
+            type="password"
+            ref={password}
+            placeholder="Enter your password"
+          />
+          <div className="error_message"></div>
+        </div>
       </StyledInputDiv>
       <StyledButtonDiv>
         <Button
+          font='"Do Hyeon", "sans-serif"'
           onClick={() => {
             if (email.current.value === "") {
               email.current.focus();
@@ -71,37 +78,50 @@ const Login = () => {
             }
           }}
         >
-          Login
+          로그인
         </Button>
-        <Button onClick={() => navigate("/join")}>Join</Button>
+        <Button onClick={() => navigate("/join")}>회원가입</Button>
       </StyledButtonDiv>
-        <Button onClick={() => {}}>Google 계정으로 로그인</Button>
+      <StyledSocialButtonDiv>
+        <StyledSocialButton onClick={() => {}} src={Naver} alt="button" />
+      </StyledSocialButtonDiv>
+      <StyledSocialButtonDiv>
+        <StyledSocialButton onClick={() => {}} src={Google} alt="button" />
+      </StyledSocialButtonDiv>
     </div>
   );
 };
 
 const StyledSpan = styled.span`
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Do Hyeon", sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   font-size: 30px;
+  color: #555;
 `;
 
 const StyledInputDiv = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   color: #aaa;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 8vh;
-  margin-bottom: 20px;
+  margin: 2vh auto 20px;
+  padding: 20px 10px;
+  width: 80vw;
+  box-shadow: 1px 1px 15px grey;
+  border-radius: 15px;
   input {
     width: 50vw;
     height: 30px;
-    margin: 10px 0;
+    margin: 15px 0;
     font-size: 16px;
     outline: none;
     border: none;
     border-bottom: 1px solid #ddd;
-    margin-bottom: 20px;
+  }
+  span {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 18px;
+    margin: 10px;
+    color: #555;
+    text-align: left;
   }
   .error_message {
     color: red;
@@ -111,7 +131,21 @@ const StyledInputDiv = styled.div`
 
 const StyledButtonDiv = styled.div`
   display: flex;
-  width: 200px;
+  width: 70vw;
   margin: auto;
 `;
+const StyledSocialButtonDiv = styled.div`
+  width: 180px;
+  margin: auto;
+`;
+const StyledSocialButton = styled.img`
+  position: relative;
+  margin: 10px auto;
+  height: 35px;
+  width: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+`;
+
 export default Login;
