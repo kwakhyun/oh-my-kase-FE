@@ -25,28 +25,31 @@ Translate: 이정윤 에디터
 - Done
   
   9.2
+    - 와이어프레임, API 명세서 작성
     - 기본 UI 구현 (Mobile First)
     
   9.3
     - mockAPI(json-server)를 이용한 렌더링 테스트
 
   9.5
-    - jwt 토큰 로그인 적용, main / mypage 데이터 서버 연동
+    - jwt 토큰 로그인 적용
+    - main / detail / mypage 서버 연동 테스트
     
   9.6
-    - main 사이드 메뉴 추가, 프로필 이미지 업로드 및 변경 기능
+    - main 사이드 메뉴 추가
+    - 프로필 이미지 업로드 및 변경 기능
   
   9.7
-    - kh
-      - favorite, comment CRUD 서버 연동
-    - jm
-      - infinite scroll, 사이드 메뉴 filtering 개선
+    - detail / mypage favorite 기능 적용
+    - comment CRUD 기능 적용
+    - 메인 페이지 infinite scroll 적용
+    - 사이드 메뉴 filtering 개선
     
 - Todo
 
   9.8
     - kh 
-      - mypage 캐싱 처리, 내 댓글에 업체 정보 적용, 전역 로그인 상태 관리
+      - detail / mypage 캐싱 처리, 전역 로그인 상태 관리, 회원가입 유효성 검증
     - jm
       - 세부적인 UI 오류 수정(마이페이지 위주) 찜목록, 내댓글, 정보수정
        
