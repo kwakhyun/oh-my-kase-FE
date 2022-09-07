@@ -53,13 +53,17 @@ Translate: 이정윤 에디터
       - 세부적인 UI 오류 수정(마이페이지 위주) 찜목록, 내댓글, 정보수정
        
 ## 🛠 사용한 기술 스택
-- React, Redux Toolkit, React Query, styled-components
+- React
+- Redux Toolkit
+- React Query
+- styled-components
 --------------------
 ## 👥 팀원 소개
 - 곽현 ([kwakhyun](https://github.com/kwakhyun))
 - 준묵 ([dan-studio](https://github.com/dan-studio))
 
-### 타입은 태그와 제목으로 구성되고, 태그는 영어로 쓰되 첫 문자는 대문자로 합니다. 
+## Commit Convention
+### 타입은 태그와 제목으로 구성되고, 태그는 영어로 쓰되 첫 문자는 대문자로 합니다.
 ### "태그: 제목"의 형태이며, : 뒤에만 space가 있음에 유의합니다.
 
 ### 예시) Feat: 댓글 삭제 기능 추가
