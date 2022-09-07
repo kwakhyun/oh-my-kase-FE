@@ -1,19 +1,36 @@
 import styled from "styled-components";
 import { RiHeartFill } from "react-icons/ri";
+import { useMutation, useQueryClient } from "react-query";
+import { myPageAPI } from "../../shared/api";
+import { useNavigate } from "react-router-dom";
 
 const LikedItem = ({ item }) => {
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
+  const { mutate } = useMutation(myPageAPI.cancelMyLiked, {
+    onSuccess: () => {
+      queryClient.invalidateQueries("myLiked");
+    },
+  });
+
   return (
     <StyledDiv>
-      <StyledImg src={item.img} alt="img" />
+      <StyledImg
+        src={item.img}
+        alt="img"
+        onClick={() => navigate(`/detail/${item.restaurant_id}`)}
+      />
       <div>
         <StyledFavorite
           onClick={() => {
-            // 즐겨찾기 해제 기능
+            mutate(item.restaurant_id);
           }}
-        >   
+        >
           <RiHeartFill />
         </StyledFavorite>
-        <StyledText>{item.name}</StyledText>
+        <StyledText onClick={() => navigate(`/detail/${item.restaurant_id}`)}>
+          {item.name}
+        </StyledText>
       </div>
     </StyledDiv>
   );
