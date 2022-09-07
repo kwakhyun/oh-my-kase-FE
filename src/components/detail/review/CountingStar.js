@@ -4,23 +4,24 @@ import { FaStar } from "react-icons/fa";
 
 const ARRAY = [0, 1, 2, 3, 4];
 
-const Stars = () => {
+const Stars = ({ setStar }) => {
   const [clicked, setClicked] = useState([false, false, false, false, false]);
   const handleStarClick = (index) => {
     const clickState = [...clicked];
     for (let i = 0; i < 5; i++) {
       clickState[i] = i <= index ? true : false;
     }
-    setClicked(clickState)
+    setClicked(clickState);
   };
 
-  useEffect(()=>{
-    sendReview()
-  }, [clicked])
+  useEffect(() => {
+    sendReview();
+  }, [clicked]);
+
   const sendReview = () => {
-    let score = clicked.filter(Boolean).length
-    console.log(score)
-  }
+    let score = clicked.filter(Boolean).length;
+    setStar(score);
+  };
   return (
     <Wrap>
       <Star>
