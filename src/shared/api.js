@@ -45,8 +45,16 @@ export const detailPageAPI = {
   // cancelLiked: (restaurantId) =>
   //   instance.delete(`api/auth/favorite/${restaurantId}`),
 
-  // getComments: (restaurant_id) =>
-  //   instance.get(`/auth/restaurant/${restaurant_id}`),
+  // getComments: async (restaurant_id) => {
+  //   await instance
+  //     .get(`/restaurant/${restaurant_id}/comment`)
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // },
 
   postComment: (data) =>
     instance.post(`/auth/restaurant/${data.restaurant_id}/comment`, {
@@ -60,6 +68,6 @@ export const detailPageAPI = {
       content: data.content,
     }),
 
-  deleteComment: (commentId) =>
-    instance.delete(`/auth/restaurant/comment/${commentId}`),
+  deleteComment: (comment_id) =>
+    instance.delete(`/auth/restaurant/comment/${comment_id}`),
 };

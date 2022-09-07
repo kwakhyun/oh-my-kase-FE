@@ -1,15 +1,29 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useQuery } from "react-query";
 import styled from "styled-components";
 import Information from "./Information";
 import Menu from "./Menu";
 import Review from "./review/Review";
+import { useParams } from "react-router-dom";
 
 const Tabs = ({ item }) => {
   const [tabIndex, setTabIndex] = useState(0);
-  const commentLength = item.commentList?.length
-  useEffect(()=>{
-
-  },[])
+  const { restaurant_id } = useParams();
+  const getComments = async () => {
+    return await axios.get(
+      `http://3.34.48.111/api/restaurant/${restaurant_id}/comment`,
+      {
+        headers: {
+          Authorization: localStorage.getItem("accessToken"),
+          "refresh-token": localStorage.getItem("refreshToken"),
+        },
+      }
+    );
+  };
+  const { data } = useQuery("comments", getComments);
+  const comments = data?.data.data;
+  const commentLength = comments?.length;
   const tabArray = [
     {
       tabTitle: (
@@ -20,7 +34,7 @@ const Tabs = ({ item }) => {
           메뉴
         </div>
       ),
-      tabContent: <Menu {...item} />,
+      tabContent: <Menu />,
     },
     {
       tabTitle: (
@@ -42,7 +56,7 @@ const Tabs = ({ item }) => {
           리뷰 ({commentLength})
         </div>
       ),
-      tabContent: <Review {...item} />,
+      tabContent: <Review comments={comments} />,
     },
   ];
 

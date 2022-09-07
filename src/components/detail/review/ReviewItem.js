@@ -1,18 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Rating from "../Rating";
 import { FiEdit } from "react-icons/fi";
+import { useQuery, useMutation, useQueryClient } from "react-query";
+import { detailPageAPI } from "../../../shared/api";
+
 const ReviewItem = ({
   editReview,
   setEditReview,
-  isAuthor,
+  setEditData,
+  comment_id,
   nickname,
+  isAuthor,
   profile_img,
   star,
   content,
   createdAt,
 }) => {
   const postedAt = createdAt.slice(0, 10);
+
+  const queryClient = useQueryClient();
+  const { mutate } = useMutation(detailPageAPI.deleteComment, {
+    onSuccess: () => {
+      queryClient.invalidateQueries("comments");
+    },
+  });
+
   return (
     <>
       <StyledDiv>
@@ -35,15 +48,35 @@ const ReviewItem = ({
         <StyledContent>
           <StyledContentInner className="content">{content}</StyledContentInner>
           <StyledContentInner>
-            <StyledContentInnerChild className="content">{postedAt}</StyledContentInnerChild>
-            {isAuthor?<StyledContentInnerChild><StyledButton
-              onClick={() => {
-                setEditReview(!editReview);
-              }}
-            >
-              <FiEdit />
-            </StyledButton></StyledContentInnerChild>:null}
-            
+            <StyledContentInnerChild className="content">
+              {postedAt}
+            </StyledContentInnerChild>
+            {isAuthor ? (
+              <StyledContentInnerChild>
+                <StyledButton
+                  onClick={() => {
+                    setEditData({
+                      comment_id: comment_id,
+                      nickname: nickname,
+                      star: star,
+                      content: content,
+                    });
+                    setEditReview(!editReview);
+                  }}
+                >
+                  <FiEdit />
+                </StyledButton>
+                <StyledButton
+                  onClick={() => {
+                    window.confirm("리뷰를 삭제하시겠습니까?")
+                      ? mutate(comment_id)
+                      : alert("취소되었습니다.");
+                  }}
+                >
+                  삭제
+                </StyledButton>
+              </StyledContentInnerChild>
+            ) : null}
           </StyledContentInner>
         </StyledContent>
       </StyledDiv>
@@ -59,7 +92,7 @@ const StyledDiv = styled.div`
   grid-template-columns: 1.8fr 3fr;
   align-items: center;
   border-bottom: 1px solid #ccc;
-  .content{
+  .content {
     margin: 0 0 5px 10px;
   }
 `;
@@ -68,14 +101,14 @@ const StyledContent = styled.div`
   grid-template-rows: 3fr 1fr;
 `;
 const StyledContentInner = styled.div`
-font-size: 15px;
+  font-size: 15px;
 `;
 const StyledContentInnerChild = styled.div`
-font-size: 13px;
-`
+  font-size: 13px;
+`;
 const StyledUsername = styled.div`
-font-size: 17px;`;
-
+  font-size: 17px;
+`;
 
 const StyledImg = styled.img`
   height: 90px;

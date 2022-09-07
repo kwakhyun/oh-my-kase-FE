@@ -1,34 +1,64 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import styled from "styled-components";
-import ReviewPost from './ReviewPost';
-import ReviewEdit from './ReviewEdit';
-import ReviewItem from './ReviewItem';
+import ReviewPost from "./ReviewPost";
+import ReviewEdit from "./ReviewEdit";
+import ReviewItem from "./ReviewItem";
+import { v4 } from "uuid";
 
-const Review = ({commentList}) => {
-  const [editReview, setEditReview] = useState(false)
-  const [postReview, setPostReview] = useState(false)
+const Review = ({ comments }) => {
+  const [editReview, setEditReview] = useState(false);
+  const [postReview, setPostReview] = useState(false);
+  const [editData, setEditData] = useState({});
 
-if(editReview === true){         //review edit 작성 component
-    return <>
-    <StyledText size="22px">Review</StyledText>
-    <ReviewEdit editReview={editReview} setEditReview={setEditReview}/>  
-    </>                
-}
-else if(postReview === true){   //review 작성 component
-    return <>
-    <StyledText size="22px">Review</StyledText>
-    <ReviewPost postReview={postReview} setPostReview={setPostReview}/>        
-    </>
-}
-else{                         //review list component
-    return <>                
-    <StyledText size="22px">Review</StyledText>
-    <StyledText weight="bold" color="#4488F7" size="16px" line="5px" onClick={()=>{setPostReview(!postReview)}}>{commentList?.length===0?"첫 리뷰를 작성해주세요!":"리뷰 작성하기"}</StyledText>
-    {commentList.map((review,idx)=> (<ReviewItem key={idx} {...review} setEditReview={setEditReview} editReview={editReview}/> ))}
-    </>
-}
+  if (editReview === true) {
+    //review 수정하기
+    return (
+      <>
+        <StyledText size="22px">Review</StyledText>
+        <ReviewEdit
+          editData={editData}
+          editReview={editReview}
+          setEditReview={setEditReview}
+        />
+      </>
+    );
+  } else if (postReview === true) {
+    //review 등록하기
+    return (
+      <>
+        <StyledText size="22px">Review</StyledText>
+        <ReviewPost postReview={postReview} setPostReview={setPostReview} />
+      </>
+    );
+  } else {
+    //review 보여주기
+    return (
+      <>
+        <StyledText size="22px">Review</StyledText>
+        <StyledText
+          weight="bold"
+          color="#4488F7"
+          size="16px"
+          line="5px"
+          onClick={() => {
+            setPostReview(!postReview);
+          }}
+        >
+          {comments?.length === 0 ? "첫 리뷰를 작성해주세요!" : "리뷰 작성하기"}
+        </StyledText>
+        {comments?.map((item) => (
+          <ReviewItem
+            key={v4()}
+            {...item}
+            setEditReview={setEditReview}
+            editReview={editReview}
+            setEditData={setEditData}
+          />
+        ))}
+      </>
+    );
+  }
 };
-
 
 export default Review;
 const StyledText = styled.div`
@@ -37,5 +67,4 @@ const StyledText = styled.div`
   line-height: ${(props) => props.line || "30px"};
   color: ${(props) => props.color};
   font-weight: ${(props) => props.weight};
-  `;
-
+`;
