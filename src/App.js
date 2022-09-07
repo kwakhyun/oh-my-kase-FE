@@ -1,12 +1,13 @@
 import "./App.css";
 import Main from "./pages/Main";
-import { Route, Routes } from "react-router-dom";
+import Filtered from "./pages/Filtered";
 import Detail from "./pages/Detail";
 import MyPage from "./pages/MyPage";
 import Join from "./pages/Join";
 import Login from "./pages/Login";
-import { useMediaQuery } from "react-responsive";
 import Contact from "./pages/Contact";
+import { Route, Routes } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 768 });
   return isDesktop ? children : null;
@@ -23,7 +24,7 @@ function App() {
         <Mobile>
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="/:district" element={<Main />} />
+            <Route path="/:district" element={<Filtered />} />
             <Route path="/detail/:restaurant_id" element={<Detail />} />
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/join" element={<Join />} />

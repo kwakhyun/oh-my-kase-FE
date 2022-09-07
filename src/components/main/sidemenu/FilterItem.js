@@ -7,7 +7,7 @@ const FilterItem = ({ item, setSelectDistrict }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
   const sendData = () => {
-    navigate("/");
+    navigate("/"+item);
     dispatch(getRegionData(item))
   };
   return (
