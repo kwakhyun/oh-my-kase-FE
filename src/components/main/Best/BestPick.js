@@ -11,7 +11,7 @@ const BestPick = () => {
   
   return (
     <>
-    <StyledTitle>Weekly Best</StyledTitle>
+    <StyledTitle>가장 높은 평점</StyledTitle>
     <StyledDiv>
     {best.map((item, idx)=> <BestPickItem key={idx} {...item}/>)}
     </StyledDiv>
@@ -30,7 +30,7 @@ overflow-y: hidden;
 `
 const StyledTitle = styled.span`
 font-family: Arial, Helvetica, sans-serif;
-font-size: 20px;
+font-size: 25px;
 display: flex;
 margin: 5px 30px
 `
