@@ -45,14 +45,7 @@ const Edit = () => {
     <div>
       <form name="file" encType="multipart/form-data" onSubmit={handleSubmit}>
         <StyledImgDiv>
-          {myInfo?.profile_img !== "" ? (
-            <img src={myInfo?.profile_img} alt="logo" />
-          ) : (
-            <img
-              src="https://i.pinimg.com/originals/4e/4f/da/4e4fda126c6778bfc2b2a678b58342df.jpg"
-              alt="logo"
-            />
-          )}
+          <img src={myInfo?.profile_img} alt="logo" />
           <input type="file" name="file" ref={file} />
         </StyledImgDiv>
         <StyledInputDiv>
