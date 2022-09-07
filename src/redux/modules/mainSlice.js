@@ -14,9 +14,9 @@ const initialState = {
 
 const MainURL = "http://3.34.48.111/api/restaurant";
 const instance = axios.create({ baseURL: MainURL });
-export const getItems = async (page, limit) => {
-  const res = await instance.get(``);
-  return res.data;
+export const getItems = async (page) => {
+  const res = await instance.get(`/page/${page}`);
+  return res.data.data;
 };
 
 export const getData = createAsyncThunk(

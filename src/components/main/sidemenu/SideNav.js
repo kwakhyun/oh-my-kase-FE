@@ -57,7 +57,10 @@ const SideNav = () => {
           {isLogin ? (
             <>
               <StyledItem>{myInfo.nickname}님 환영합니다!</StyledItem>
-              <StyledImg src={myInfo.profile_img} />
+              <StyledImg
+                src={myInfo.profile_img}
+                onClick={() => navigate("/myPage")}
+              />
               <StyledItem onClick={() => navigate("/myPage")}>
                 마이 페이지
               </StyledItem>

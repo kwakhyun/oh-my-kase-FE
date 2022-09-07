@@ -46,6 +46,24 @@ const Join = () => {
       });
   };
 
+
+  //Signup 정규식
+  // const [passwordChk, setPasswordChk] = React.useState("");
+  // const emailCheck = (username) => {
+  //   return emailRegEx.test(username); //형식에 맞을 경우, true 리턴
+  // }
+  // const passwordCheck = (password) => {
+  //   if(password.match(passwordRegEx)===null) { //형식에 맞지 않을 경우 아래 콘솔 출력
+  //     console.log('비밀번호 형식을 확인해주세요');
+  //     return;
+  //   }else{ // 맞을 경우 출력
+  //     console.log('비밀번호 형식이 맞아요');
+  //   }
+  // }
+  // const emailRegEx = /^[A-Za-z0-9]([-_.]?[A-Za-z0-9])*@[A-Za-z0-9]([-_.]?[A-Za-z0-9])*\.[A-Za-z]{2,3}$/;
+  // const passwordRegEx = /^[A-Za-z0-9]{8,20}$/
+
+
   return (
     <div>
       <Header />
