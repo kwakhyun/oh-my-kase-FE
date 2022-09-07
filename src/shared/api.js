@@ -29,37 +29,45 @@ export const authAPI = {
     instance.post("api/join", { email, nickname, password }),
 };
 
-export const likedAPI = {
+export const myPageAPI = {
   getMyLiked: () => instance.get("/auth/member/mypage/favorite"),
-
   // cancelMyLiked: (restaurantId) =>
   //   instance.delete(`api/auth/member/mypage/favorite/${restaurantId}`),
+  getMyComments: () => instance.get("/auth/member/mypage/comment"),
+  getMyInfo: () => instance.get("/auth/member/mypage/update"),
+  editMyInfo: (formData) =>
+    instance.put("/auth/member/mypage/update", formData),
+};
 
+export const detailPageAPI = {
   // getLiked: () => instance.get("api/auth/favorite"),
 
   // cancelLiked: (restaurantId) =>
   //   instance.delete(`api/auth/favorite/${restaurantId}`),
-};
 
-export const commentsAPI = {
-  getMyComments: () => instance.get("/auth/member/mypage/comment"),
+  // getComments: async (restaurant_id) => {
+  //   await instance
+  //     .get(`/restaurant/${restaurant_id}/comment`)
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // },
 
-  postComment: (restaurantId, comment) =>
-    instance.post(`api/auth/restaurant/${restaurantId}/comment`, { comment }),
+  postComment: (data) =>
+    instance.post(`/auth/restaurant/${data.restaurant_id}/comment`, {
+      star: data.star,
+      content: data.content,
+    }),
 
-  editComment: (commentId, comment) =>
-    instance.put(`/api/auth/restaurant/comment/${commentId}`, { comment }),
+  editComment: (data) =>
+    instance.put(`/auth/restaurant/comment/${data.comment_id}`, {
+      star: data.star,
+      content: data.content,
+    }),
 
-  deleteComment: (commentId) =>
-    instance.delete(`api/auth/restaurant/comment/${commentId}`),
-};
-
-export const userAPI = {
-  getMyInfo: () => instance.get("/auth/member/mypage/update"),
-
-  // editMyInfo: (editData) =>
-  //   instance.put("/auth/member/mypage/update", editData),
-
-  editMyInfo: (formData) =>
-    instance.put("/auth/member/mypage/update", formData),
+  deleteComment: (comment_id) =>
+    instance.delete(`/auth/restaurant/comment/${comment_id}`),
 };

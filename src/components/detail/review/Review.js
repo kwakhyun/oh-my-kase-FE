@@ -3,21 +3,27 @@ import styled from "styled-components";
 import ReviewPost from "./ReviewPost";
 import ReviewEdit from "./ReviewEdit";
 import ReviewItem from "./ReviewItem";
+import { v4 } from "uuid";
 
-const Review = ({ commentList }) => {
+const Review = ({ comments }) => {
   const [editReview, setEditReview] = useState(false);
   const [postReview, setPostReview] = useState(false);
+  const [editData, setEditData] = useState({});
 
   if (editReview === true) {
-    //review edit 작성 component
+    //review 수정하기
     return (
       <>
         <StyledText size="22px">Review</StyledText>
-        <ReviewEdit editReview={editReview} setEditReview={setEditReview} />
+        <ReviewEdit
+          editData={editData}
+          editReview={editReview}
+          setEditReview={setEditReview}
+        />
       </>
     );
   } else if (postReview === true) {
-    //review 작성 component
+    //review 등록하기
     return (
       <>
         <StyledText size="22px">Review</StyledText>
@@ -25,7 +31,7 @@ const Review = ({ commentList }) => {
       </>
     );
   } else {
-    //review list component
+    //review 보여주기
     return (
       <>
         <StyledText size="22px">Review</StyledText>
@@ -38,16 +44,15 @@ const Review = ({ commentList }) => {
             setPostReview(!postReview);
           }}
         >
-          {commentList?.length === 0
-            ? "첫 리뷰를 작성해주세요!"
-            : "리뷰 작성하기"}
+          {comments?.length === 0 ? "첫 리뷰를 작성해주세요!" : "리뷰 작성하기"}
         </StyledText>
-        {commentList.map((review, idx) => (
+        {comments?.map((item) => (
           <ReviewItem
-            key={idx}
-            {...review}
+            key={v4()}
+            {...item}
             setEditReview={setEditReview}
             editReview={editReview}
+            setEditData={setEditData}
           />
         ))}
       </>

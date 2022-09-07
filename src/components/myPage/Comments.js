@@ -1,10 +1,10 @@
 import { useQuery } from "react-query";
-import { commentsAPI } from "../../shared/api";
+import { myPageAPI } from "../../shared/api";
 import CommentsItem from "./CommentsItem";
 import { v4 } from "uuid";
 
 const Comment = () => {
-  const { data } = useQuery("myComments", commentsAPI.getMyComments, {
+  const { data } = useQuery("myComments", myPageAPI.getMyComments, {
     onSuccess: (data) => {
       console.log(data);
     },

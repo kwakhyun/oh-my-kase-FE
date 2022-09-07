@@ -1,10 +1,10 @@
 import { useQuery } from "react-query";
-import { likedAPI } from "../../shared/api";
+import { myPageAPI } from "../../shared/api";
 import { v4 } from "uuid";
 import LikedItem from "./LikedItem";
 
 const Like = () => {
-  const { data } = useQuery("myLiked", likedAPI.getMyLiked, {
+  const { data } = useQuery("myLiked", myPageAPI.getMyLiked, {
     onSuccess: (data) => {
       console.log(data);
     },
