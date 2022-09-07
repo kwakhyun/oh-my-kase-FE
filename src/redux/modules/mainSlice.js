@@ -4,7 +4,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 const URL = process.env.REACT_APP_SERVER_URL;
 const ServerURL = process.env.REACT_APP_RESTAURANT_URL;
 
-const instance = axios.create({ baseURL: URL});
 
 const initialState = {
   data: [],
@@ -17,6 +16,13 @@ const initialState = {
 //   const response = await instance.get(`/?_page=${page}&_limit=${limit}`);
 //   return response.data;
 // };
+
+const MainURL = 'http://3.34.48.111/api/restaurant'
+const instance = axios.create({baseURL: MainURL})
+export const getItems = async(page, size)=>{
+  const res = await instance.get(`?page=${page}&size=${size}`)
+  return res.data
+}
 
 export const getData = createAsyncThunk(
   "data/GET_DATA",
