@@ -1,14 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useQuery, useMutation, useQueryClient } from "react-query";
-import { userAPI } from "../../shared/api";
+import { myPageAPI } from "../../shared/api";
 import styled from "styled-components";
 import Button from "../buttons/Button";
-import axios from "axios";
 
 const Edit = () => {
   const nickname = useRef(null);
 
-  const { data } = useQuery("myInfo", userAPI.getMyInfo, {
+  const { data } = useQuery("myInfo", myPageAPI.getMyInfo, {
     onSuccess: (data) => {
       console.log(data);
     },
@@ -20,7 +19,7 @@ const Edit = () => {
   const myInfo = data?.data.data;
 
   const queryClient = useQueryClient();
-  const { mutate } = useMutation(userAPI.editMyInfo, {
+  const { mutate } = useMutation(myPageAPI.editMyInfo, {
     onSuccess: () => {
       alert("저장 완료!");
       queryClient.invalidateQueries("myInfo");
