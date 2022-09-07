@@ -29,4 +29,7 @@ const Filter = () => {
 
 export default Filter;
 
-const StyledFilter = styled.div``;
+const StyledFilter = styled.div`
+display:flex;
+flex-wrap: wrap;
+`;
