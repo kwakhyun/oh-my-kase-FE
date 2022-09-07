@@ -5,12 +5,14 @@ const Button = ({ onClick, children }) => {
 };
 
 const StyledButton = styled.button`
-  font-size: 15px;
-  width: 100px;
+  font-size: 25px;
+  font-family: "Do Hyeon", sans-serif;
+  width: 35vw;
   height: 40px;
   border: none;
   background-color: transparent;
   margin: 10px;
+  color: #555;
   cursor: pointer;
 `;
 
