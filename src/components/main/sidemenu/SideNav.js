@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const SideNav = () => {
   //로그인에 따른 버튼 변화 테스트 코드
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const ref = useRef();
   const [openDropDown, setOpenDropDown] = useState(false);
 
@@ -102,12 +102,15 @@ const StyledContainer = styled.div`
   top: 0;
   right: 0;
   z-index: 1;
-  width: 40vw;
+  width: 60vw;
   height: 100vh;
   background-color: white;
   transition: 100ms;
-  padding: 60px;
+  padding: 8vw;
   overflow: hidden;
+  opacity: .95;
+  box-shadow: 1px 1px 65px grey;
+
 `;
 const StyledDropDown = styled.div`
   font-size: 25px;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import Rating from "../detail/Rating";
 import {RiHeartFill} from "react-icons/ri"
-const Item = React.forwardRef((item, ref) => {
+const Item = (item, ref) => {
   const { restaurant_id, name, address, img, avg_star, favorite_num, comment_num} = item;
   const navigate = useNavigate();
 
@@ -37,7 +37,7 @@ const Item = React.forwardRef((item, ref) => {
       </div>
     </StyledDiv>
   );
-});
+};
 
 export default Item;
 

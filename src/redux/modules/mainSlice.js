@@ -4,7 +4,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 const URL = process.env.REACT_APP_SERVER_URL;
 const ServerURL = process.env.REACT_APP_RESTAURANT_URL;
 
-
 const initialState = {
   data: [],
   region: [],
@@ -12,17 +11,13 @@ const initialState = {
   error: null,
 };
 
-// export const getDataScroll = async (page, limit) => {
-//   const response = await instance.get(`/?_page=${page}&_limit=${limit}`);
-//   return response.data;
-// };
 
-const MainURL = 'http://3.34.48.111/api/restaurant'
-const instance = axios.create({baseURL: MainURL})
-export const getItems = async(page, size)=>{
-  const res = await instance.get(`?page=${page}&size=${size}`)
-  return res.data
-}
+// const MainURL = "http://3.34.48.111/api/restaurant";
+// const instance = axios.create({ baseURL: MainURL });
+// export const getItems = async (page, limit) => {
+//   const res = await instance.get(`/?_page=${page}&_limit=${limit}`);
+//   return res.data;
+// };
 
 export const getData = createAsyncThunk(
   "data/GET_DATA",
@@ -39,7 +34,10 @@ export const updateData = createAsyncThunk(
   "data/UPDATE_DATA",
   async (payload, thunkAPI) => {
     try {
-      const response = await axios.patch(URL+`/${payload.restaurant_id}`, payload);
+      const response = await axios.patch(
+        URL + `/${payload.restaurant_id}`,
+        payload
+      );
       return thunkAPI.fulfillWithValue(response.data);
     } catch (error) {
       return thunkAPI.fulfillWithValue(error);
@@ -51,7 +49,9 @@ export const getRegionData = createAsyncThunk(
   "data/GET_REGION_DATA",
   async (region, thunkAPI) => {
     try {
-      const response = await axios.get(`http://3.34.48.111/api/restaurant/region/${region}`);
+      const response = await axios.get(
+        `http://3.34.48.111/api/restaurant/region/${region}`
+      );
       return thunkAPI.fulfillWithValue(response.data.data);
     } catch (error) {
       return thunkAPI.fulfillWithValue(error);
@@ -69,11 +69,11 @@ const main = createSlice({
     },
     [updateData.fulfilled]: (state, action) => {
       state.data = state.data.map((item) =>
-      item.id === action.payload.restaurant_id ? { ...action.payload } : item
+        item.id === action.payload.restaurant_id ? { ...action.payload } : item
       );
     },
     [getRegionData.fulfilled]: (state, action) => {
-      state.region = action.payload
+      state.region = action.payload;
     },
   },
 });
