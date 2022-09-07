@@ -12,13 +12,12 @@ const Comment = () => {
       console.log(error);
     },
   });
-
   const myComments = data?.data.data;
 
   return (
     <div>
-      {myComments?.map((item) => {
-        return <CommentsItem key={v4()} item={item} />;
+      {myComments?.map((comment) => {
+        return <CommentsItem key={v4()} comment={comment} />;
       })}
     </div>
   );
