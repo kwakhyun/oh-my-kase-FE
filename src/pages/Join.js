@@ -47,23 +47,6 @@ const Join = () => {
   };
 
 
-  //Signup 정규식
-  // const [passwordChk, setPasswordChk] = React.useState("");
-  // const emailCheck = (username) => {
-  //   return emailRegEx.test(username); //형식에 맞을 경우, true 리턴
-  // }
-  // const passwordCheck = (password) => {
-  //   if(password.match(passwordRegEx)===null) { //형식에 맞지 않을 경우 아래 콘솔 출력
-  //     console.log('비밀번호 형식을 확인해주세요');
-  //     return;
-  //   }else{ // 맞을 경우 출력
-  //     console.log('비밀번호 형식이 맞아요');
-  //   }
-  // }
-  // const emailRegEx = /^[A-Za-z0-9]([-_.]?[A-Za-z0-9])*@[A-Za-z0-9]([-_.]?[A-Za-z0-9])*\.[A-Za-z]{2,3}$/;
-  // const passwordRegEx = /^[A-Za-z0-9]{8,20}$/
-
-
   return (
     <div>
       <Header />
@@ -89,7 +72,7 @@ const Join = () => {
             <input type="text" ref={email} placeholder="Enter your email" />
           </div>
           <div>
-            <span>이름</span>
+            <span>닉네임</span>
             <input type="text" ref={nickname} placeholder="Enter your name" />
           </div>
           <div>
@@ -97,7 +80,7 @@ const Join = () => {
             <input
               type="password"
               ref={password}
-              placeholder="Create a password"
+              placeholder="Enter your password"
             />
           </div>
           <div>
@@ -107,23 +90,33 @@ const Join = () => {
               ref={passwordConfirm}
               placeholder="Confirm Password"
             />
+            <div className="error_message"></div>
           </div>
         </StyledInputDiv>
         <StyledButtonDiv>
           <Button
             onClick={() => {
               if (email.current.value === "") {
-                alert("이메일을 입력해주세요.");
+                email.current.focus();
+                document.querySelector(".error_message").innerHTML =
+                  "이메일을 입력해주세요.";
                 return;
               } else if (nickname.current.value === "") {
-                alert("닉네임을 입력해주세요.");
+                nickname.current.focus();
+                document.querySelector(".error_message").innerHTML =
+                  "닉네임을 입력해주세요.";
                 return;
               } else if (password.current.value === "") {
-                alert("비밀번호를 입력해주세요.");
+                password.current.focus();
+                document.querySelector(".error_message").innerHTML =
+                  "비밀번호를 입력해주세요.";
                 return;
               } else if (passwordConfirm.current.value === "") {
-                alert("비밀번호 확인을 입력해주세요.");
+                password.current.focus();
+                document.querySelector(".error_message").innerHTML =
+                  "비밀번호 확인을 입력해주세요.";
                 return;
+              } else {
               }
               // alert("회원가입 성공!");
               // navigate("/login");
@@ -174,10 +167,14 @@ const StyledInputDiv = styled.div`
   }
   span {
     font-family: "Do Hyeon", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     margin: 10px;
     color: #555;
-}
+  }
+  .error_message {
+    color: red;
+    font-size: 18px;
+  }
 `;
 const StyledSpan = styled.p`
   font-family: Arial, Helvetica, sans-serif;

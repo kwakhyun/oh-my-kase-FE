@@ -125,7 +125,7 @@ const StyledInputDiv = styled.div`
   }
   .error_message {
     color: red;
-    font-size: 12px;
+    font-size: 18px;
   }
 `;
 
