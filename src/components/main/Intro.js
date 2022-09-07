@@ -18,7 +18,7 @@ export default Intro;
 
 const StyledDiv=styled.div`
 margin: 30px auto 80px;
-width: 40vw;
+width: 50vw;
 font-family: Arial, Helvetica, sans-serif;
 box-shadow: 1px 1px 15px grey;
 padding: 35px;

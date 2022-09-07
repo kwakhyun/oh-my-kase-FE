@@ -7,8 +7,6 @@ import FilterItem from "./FilterItem";
 const Filter = () => {
   
   //Main -> SideNav -> Filter
-  const dispatch = useDispatch()
-  const navigate=useNavigate()
   const [selectDistrict, setSelectDistrict] = useState("전체");
   const districts = useSelector((state) => state.main.data);
   const sets = districts.map((item) => item.address.split(" ")[1]);
