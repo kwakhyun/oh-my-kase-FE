@@ -12,14 +12,13 @@ Author: Jacob Dean
 Translate: 이정윤 에디터
 2021년 10월 6일
 
-
-
 ## 📢 프로젝트 소개
-
-서울내 오마카세 리스트 
+서울 내 오마카세 정보를 확인하고 후기를 공유할 수 있는 앱입니다.
+<br>
 
 ## 🗓 프로젝트 기간
 2022.09.02 - 2022.09.08
+<br>
 
 ## 📝 프로젝트 노트
 - Done
@@ -29,7 +28,7 @@ Translate: 이정윤 에디터
     - 기본 UI 구현 (Mobile First)
     
   9.3
-    - mockAPI(json-server)를 이용한 렌더링 테스트
+    - mockAPI(json-server)를 이용한 테스트
 
   9.5
     - jwt 토큰 로그인 적용
@@ -53,9 +52,8 @@ Translate: 이정윤 에디터
     - jm
       - 세부적인 UI 오류 수정(마이페이지 위주) 찜목록, 내댓글, 정보수정
        
-## 🛠 포함된 프레임워크/라이브러리
-- REACT
-- REDUX
+## 🛠 사용한 기술 스택
+- React, Redux Toolkit, React Query, styled-components
 --------------------
 ## 👥 팀원 소개
 - 곽현 ([kwakhyun](https://github.com/kwakhyun))
