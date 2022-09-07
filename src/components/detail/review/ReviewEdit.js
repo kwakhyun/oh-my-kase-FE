@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import CountingStar from "./CountingStar";
-import { useQuery, useMutation, useQueryClient } from "react-query";
+import { useMutation, useQueryClient } from "react-query";
 import { detailPageAPI } from "../../../shared/api";
 
 const ReviewEdit = ({ editData, editReview, setEditReview }) => {

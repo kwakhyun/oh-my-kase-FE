@@ -28,7 +28,7 @@ const Login = () => {
             "refreshToken",
             response.headers["refresh-token"]
           );
-          navigate("/");
+          navigate(-1);
         } else if (response.status !== 200) {
           alert("서버와 연결에 실패했습니다.");
         } else {
