@@ -24,9 +24,9 @@
 - Todo
     - UI 모바일 최적화
     9.7
-      kh
+      - kh
         - main, detail, comment CRUD => server 연동
-      jm
+      - jm
         - infinite scroll, filtering => 전체 문제 해결하기
         
       공통
