@@ -1,22 +1,44 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { RiHeartFill, RiHeartAddLine } from "react-icons/ri";
 import Rating from "./Rating";
 import { updateData } from "../../redux/modules/mainSlice";
 import { useDispatch } from "react-redux";
+import { useMutation } from "react-query";
+import { detailPageAPI } from "../../shared/api";
+import { useParams } from "react-router-dom";
 
-const DetailInfo = ({ name, avg_star, restaurant_id, favorite, favorite_num }) => {
+const DetailInfo = ({ name, avg_star, favorite, favorite_num }) => {
   const dispatch = useDispatch();
-  const [like, setLike] = useState(false);
-  const favoriteClickHandler = (e) => {
-    const updateFavorite = {
-      restaurant_id,
-      favorite: !favorite,
-    };
-    dispatch(updateData(updateFavorite));
-    console.log(restaurant_id);
-    console.log(favorite);
-  };
+  // const favoriteClickHandler = (e) => {
+  //   const updateFavorite = {
+  //     restaurant_id,
+  //     favorite: !favorite,
+  //   };
+  //   dispatch(updateData(updateFavorite));
+  //   console.log(restaurant_id);
+  //   console.log(favorite);
+  // };
+  // const { restaurant_id } = useParams();
+
+  const [like, setLike] = useState(null);
+  const { restaurant_id } = useParams();
+
+  useEffect(() => {
+    setLike(favorite);
+  }, [favorite]);
+
+  const addFavorite = useMutation(detailPageAPI.addFavorite, {
+    onSuccess: () => {
+      setLike(!like);
+    },
+  });
+
+  const cancelFavorite = useMutation(detailPageAPI.cancelFavorite, {
+    onSuccess: () => {
+      setLike(!like);
+    },
+  });
 
   return (
     <StyledDiv>
@@ -31,13 +53,18 @@ const DetailInfo = ({ name, avg_star, restaurant_id, favorite, favorite_num }) =
         <StyledText size="15px" margin="0">
           ({favorite_num})
         </StyledText>
-          <StyledFavorite
-            onClick={() => {
-              setLike(favoriteClickHandler);
-            }}
-          >
-            {favorite ? <RiHeartFill /> : <RiHeartAddLine />}
-          </StyledFavorite>
+        <StyledFavorite
+          onClick={() => {
+            if (like) {
+              cancelFavorite.mutate(restaurant_id);
+            } else {
+              addFavorite.mutate(restaurant_id);
+            }
+            // setLike(favoriteClickHandler);
+          }}
+        >
+          {like ? <RiHeartFill /> : <RiHeartAddLine />}
+        </StyledFavorite>
       </StyledFavoriteDiv>
     </StyledDiv>
   );

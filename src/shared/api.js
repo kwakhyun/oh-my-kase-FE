@@ -31,19 +31,34 @@ export const authAPI = {
 
 export const myPageAPI = {
   getMyLiked: () => instance.get("/auth/member/mypage/favorite"),
-  // cancelMyLiked: (restaurantId) =>
-  //   instance.delete(`api/auth/member/mypage/favorite/${restaurantId}`),
+  cancelMyLiked: (restaurant_id) =>
+    instance.delete(`/auth/favorite/${restaurant_id}`),
+
   getMyComments: () => instance.get("/auth/member/mypage/comment"),
+
   getMyInfo: () => instance.get("/auth/member/mypage/update"),
   editMyInfo: (formData) =>
     instance.put("/auth/member/mypage/update", formData),
 };
 
 export const detailPageAPI = {
-  // getLiked: () => instance.get("api/auth/favorite"),
+  getDetailData: (restaurantId) =>
+    instance
+      .get(`/restaurant/${restaurantId}`)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err)),
 
-  // cancelLiked: (restaurantId) =>
-  //   instance.delete(`api/auth/favorite/${restaurantId}`),
+  addFavorite: (restaurant_id) =>
+    instance
+      .post(`/auth/favorite/${restaurant_id}`)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err)),
+
+  cancelFavorite: (restaurant_id) =>
+    instance
+      .delete(`/auth/favorite/${restaurant_id}`)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err)),
 
   // getComments: async (restaurant_id) => {
   //   await instance
