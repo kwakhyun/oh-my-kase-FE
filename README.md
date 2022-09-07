@@ -25,25 +25,31 @@ Translate: 이정윤 에디터
 - Done
   
   9.2
-    - UI 구현
+    - 기본 UI 구현 (Mobile First)
+    
+  9.3
+    - mockAPI(json-server)를 이용한 렌더링 테스트
+
+  9.5
+    - jwt 토큰 로그인 적용, main / mypage 데이터 서버 연동
+    
+  9.6
+    - main 사이드 메뉴 추가, 프로필 이미지 업로드 및 변경 기능
+  
+  9.7
+    - kh
+      - favorite, comment CRUD 서버 연동
+    - jm
+      - infinite scroll, 사이드 메뉴 filtering 개선
     
 - Todo
-    - UI 모바일 최적화
-    9.7
-      - kh
-        - main, detail, comment CRUD => server 연동
-      - jm
-        - infinite scroll, filtering => 전체 문제 해결하기
-        
-      공통
-        - 바뀌거나 추가된 기능에 따른 UI 업데이트 하기
-     9.8
-      -kh 
-        - 전역 토크 관리
-      -jm
-        - 세부적인 UI 오류 수정(마이페이지 위주) 찜목록, 내댓글, 정보수정
+
+  9.8
+    - kh 
+      - mypage 캐싱 처리, 내 댓글에 업체 정보 적용, 전역 로그인 상태 관리
+    - jm
+      - 세부적인 UI 오류 수정(마이페이지 위주) 찜목록, 내댓글, 정보수정
        
-  - 
 ## 🛠 포함된 프레임워크/라이브러리
 - REACT
 - REDUX
