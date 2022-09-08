@@ -128,7 +128,7 @@ const Join = () => {
           </div>
         </StyledInputDiv>
         <StyledButtonDiv>
-          <input
+          <StyledInput
             onClick={() => {
               if (email.current.value === "") {
                 email.current.focus();
@@ -207,10 +207,19 @@ const StyledInputDiv = styled.div`
     font-size: 18px;
   }
 `;
-const StyledSpan = styled.p`
-  font-family: Arial, Helvetica, sans-serif;
-  margin: auto;
+
+const StyledInput = styled.input`
+  font-size: 25px;
+  font-family: "Do Hyeon", sans-serif;
+  width: 35vw;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  margin: 10px;
+  color: #555;
+  cursor: pointer;
 `;
+
 const StyledButtonDiv = styled.div`
   display: flex;
   width: 70vw;
