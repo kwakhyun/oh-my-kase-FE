@@ -37,7 +37,8 @@ const CommentsItem = ({ comment }) => {
 
 const StyledDiv = styled.div`
   font-family: Arial, Helvetica, sans-serif;
-  margin: 5px 40px 0 20px;
+  padding: 10px 0;
+  margin: 0 40px 0 20px;
   word-break: break-all;
   display: grid;
   grid-template-columns: 1.8fr 3fr;
