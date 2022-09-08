@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Rating from "../Rating";
 import { RiEditFill } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
-import { useQuery, useMutation, useQueryClient } from "react-query";
+import { useMutation, useQueryClient } from "react-query";
 import { detailPageAPI } from "../../../shared/api";
 
 const ReviewItem = ({
@@ -74,7 +74,7 @@ const ReviewItem = ({
                       : alert("취소되었습니다.");
                   }}
                 >
-                  <MdDelete/>
+                  <MdDelete />
                 </StyledButton>
               </StyledContentInnerChild>
             ) : null}
@@ -84,7 +84,7 @@ const ReviewItem = ({
     </>
   );
 };
-export default ReviewItem;
+
 const StyledDiv = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   margin: 5px 40px 0 20px;
@@ -97,16 +97,20 @@ const StyledDiv = styled.div`
     margin: 0 0 5px 10px;
   }
 `;
+
 const StyledContent = styled.div`
   font-size: 17px;
   grid-template-rows: 3fr 1fr;
 `;
+
 const StyledContentInner = styled.div`
   font-size: 15px;
 `;
+
 const StyledContentInnerChild = styled.div`
   font-size: 13px;
 `;
+
 const StyledUsername = styled.div`
   font-size: 17px;
 `;
@@ -120,12 +124,14 @@ const StyledImg = styled.img`
   display: grid;
   grid-template-rows: 2fr 1fr;
 `;
+
 const StyledAuthorDiv = styled.div`
   font-size: 15px;
   display: grid;
   grid-template-rows: 2fr 1fr 1fr;
   justify-content: center;
 `;
+
 const StyledButton = styled.button`
   font-size: 20px;
   background-color: transparent;
@@ -134,3 +140,5 @@ const StyledButton = styled.button`
   font-weight: bold;
   margin: 0 10px;
 `;
+
+export default ReviewItem;

@@ -7,21 +7,17 @@ import Header from "../components/Header";
 import Footer from "./Footer";
 
 const Join = () => {
+  const fileRef = useRef(null);
   const email = useRef(null);
   const nickname = useRef(null);
   const password = useRef(null);
   const passwordConfirm = useRef(null);
   const navigate = useNavigate();
 
-  const token = localStorage.getItem("accessToken");
-  console.log(token);
-
-  const fileRef = useRef(null);
-
   const handleSubmit = (e) => {
-    validate();
-    const formData = new FormData();
+    e.preventDefault();
 
+    const formData = new FormData();
     const data = {
       email: email.current.value,
       nickname: nickname.current.value,
@@ -42,6 +38,8 @@ const Join = () => {
           email.current.focus();
           document.querySelector(".error_message").innerHTML =
             "이미 가입된 이메일입니다.";
+        } else if (response.data.success) {
+          validate();
         }
       })
       .catch((error) => {
@@ -56,16 +54,22 @@ const Join = () => {
   const validPassword = new RegExp("^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$");
   const [myEmail, setMyEmail] = useState("");
   const [myPassword, setMyPassword] = useState("");
+
   const validate = () => {
     if (!validEmail.test(myEmail)) {
-      alert("이메일 형식이 올바르지 않아요");
-    }
-    if (!validPassword.test(myPassword)) {
-      alert(
-        "비밀번호는 최소 8자, 하나 이상의 문자와 하나 이상의 숫자를 입력해주세요"
-      );
+      email.current.focus();
+      document.querySelector(".error_message").innerHTML =
+        "이메일 형식이 올바르지 않습니다.";
+    } else if (!validPassword.test(myPassword)) {
+      password.current.focus();
+      document.querySelector(".error_message").innerHTML =
+        "비밀번호는 문자와 숫자를 혼합 8자 이상 입력해주세요.";
+    } else {
+      alert("회원가입이 완료되었습니다.");
+      navigate("/login");
     }
   };
+
   return (
     <div>
       <Header />
@@ -124,8 +128,8 @@ const Join = () => {
             <div className="error_message"></div>
           </div>
         </StyledInputDiv>
-        <StyledButtonDiv margin="0 auto 60px">
-          <Button
+        <StyledButtonDiv>
+          <input
             onClick={() => {
               if (email.current.value === "") {
                 email.current.focus();
@@ -148,14 +152,12 @@ const Join = () => {
                   "비밀번호 확인을 입력해주세요.";
                 return;
               } else {
+                handleSubmit();
               }
-              alert("회원가입이 완료되었습니다.");
-              navigate("/login");
-              handleSubmit();
             }}
-          >
-            가입하기
-          </Button>
+            type="submit"
+            value="가입하기"
+          />
           <Button onClick={() => navigate("/login")}>돌아가기</Button>
         </StyledButtonDiv>
       </form>
