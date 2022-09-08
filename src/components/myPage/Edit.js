@@ -44,7 +44,7 @@ const Edit = () => {
           <input type="file" name="file" ref={file} />
         </StyledImgDiv>
         <StyledInputDiv>
-          <span>닉네임: {myInfo.nickname}</span>
+          <span>닉네임: {myInfo?.nickname}</span>
           <input type="text" ref={nickname} placeholder="변경할 닉네임 입력" />
         </StyledInputDiv>
         <StyledButtonDiv>
