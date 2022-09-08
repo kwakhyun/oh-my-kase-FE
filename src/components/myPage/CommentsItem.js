@@ -53,6 +53,7 @@ const StyledAuthorDiv = styled.div`
   display: grid;
   justify-content: center;
 `;
+
 const StyledImg = styled.img`
   height: 100px;
   width: 140px;
@@ -65,12 +66,15 @@ const StyledContent = styled.div`
   font-size: 17px;
   grid-template-rows: 3fr 1fr;
 `;
+
 const StyledContentInner = styled.div`
   font-size: 15px;
 `;
+
 const StyledContentInnerChild = styled.div`
   font-size: 13px;
 `;
+
 const StyledUsername = styled.div`
   font-size: 17px;
 `;

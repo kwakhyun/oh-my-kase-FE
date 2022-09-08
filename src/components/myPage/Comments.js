@@ -5,13 +5,10 @@ import { v4 } from "uuid";
 
 const Comment = () => {
   const { data } = useQuery("myComments", myPageAPI.getMyComments, {
-    onSuccess: (data) => {
-      console.log(data);
-    },
-    onError: (error) => {
-      console.log(error);
-    },
+    staleTime: 5000,
+    refetchOnWindowFocus: false,
   });
+
   const myComments = data?.data.data;
 
   return (

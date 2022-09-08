@@ -8,12 +8,7 @@ const Edit = () => {
   const nickname = useRef(null);
 
   const { data } = useQuery("myInfo", myPageAPI.getMyInfo, {
-    onSuccess: (data) => {
-      console.log(data);
-    },
-    onError: (error) => {
-      console.log(error);
-    },
+    refetchOnWindowFocus: false,
   });
 
   const myInfo = data?.data.data;
@@ -49,7 +44,8 @@ const Edit = () => {
           <input type="file" name="file" ref={file} />
         </StyledImgDiv>
         <StyledInputDiv>
-          <input type="text" ref={nickname} defaultValue={myInfo?.nickname} />
+          <span>닉네임: {myInfo.nickname}</span>
+          <input type="text" ref={nickname} placeholder="변경할 닉네임 입력" />
         </StyledInputDiv>
         <StyledButtonDiv>
           <Button type="submit">저장하기</Button>
@@ -79,12 +75,21 @@ const StyledInputDiv = styled.div`
   flex-direction: column;
   margin-top: 5vh;
   margin-bottom: 20px;
-  input {
-    width: 40vw;
-    height: 40px;
-    margin: 5px 0;
+  span {
+    width: 50vw;
+    padding: 20px 0 10px 0;
+    margin-bottom: 10px;
     border: none;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+  }
+  input {
+    width: 50vw;
+    padding: 20px 0 10px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
     font-size: 16px;
     font-weight: 600;
     text-align: center;

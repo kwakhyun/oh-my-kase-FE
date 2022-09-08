@@ -5,12 +5,8 @@ import LikedItem from "./LikedItem";
 
 const Like = () => {
   const { data } = useQuery("myLiked", myPageAPI.getMyLiked, {
-    onSuccess: (data) => {
-      console.log(data);
-    },
-    onError: (error) => {
-      console.log(error);
-    },
+    staleTime: 5000,
+    refetchOnWindowFocus: false,
   });
 
   const myLiked = data?.data.data;

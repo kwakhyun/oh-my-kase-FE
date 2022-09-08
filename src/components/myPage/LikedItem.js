@@ -7,6 +7,7 @@ import Rating from "../detail/Rating";
 
 const LikedItem = ({ item }) => {
   const navigate = useNavigate();
+  
   const queryClient = useQueryClient();
   const { mutate } = useMutation(myPageAPI.cancelMyLiked, {
     onSuccess: () => {
@@ -56,17 +57,20 @@ const StyledDiv = styled.div`
   font-size: 0.7em;
   box-shadow: 1px 1px 15px grey;
 `;
+
 const StyledImg = styled.img`
   object-fit: cover;
   width: 90vw;
   height: 220px;
   margin: 0 auto 0;
 `;
+
 const StyledText = styled.p`
   font-size: ${(props) => props.size || "25px"};
   margin: ${(props) => props.margin || "10px auto 25px"};
   color: ${(props) => props.color};
 `;
+
 const StyledFavorite = styled.div`
   position: absolute;
   right: 8vw;
@@ -83,9 +87,11 @@ const StyledFavorite = styled.div`
   transform: translateY(-1vh);
   cursor: pointer;
 `;
+
 const StyledFavoriteDiv = styled.div`
   display: flex;
   justify-content: center;
   margin: 20px auto;
 `;
+
 export default LikedItem;

@@ -24,6 +24,7 @@ const SideNav = () => {
       console.log(err);
     },
   });
+
   const myInfo = data?.data.data;
 
   const navigate = useNavigate();
@@ -98,6 +99,7 @@ const SideNav = () => {
                 localStorage.removeItem("accessToken");
                 localStorage.removeItem("refreshToken");
                 setIsLogin(false);
+                navigate("/");
               }}
             >
               로그아웃
