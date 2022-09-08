@@ -224,7 +224,7 @@ const StyledInput = styled.input`
 
 const StyledButtonDiv = styled.div`
   display: flex;
-  width: 70vw;
+  width: 75vw;
   margin: ${props=>props.margin||"auto"};
 `;
 
