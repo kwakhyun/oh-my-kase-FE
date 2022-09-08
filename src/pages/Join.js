@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../components/buttons/Button";
@@ -19,6 +19,7 @@ const Join = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    validate()
     const formData = new FormData();
 
     const data = {
@@ -46,7 +47,21 @@ const Join = () => {
       });
   };
 
-
+  //Regex
+  const validEmail = new RegExp(
+    "^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$"
+  );
+  const validPassword = new RegExp("^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$");
+  const [myEmail, setMyEmail] = useState("");
+  const [myPassword, setMyPassword] = useState("");
+  const validate = () => {
+    if (!validEmail.test(myEmail)) {
+      alert('이메일 형식이 올바르지 않아요')
+     }
+     if (!validPassword.test(myPassword)) {
+       alert('비밀번호는 최소 8자, 하나 이상의 문자와 하나 이상의 숫자를 입력해주세요')
+     }
+    }
   return (
     <div>
       <Header />
@@ -69,7 +84,15 @@ const Join = () => {
         <StyledInputDiv>
           <div>
             <span>이메일</span>
-            <input type="text" ref={email} placeholder="Enter your email" />
+            <input
+              type="text"
+              ref={email}
+              value={myEmail}
+              onChange={(e) => {
+                setMyEmail(e.target.value);
+              }}
+              placeholder="Enter your email"
+            />
           </div>
           <div>
             <span>닉네임</span>
@@ -81,6 +104,10 @@ const Join = () => {
               type="password"
               ref={password}
               placeholder="Enter your password"
+              value={myPassword}
+              onChange={(e) => {
+                setMyPassword(e.target.value);
+              }}
             />
           </div>
           <div>

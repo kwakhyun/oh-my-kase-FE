@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Rating from "../Rating";
-import { FiEdit } from "react-icons/fi";
+import { RiEditFill } from "react-icons/ri";
+import { MdDelete } from "react-icons/md";
 import { useQuery, useMutation, useQueryClient } from "react-query";
 import { detailPageAPI } from "../../../shared/api";
 
@@ -64,7 +65,7 @@ const ReviewItem = ({
                     setEditReview(!editReview);
                   }}
                 >
-                  <FiEdit />
+                  <RiEditFill />
                 </StyledButton>
                 <StyledButton
                   onClick={() => {
@@ -73,7 +74,7 @@ const ReviewItem = ({
                       : alert("취소되었습니다.");
                   }}
                 >
-                  삭제
+                  <MdDelete/>
                 </StyledButton>
               </StyledContentInnerChild>
             ) : null}
