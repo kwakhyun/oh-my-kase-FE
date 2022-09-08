@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../components/buttons/Button";
 import Header from "../components/Header";
+import Footer from "./Footer";
 
 const Join = () => {
   const email = useRef(null);
@@ -123,7 +124,7 @@ const Join = () => {
             <div className="error_message"></div>
           </div>
         </StyledInputDiv>
-        <StyledButtonDiv>
+        <StyledButtonDiv margin="0 auto 60px">
           <Button
             onClick={() => {
               if (email.current.value === "") {
@@ -158,6 +159,7 @@ const Join = () => {
           <Button onClick={() => navigate("/login")}>돌아가기</Button>
         </StyledButtonDiv>
       </form>
+      <Footer/>
     </div>
   );
 };
@@ -205,14 +207,10 @@ const StyledInputDiv = styled.div`
     font-size: 18px;
   }
 `;
-const StyledSpan = styled.p`
-  font-family: Arial, Helvetica, sans-serif;
-  margin: auto;
-`;
 const StyledButtonDiv = styled.div`
   display: flex;
   width: 70vw;
-  margin: auto;
+  margin: ${props=>props.margin||"auto"};
 `;
 
 export default Join;
