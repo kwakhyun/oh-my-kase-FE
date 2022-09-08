@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Naver from "../img/naverButton.png";
 import Google from "../img/googleButton.png";
 import { GoogleLogin } from "react-google-login";
+import Footer from "./Footer";
 
 const Login = () => {
   const email = useRef(null);
@@ -88,13 +89,14 @@ const Login = () => {
           <StyledSocialButton src={Naver} alt="button" />
         </a>
       </StyledSocialButtonDiv>
-      <StyledSocialButtonDiv>
+      <StyledSocialButtonDiv margin="0 auto 60px">
         <a href="http://jeeyeon.shop/oauth2/authorization/google">
           <StyledSocialButton src={Google} alt="button" />
         </a>
       </StyledSocialButtonDiv>
 
       {/* <GoogleLogin clientId="798484319345-dn5gh2o8lbtgcrn98einibr554upc1ce.apps.googleusercontent.com" /> */}
+    <Footer/>
     </div>
   );
 };
@@ -143,7 +145,7 @@ const StyledButtonDiv = styled.div`
 
 const StyledSocialButtonDiv = styled.div`
   width: 180px;
-  margin: auto;
+  margin: ${props=>props.margin || "auto"}
 `;
 
 const StyledSocialButton = styled.img`
