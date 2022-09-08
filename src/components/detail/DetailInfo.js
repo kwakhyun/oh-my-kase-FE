@@ -59,7 +59,6 @@ const DetailInfo = ({ name, avg_star, favorite, favorite_num }) => {
   );
 };
 
-export default DetailInfo;
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -94,3 +93,5 @@ const StyledFavorite = styled.div`
   background-color: transparent;
   box-shadow: 1px 1px 15px #ccc;
 `;
+
+export default DetailInfo;

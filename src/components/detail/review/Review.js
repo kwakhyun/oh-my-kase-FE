@@ -78,11 +78,12 @@ const Review = ({ comments }) => {
   }
 };
 
-export default Review;
 const StyledText = styled.div`
   font-size: ${(props) => props.size || "25px"};
   margin: 30px auto 40px;
   line-height: ${(props) => props.line || "30px"};
   color: ${(props) => props.color};
   font-weight: ${(props) => props.weight};
-`;
+  `;
+  
+  export default Review;

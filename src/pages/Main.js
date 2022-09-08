@@ -14,6 +14,7 @@ const Main = () => {
   useEffect(() => {
     dispatch(getData());
   }, [dispatch]);
+  
   return (
     <>
       <Header/>

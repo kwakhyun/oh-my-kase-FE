@@ -1,8 +1,7 @@
-import axios from "axios";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const URL = process.env.REACT_APP_SERVER_URL;
-const ServerURL = process.env.REACT_APP_RESTAURANT_URL;
 
 const initialState = {
   data: [],
@@ -11,8 +10,8 @@ const initialState = {
   error: null,
 };
 
-
 const MainURL = "http://3.34.48.111/api/restaurant";
+
 const instance = axios.create({ baseURL: MainURL });
 export const getItems = async (page) => {
   const res = await instance.get(`/page/${page}`);
@@ -30,6 +29,7 @@ export const getData = createAsyncThunk(
     }
   }
 );
+
 export const updateData = createAsyncThunk(
   "data/UPDATE_DATA",
   async (payload, thunkAPI) => {
@@ -65,7 +65,7 @@ const main = createSlice({
   reducers: {},
   extraReducers: {
     [getData.fulfilled]: (state, action) => {
-      state.data = [...action.payload]; // Store에 있는 list에 서버에서 가져온 restaurant 넣음
+      state.data = action.payload;
     },
     [updateData.fulfilled]: (state, action) => {
       state.data = state.data.map((item) =>

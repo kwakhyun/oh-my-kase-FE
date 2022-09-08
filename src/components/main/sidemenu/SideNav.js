@@ -19,7 +19,11 @@ const SideNav = () => {
     }
   }, []);
 
-  const { data } = useQuery("getMyInfo", myPageAPI.getMyInfo);
+  const { data } = useQuery("getMyInfo", myPageAPI.getMyInfo, {
+    onError: (err) => {
+      console.log(err);
+    },
+  });
   const myInfo = data?.data.data;
 
   const navigate = useNavigate();

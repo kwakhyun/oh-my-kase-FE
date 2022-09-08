@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import SideNav from "../components/main/sidemenu/SideNav";
 import Footer from "./Footer";
+
 const Contact = () => {
   return (
     <>
@@ -23,10 +24,9 @@ const Contact = () => {
   );
 };
 
-export default Contact;
 const StyledParagraph = styled.p`
   font-size: 20px;
-`;
+  `;
 const StyledDiv = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   margin: 50px;
@@ -38,12 +38,14 @@ const StyledDiv = styled.div`
   font-size: 0.7em;
   box-shadow: 1px 1px 15px grey;
   background-color: white;
-`;
+  `;
 const StyledTextDiv = styled.div`
   margin-bottom: 20px;
-`;
+  `;
 
 const StyledImg = styled.img`
   object-fit: cover;
   border-radius: 7px;
-`;
+  `;
+
+export default Contact;

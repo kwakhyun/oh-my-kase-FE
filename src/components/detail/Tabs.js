@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import styled from "styled-components";
 import Information from "./Information";
@@ -21,6 +21,7 @@ const Tabs = ({ item }) => {
       }
     );
   };
+
   const { data } = useQuery("comments", getComments);
   const comments = data?.data.data;
   const commentLength = comments?.length;
@@ -72,8 +73,6 @@ const Tabs = ({ item }) => {
   );
 };
 
-export default Tabs;
-
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -94,4 +93,7 @@ const StyledTab = styled.div`
     border-bottom: 1px solid black;
   }
 `;
+
 const StyledTabTitle = styled.div``;
+
+export default Tabs;

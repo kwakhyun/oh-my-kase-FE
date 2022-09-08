@@ -40,8 +40,6 @@ const Stars = ({ setStar }) => {
   );
 };
 
-export default Stars;
-
 const Star = styled.div`
   display: flex;
   padding-top: 5px;
@@ -71,3 +69,5 @@ const Wrap = styled.div`
   flex-direction: column;
   padding-top: 15px;
 `;
+
+export default Stars;

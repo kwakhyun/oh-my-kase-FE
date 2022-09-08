@@ -6,7 +6,6 @@ import Button from "../components/buttons/Button";
 import Header from "../components/Header";
 import Naver from "../img/naverButton.png";
 import Google from "../img/googleButton.png";
-import { GoogleLogin } from "react-google-login";
 import Footer from "./Footer";
 
 const Login = () => {
@@ -94,9 +93,7 @@ const Login = () => {
           <StyledSocialButton src={Google} alt="button" />
         </a>
       </StyledSocialButtonDiv>
-
-      {/* <GoogleLogin clientId="798484319345-dn5gh2o8lbtgcrn98einibr554upc1ce.apps.googleusercontent.com" /> */}
-    <Footer/>
+      <Footer />
     </div>
   );
 };
@@ -145,7 +142,7 @@ const StyledButtonDiv = styled.div`
 
 const StyledSocialButtonDiv = styled.div`
   width: 180px;
-  margin: ${props=>props.margin || "auto"}
+  margin: ${(props) => props.margin || "auto"};
 `;
 
 const StyledSocialButton = styled.img`

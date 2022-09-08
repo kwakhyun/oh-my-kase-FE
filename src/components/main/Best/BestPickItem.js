@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { RiHeartFill } from "react-icons/ri";
 import BestRating from "./BestRating";
 const BestPickItem = ({
   img,
@@ -39,8 +38,6 @@ const BestPickItem = ({
   );
 };
 
-export default BestPickItem;
-
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -65,3 +62,5 @@ const StyledText = styled.div`
   margin: ${(props) => props.margin || "12px 0"};
   color: ${(props) => props.color};
 `;
+
+export default BestPickItem;
