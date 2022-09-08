@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import ReviewPost from "./ReviewPost";
 import ReviewEdit from "./ReviewEdit";
@@ -6,6 +7,8 @@ import ReviewItem from "./ReviewItem";
 import { v4 } from "uuid";
 
 const Review = ({ comments }) => {
+  const navigate = useNavigate();
+  const token = localStorage.getItem("accessToken");
   const [editReview, setEditReview] = useState(false);
   const [postReview, setPostReview] = useState(false);
   const [editData, setEditData] = useState({});
@@ -35,17 +38,33 @@ const Review = ({ comments }) => {
     return (
       <>
         <StyledText size="22px">Review</StyledText>
-        <StyledText
-          weight="bold"
-          color="#4488F7"
-          size="16px"
-          line="5px"
-          onClick={() => {
-            setPostReview(!postReview);
-          }}
-        >
-          {comments?.length === 0 ? "첫 리뷰를 작성해주세요!" : "리뷰 작성하기"}
-        </StyledText>
+        {token ? (
+          <StyledText
+            weight="bold"
+            color="#4488F7"
+            size="16px"
+            line="5px"
+            onClick={() => {
+              setPostReview(!postReview);
+            }}
+          >
+            {comments?.length === 0
+              ? "첫 리뷰를 작성해주세요!"
+              : "리뷰 작성하기"}
+          </StyledText>
+        ) : (
+          <StyledText
+            weight="bold"
+            color="#4488F7"
+            size="16px"
+            line="5px"
+            onClick={() => navigate("/login")}
+          >
+            {/* 로그인 후 리뷰 작성하기 */}
+            로그인 후 리뷰 확인하기
+          </StyledText>
+        )}
+
         {comments?.map((item) => (
           <ReviewItem
             key={v4()}

@@ -12,42 +12,58 @@ Author: Jacob Dean
 Translate: 이정윤 에디터
 2021년 10월 6일
 
-
-
 ## 📢 프로젝트 소개
-
-서울내 오마카세 리스트 
+서울 내 오마카세 정보를 확인하고 후기를 공유할 수 있는 앱입니다.
+<br>
 
 ## 🗓 프로젝트 기간
 2022.09.02 - 2022.09.08
+<br>
 
 ## 📝 프로젝트 노트
 - Done
   
   9.2
-    - UI 구현
+    - 와이어프레임, API 명세서 작성
+    - 기본 UI 구현 (Mobile First)
+    
+  9.3
+    - mockAPI(json-server)를 이용한 테스트
+
+  9.5
+    - jwt 토큰 로그인 적용
+    - main / detail / mypage 서버 연동 테스트
+    
+  9.6
+    - main 사이드 메뉴 추가
+    - 프로필 이미지 업로드 및 변경 기능
+  
+  9.7
+    - detail / mypage favorite 기능 적용
+    - comment CRUD 기능 적용
+    - 메인 페이지 infinite scroll 적용
+    - 사이드 메뉴 filtering 개선
     
 - Todo
-    - UI 모바일 최적화
-    9.7
-      - kh
-        - main, detail, comment CRUD => server 연동
-      - jm
-        - infinite scroll, filtering => 전체 문제 해결하기
-        
-      공통
-        - 바뀌거나 추가된 기능에 따른 UI 업데이트 하기
-     
-  - 
-## 🛠 포함된 프레임워크/라이브러리
-- REACT
-- REDUX
+
+  9.8
+    - kh 
+      - detail / mypage 캐싱 처리, 전역 로그인 상태 관리, 회원가입 유효성 검증
+    - jm
+      - 세부적인 UI 오류 수정(마이페이지 위주) 찜목록, 내댓글, 정보수정
+       
+## 🛠 사용한 기술 스택
+- React
+- Redux Toolkit
+- React Query
+- styled-components
 --------------------
 ## 👥 팀원 소개
 - 곽현 ([kwakhyun](https://github.com/kwakhyun))
 - 준묵 ([dan-studio](https://github.com/dan-studio))
 
-### 타입은 태그와 제목으로 구성되고, 태그는 영어로 쓰되 첫 문자는 대문자로 합니다. 
+## Commit Convention
+### 타입은 태그와 제목으로 구성되고, 태그는 영어로 쓰되 첫 문자는 대문자로 합니다.
 ### "태그: 제목"의 형태이며, : 뒤에만 space가 있음에 유의합니다.
 
 ### 예시) Feat: 댓글 삭제 기능 추가
