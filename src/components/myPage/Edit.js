@@ -8,12 +8,7 @@ const Edit = () => {
   const nickname = useRef(null);
 
   const { data } = useQuery("myInfo", myPageAPI.getMyInfo, {
-    onSuccess: (data) => {
-      console.log(data);
-    },
-    onError: (error) => {
-      console.log(error);
-    },
+    refetchOnWindowFocus: false,
   });
 
   const myInfo = data?.data.data;

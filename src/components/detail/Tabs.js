@@ -1,11 +1,11 @@
-import axios from "axios";
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
+import axios from "axios";
 import styled from "styled-components";
 import Information from "./Information";
 import Menu from "./Menu";
 import Review from "./review/Review";
-import { useParams } from "react-router-dom";
 
 const Tabs = ({ item }) => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -23,7 +23,9 @@ const Tabs = ({ item }) => {
   };
 
   const { data } = useQuery("comments", getComments);
+
   const comments = data?.data.data;
+
   const commentLength = comments?.length;
   const tabArray = [
     {

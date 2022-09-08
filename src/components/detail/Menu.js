@@ -1,8 +1,8 @@
-import axios from "axios";
 import React from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
+import axios from "axios";
 
 const Menu = () => {
   const { restaurant_id } = useParams();
@@ -11,7 +11,11 @@ const Menu = () => {
       `http://3.34.48.111/api/restaurant/${restaurant_id}/menu`
     );
   };
-  const { data } = useQuery("menuList", getMenuList);
+
+  const { data } = useQuery("menuList", getMenuList, {
+    refetchOnWindowFocus: false,
+  });
+
   const menuList = data?.data.data;
 
   return (
