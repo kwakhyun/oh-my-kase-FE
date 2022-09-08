@@ -3,6 +3,7 @@ import { RiHeartFill } from "react-icons/ri";
 import { useMutation, useQueryClient } from "react-query";
 import { myPageAPI } from "../../shared/api";
 import { useNavigate } from "react-router-dom";
+import Rating from "../detail/Rating";
 
 const LikedItem = ({ item }) => {
   const navigate = useNavigate();
@@ -21,16 +22,25 @@ const LikedItem = ({ item }) => {
         onClick={() => navigate(`/detail/${item.restaurant_id}`)}
       />
       <div>
-        <StyledFavorite
-          onClick={() => {
-            mutate(item.restaurant_id);
-          }}
-        >
-          <RiHeartFill />
-        </StyledFavorite>
         <StyledText onClick={() => navigate(`/detail/${item.restaurant_id}`)}>
           {item.name}
         </StyledText>
+        <Rating star={item.avg_star} />
+        <StyledFavoriteDiv>
+          <StyledText size="15px" color="#F44336" margin="0">
+            <RiHeartFill />
+          </StyledText>
+          <StyledText size="15px" margin="0">
+            ({item.favorite_num})
+          </StyledText>
+          <StyledFavorite
+            onClick={() => {
+              mutate(item.restaurant_id);
+            }}
+          >
+            <RiHeartFill />
+          </StyledFavorite>
+        </StyledFavoriteDiv>
       </div>
     </StyledDiv>
   );
@@ -53,23 +63,29 @@ const StyledImg = styled.img`
   margin: 0 auto 0;
 `;
 const StyledText = styled.p`
-  font-size: ${(props) => props.size || "20px"};
-  margin: 15px;
+  font-size: ${(props) => props.size || "25px"};
+  margin: ${(props) => props.margin || "10px auto 25px"};
+  color: ${(props) => props.color};
 `;
 const StyledFavorite = styled.div`
-  margin: 10px;
-  right: 25px;
+  position: absolute;
+  right: 8vw;
   padding: 2px;
-  font-size: 28px;
-  height: 30px;
-  width: 30px;
+  font-size: 25px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   color: #f44336;
   position: absolute;
   align-items: center;
   background-color: transparent;
   box-shadow: 1px 1px 15px #ccc;
+  transform: translateY(-1vh);
   cursor: pointer;
 `;
-
+const StyledFavoriteDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+`;
 export default LikedItem;

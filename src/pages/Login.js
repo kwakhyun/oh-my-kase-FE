@@ -83,10 +83,10 @@ const Login = () => {
         <Button onClick={() => navigate("/join")}>회원가입</Button>
       </StyledButtonDiv>
       <StyledSocialButtonDiv>
-        <StyledSocialButton onClick={() => {}} src={Naver} alt="button" />
+      <a href="http://jeeyeon.shop/oauth2/authorization/naver"><StyledSocialButton src={Naver} alt="button" /></a>
       </StyledSocialButtonDiv>
       <StyledSocialButtonDiv>
-        <StyledSocialButton onClick={() => {}} src={Google} alt="button" />
+        <a href="http://jeeyeon.shop/oauth2/authorization/google"><StyledSocialButton src={Google} alt="button" /></a>
       </StyledSocialButtonDiv>
     </div>
   );

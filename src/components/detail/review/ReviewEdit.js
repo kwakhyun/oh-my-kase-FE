@@ -20,12 +20,14 @@ const ReviewEdit = ({ editData, editReview, setEditReview }) => {
   return (
     <StyledDiv>
       <StyledText>리뷰 수정하기</StyledText>
-      <span>{editData.nickname}</span>
+      <StyledText>{editData.nickname}</StyledText>
       <CountingStar star={editData.star} setStar={setStar} />
       <StyledTextArea
         ref={content}
         defaultValue={editData.content}
-      ></StyledTextArea>
+        maxLength="200"
+        ></StyledTextArea>
+          <p>리뷰는 공백 포함 200자 까지 등록 가능합니다.</p>
       <StyledButton
         onClick={() => {
           mutate({
@@ -34,14 +36,14 @@ const ReviewEdit = ({ editData, editReview, setEditReview }) => {
             content: content.current.value,
           });
         }}
-      >
+        >
         완료
       </StyledButton>
       <StyledButton
         onClick={() => {
           setEditReview(!editReview);
         }}
-      >
+        >
         취소
       </StyledButton>
     </StyledDiv>

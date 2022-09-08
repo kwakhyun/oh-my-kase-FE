@@ -21,7 +21,8 @@ const PostReview = ({ setPostReview, postReview }) => {
     <StyledDiv>
       <StyledText>리뷰 작성하기</StyledText>
       <CountingStar setStar={setStar} />
-      <StyledTextArea ref={content}></StyledTextArea>
+      <StyledTextArea ref={content} maxLength="200"></StyledTextArea>
+      <p>리뷰는 공백 포함 200자 까지 등록 가능합니다.</p>
       <StyledButton
         onClick={() => {
           mutate({

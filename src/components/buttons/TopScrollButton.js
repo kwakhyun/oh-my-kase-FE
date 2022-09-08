@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { TbArrowBigUpLines } from "react-icons/tb";
+import { TiArrowUp } from "react-icons/ti";
 const TopScrollButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -10,7 +10,7 @@ const TopScrollButton = () => {
   };
   return (
     <StyledTopScrollButton onClick={scrollToTop}>
-      <TbArrowBigUpLines />
+      <TiArrowUp />
     </StyledTopScrollButton>
   );
 };
@@ -21,9 +21,9 @@ const StyledTopScrollButton = styled.div`
   background-color: transparent;
   text-align: center;
   background-color: white;
-  width: 40px;
-  height: 40px;
-  font-size: 40px;
+  width: 36px;
+  height: 36px;
+  font-size: 36px;
   border-radius: 50%;
   color: black;
   position: fixed;
