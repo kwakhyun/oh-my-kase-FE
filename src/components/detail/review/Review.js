@@ -60,8 +60,7 @@ const Review = ({ comments }) => {
             line="5px"
             onClick={() => navigate("/login")}
           >
-            {/* 로그인 후 리뷰 작성하기 */}
-            로그인 후 리뷰 확인하기
+            로그인 후 리뷰 작성하기
           </StyledText>
         )}
 
