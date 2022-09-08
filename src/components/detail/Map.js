@@ -35,4 +35,5 @@ export default Map;
 const StyledMap = styled.div`
   width: 90vw;
   height: 400px;
+  z-index: 0;
 `;

@@ -1,7 +1,6 @@
-# 로고의 변천사
-![ohmykase](https://user-images.githubusercontent.com/78805018/188122251-16068eba-6562-49c8-9669-086f68e2b3fe.png)
+# 🍣OhMyKase - FE
 
-![OMKS](https://user-images.githubusercontent.com/78805018/188594860-c7225de1-176b-49b3-8a23-1a0145281468.png)
+![OMKTransparentThumb](https://user-images.githubusercontent.com/78805018/189072229-0b8e4d49-27b5-4ccd-a977-dd963d7da789.png)
 
 # 오마카세
 ![omakaseimg](https://user-images.githubusercontent.com/78805018/188814729-1667f13c-94a1-42f5-b51f-803a12f467ca.jpeg)
