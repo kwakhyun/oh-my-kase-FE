@@ -18,8 +18,7 @@ const Join = () => {
   const fileRef = useRef(null);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    validate()
+    validate();
     const formData = new FormData();
 
     const data = {
@@ -39,7 +38,9 @@ const Join = () => {
       .then((response) => {
         console.log(response);
         if (response.data.error === "DUPLICATE_EMAIL") {
-          alert("이메일 중복입니다.");
+          email.current.focus();
+          document.querySelector(".error_message").innerHTML =
+            "이미 가입된 이메일입니다.";
         }
       })
       .catch((error) => {
@@ -56,12 +57,14 @@ const Join = () => {
   const [myPassword, setMyPassword] = useState("");
   const validate = () => {
     if (!validEmail.test(myEmail)) {
-      alert('이메일 형식이 올바르지 않아요')
-     }
-     if (!validPassword.test(myPassword)) {
-       alert('비밀번호는 최소 8자, 하나 이상의 문자와 하나 이상의 숫자를 입력해주세요')
-     }
+      alert("이메일 형식이 올바르지 않아요");
     }
+    if (!validPassword.test(myPassword)) {
+      alert(
+        "비밀번호는 최소 8자, 하나 이상의 문자와 하나 이상의 숫자를 입력해주세요"
+      );
+    }
+  };
   return (
     <div>
       <Header />
@@ -91,19 +94,19 @@ const Join = () => {
               onChange={(e) => {
                 setMyEmail(e.target.value);
               }}
-              placeholder="Enter your email"
+              placeholder="이메일 입력"
             />
           </div>
           <div>
             <span>닉네임</span>
-            <input type="text" ref={nickname} placeholder="Enter your name" />
+            <input type="text" ref={nickname} placeholder="닉네임 입력" />
           </div>
           <div>
             <span>비밀번호</span>
             <input
               type="password"
               ref={password}
-              placeholder="Enter your password"
+              placeholder="문자, 숫자 혼합 8자 이상"
               value={myPassword}
               onChange={(e) => {
                 setMyPassword(e.target.value);
@@ -115,7 +118,7 @@ const Join = () => {
             <input
               type="password"
               ref={passwordConfirm}
-              placeholder="Confirm Password"
+              placeholder="비밀번호 재입력"
             />
             <div className="error_message"></div>
           </div>
@@ -145,16 +148,15 @@ const Join = () => {
                 return;
               } else {
               }
-              // alert("회원가입 성공!");
-              // navigate("/login");
+              alert("회원가입이 완료되었습니다.");
+              navigate("/login");
               handleSubmit();
             }}
           >
-            회원가입
+            가입하기
           </Button>
           <Button onClick={() => navigate("/login")}>돌아가기</Button>
         </StyledButtonDiv>
-        <input type="submit" value="가입하기" />
       </form>
     </div>
   );

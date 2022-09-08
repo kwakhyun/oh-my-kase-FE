@@ -2,27 +2,14 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { RiHeartFill, RiHeartAddLine } from "react-icons/ri";
 import Rating from "./Rating";
-import { updateData } from "../../redux/modules/mainSlice";
-import { useDispatch } from "react-redux";
 import { useMutation } from "react-query";
 import { detailPageAPI } from "../../shared/api";
 import { useParams } from "react-router-dom";
 
 const DetailInfo = ({ name, avg_star, favorite, favorite_num }) => {
-  const dispatch = useDispatch();
-  // const favoriteClickHandler = (e) => {
-  //   const updateFavorite = {
-  //     restaurant_id,
-  //     favorite: !favorite,
-  //   };
-  //   dispatch(updateData(updateFavorite));
-  //   console.log(restaurant_id);
-  //   console.log(favorite);
-  // };
-  // const { restaurant_id } = useParams();
-
   const [like, setLike] = useState(null);
   const { restaurant_id } = useParams();
+  const token = localStorage.getItem("accessToken");
 
   useEffect(() => {
     setLike(favorite);
@@ -53,18 +40,20 @@ const DetailInfo = ({ name, avg_star, favorite, favorite_num }) => {
         <StyledText size="15px" margin="0">
           ({favorite_num})
         </StyledText>
-        <StyledFavorite
-          onClick={() => {
-            if (like) {
-              cancelFavorite.mutate(restaurant_id);
-            } else {
-              addFavorite.mutate(restaurant_id);
-            }
-            // setLike(favoriteClickHandler);
-          }}
-        >
-          {like ? <RiHeartFill /> : <RiHeartAddLine />}
-        </StyledFavorite>
+        {token ? (
+          <StyledFavorite
+            onClick={() => {
+              if (like) {
+                cancelFavorite.mutate(restaurant_id);
+              } else {
+                addFavorite.mutate(restaurant_id);
+              }
+              // setLike(favoriteClickHandler);
+            }}
+          >
+            {like ? <RiHeartFill /> : <RiHeartAddLine />}
+          </StyledFavorite>
+        ) : null}
       </StyledFavoriteDiv>
     </StyledDiv>
   );

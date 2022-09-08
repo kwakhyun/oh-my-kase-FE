@@ -6,6 +6,7 @@ import Button from "../components/buttons/Button";
 import Header from "../components/Header";
 import Naver from "../img/naverButton.png";
 import Google from "../img/googleButton.png";
+import { GoogleLogin } from "react-google-login";
 
 const Login = () => {
   const email = useRef(null);
@@ -83,18 +84,23 @@ const Login = () => {
         <Button onClick={() => navigate("/join")}>회원가입</Button>
       </StyledButtonDiv>
       <StyledSocialButtonDiv>
-      <a href="http://jeeyeon.shop/oauth2/authorization/naver"><StyledSocialButton src={Naver} alt="button" /></a>
+        <a href="http://jeeyeon.shop/oauth2/authorization/naver">
+          <StyledSocialButton src={Naver} alt="button" />
+        </a>
       </StyledSocialButtonDiv>
       <StyledSocialButtonDiv>
-        <a href="http://jeeyeon.shop/oauth2/authorization/google"><StyledSocialButton src={Google} alt="button" /></a>
+        <a href="http://jeeyeon.shop/oauth2/authorization/google">
+          <StyledSocialButton src={Google} alt="button" />
+        </a>
       </StyledSocialButtonDiv>
+
+      {/* <GoogleLogin clientId="798484319345-dn5gh2o8lbtgcrn98einibr554upc1ce.apps.googleusercontent.com" /> */}
     </div>
   );
 };
 
 const StyledSpan = styled.span`
   font-family: "Do Hyeon", sans-serif;
-  /* font-family: Arial, Helvetica, sans-serif; */
   font-size: 30px;
   color: #555;
 `;
@@ -134,10 +140,12 @@ const StyledButtonDiv = styled.div`
   width: 70vw;
   margin: auto;
 `;
+
 const StyledSocialButtonDiv = styled.div`
   width: 180px;
   margin: auto;
 `;
+
 const StyledSocialButton = styled.img`
   position: relative;
   margin: 10px auto;
