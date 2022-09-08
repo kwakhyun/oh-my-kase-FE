@@ -1,6 +1,6 @@
 # 🍣OhMyKase - FE
 
-![ohmykase](https://user-images.githubusercontent.com/78805018/189049563-4db7247a-6061-4913-b560-c2d7b2a6706b.png)
+![OMKTransparentThumb](https://user-images.githubusercontent.com/78805018/189072229-0b8e4d49-27b5-4ccd-a977-dd963d7da789.png)
 
 # 오마카세
 ![omakaseimg](https://user-images.githubusercontent.com/78805018/188814729-1667f13c-94a1-42f5-b51f-803a12f467ca.jpeg)
