@@ -1,24 +1,23 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
+
 const Skeleton = () => {
   return (
     <Div>
-        <Img>
+      <Img>
+        <Shimmer />
+      </Img>
+      <Wrap>
+        <Text>
           <Shimmer />
-        </Img>
-        <Wrap>
-          <Text>
-            <Shimmer />
-          </Text>
-          <Text>
-            <Shimmer />
-          </Text>
-        </Wrap>
+        </Text>
+        <Text>
+          <Shimmer />
+        </Text>
+      </Wrap>
     </Div>
   );
 };
-
-export default Skeleton;
 
 const Shimmer = styled.div`
   width: 50%;
@@ -38,6 +37,7 @@ const Shimmer = styled.div`
     }
   }
 `;
+
 const Div = styled.div`
   display: flex;
   flex-direction: column;
@@ -74,3 +74,5 @@ export const Text = styled.div`
   overflow: hidden;
   background-color: #eeeeee;
 `;
+
+export default Skeleton;

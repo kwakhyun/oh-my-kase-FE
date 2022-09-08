@@ -13,8 +13,6 @@ const Footer = () => {
   );
 };
 
-export default Footer;
-
 const StyledDiv = styled.div`
   height: 200px;
   width: 100vw;
@@ -28,3 +26,5 @@ const StyledText = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
 `;
+
+export default Footer;

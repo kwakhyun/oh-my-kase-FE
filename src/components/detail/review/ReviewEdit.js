@@ -50,8 +50,6 @@ const ReviewEdit = ({ editData, editReview, setEditReview }) => {
   );
 };
 
-export default ReviewEdit;
-
 const StyledDiv = styled.div``;
 const StyledTextArea = styled.textarea`
   width: 80vw;
@@ -64,7 +62,7 @@ const StyledTextArea = styled.textarea`
   box-shadow: 10px 5px 20px grey;
   font-family: Arial, Helvetica, sans-serif;
   outline: none;
-`;
+  `;
 const StyledButton = styled.button`
   background-color: transparent;
   border: none;
@@ -77,4 +75,6 @@ const StyledText = styled.div`
   line-height: 5px;
   color: #555;
   font-weight: bold;
-`;
+  `;
+
+export default ReviewEdit;

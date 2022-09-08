@@ -9,14 +9,17 @@ import Contact from "./pages/Contact";
 import { Route, Routes } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Oauth from "./pages/Oauth";
+
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 768 });
   return isDesktop ? children : null;
 };
+
 const Mobile = ({ children }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   return isMobile ? children : null;
 };
+
 function App() {
   return (
     <div className="App">

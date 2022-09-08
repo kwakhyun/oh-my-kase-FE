@@ -28,10 +28,10 @@ const Menu = () => {
   );
 };
 
-export default Menu;
-
 const StyledText = styled.p`
   font-size: ${(props) => props.size || "25px"};
   margin: 30px auto 40px;
   line-height: ${(props) => props.line || "30px"};
 `;
+
+export default Menu;

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { TiArrowUp } from "react-icons/ti";
+
 const TopScrollButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -15,8 +16,6 @@ const TopScrollButton = () => {
   );
 };
 
-export default TopScrollButton;
-
 const StyledTopScrollButton = styled.div`
   background-color: transparent;
   text-align: center;
@@ -29,5 +28,7 @@ const StyledTopScrollButton = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
-  opacity: .6;
+  opacity: 0.6;
 `;
+
+export default TopScrollButton;

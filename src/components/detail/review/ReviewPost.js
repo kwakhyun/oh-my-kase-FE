@@ -45,11 +45,10 @@ const PostReview = ({ setPostReview, postReview }) => {
   );
 };
 
-export default PostReview;
-
 const StyledDiv = styled.div`
   width: 100%;
 `;
+
 const StyledTextArea = styled.textarea`
   width: 80%;
   border: none;
@@ -77,3 +76,5 @@ const StyledText = styled.div`
   color: #555;
   font-weight: bold;
 `;
+
+export default PostReview;

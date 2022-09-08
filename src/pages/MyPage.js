@@ -4,8 +4,6 @@ import Header from "../components/Header";
 import Liked from "../components/myPage/Liked";
 import Comments from "../components/myPage/Comments";
 import Edit from "../components/myPage/Edit";
-import MyPageButton from "../components/buttons/MyPageButton";
-import LogInOutButton from "../components/buttons/LogInOutButton";
 import SideNav from "../components/main/sidemenu/SideNav";
 
 const MyPage = () => {
