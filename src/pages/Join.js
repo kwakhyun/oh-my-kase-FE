@@ -30,21 +30,24 @@ const Join = () => {
       new Blob([JSON.stringify(data)], { type: "application/json" })
     );
 
-    axios
-      .post("http://3.34.48.111/api/member/signup", formData)
-      .then((response) => {
-        console.log(response);
-        if (response.data.error === "DUPLICATE_EMAIL") {
-          email.current.focus();
-          document.querySelector(".error_message").innerHTML =
-            "이미 가입된 이메일입니다.";
-        } else if (response.data.success) {
-          validate();
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (validate()) {
+      axios
+        .post("http://3.34.48.111/api/member/signup", formData)
+        .then((response) => {
+          console.log(response);
+          if (response.data.error === "DUPLICATE_EMAIL") {
+            email.current.focus();
+            document.querySelector(".error_message").innerHTML =
+              "이미 가입된 이메일입니다.";
+          } else if (response.data.success) {
+            alert("회원가입이 완료되었습니다.");
+            navigate("/login");
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   };
 
   //Regex
@@ -64,9 +67,12 @@ const Join = () => {
       password.current.focus();
       document.querySelector(".error_message").innerHTML =
         "비밀번호는 문자와 숫자를 혼합 8자 이상 입력해주세요.";
+    } else if (password.current.value !== passwordConfirm.current.value) {
+      passwordConfirm.current.focus();
+      document.querySelector(".error_message").innerHTML =
+        "비밀번호가 일치하지 않습니다.";
     } else {
-      alert("회원가입이 완료되었습니다.");
-      navigate("/login");
+      return true;
     }
   };
 
@@ -161,7 +167,7 @@ const Join = () => {
           <Button onClick={() => navigate("/login")}>돌아가기</Button>
         </StyledButtonDiv>
       </form>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
@@ -225,7 +231,7 @@ const StyledInput = styled.input`
 const StyledButtonDiv = styled.div`
   display: flex;
   width: 75vw;
-  margin: ${props=>props.margin||"auto"};
+  margin: ${(props) => props.margin || "auto"};
 `;
 
 export default Join;
