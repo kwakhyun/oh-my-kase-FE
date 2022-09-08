@@ -48,7 +48,7 @@ const Login = () => {
           <input
             type="email"
             ref={email}
-            placeholder="Enter your email"
+            placeholder="이메일을 입력해주세요."
             autoFocus
           />
         </div>
@@ -57,7 +57,7 @@ const Login = () => {
           <input
             type="password"
             ref={password}
-            placeholder="Enter your password"
+            placeholder="비밀번호를 입력해주세요."
           />
           <div className="error_message"></div>
         </div>

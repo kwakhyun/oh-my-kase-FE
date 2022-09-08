@@ -28,15 +28,9 @@ instance.interceptors.response.use((response) => {
   return response;
 });
 
-export const authAPI = {
-  login: (email, password) => instance.post("api/login", { email, password }),
-
-  join: (email, nickname, password) =>
-    instance.post("api/join", { email, nickname, password }),
-};
-
 export const myPageAPI = {
   getMyLiked: () => instance.get("/auth/member/mypage/favorite"),
+  
   cancelMyLiked: (restaurant_id) =>
     instance.delete(`/auth/favorite/${restaurant_id}`),
 
@@ -49,23 +43,13 @@ export const myPageAPI = {
 };
 
 export const detailPageAPI = {
-  getDetailData: (restaurantId) =>
-    instance
-      .get(`/restaurant/${restaurantId}`)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err)),
+  getDetailData: (restaurantId) => instance.get(`/restaurant/${restaurantId}`),
 
   addFavorite: (restaurant_id) =>
-    instance
-      .post(`/auth/favorite/${restaurant_id}`)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err)),
+    instance.post(`/auth/favorite/${restaurant_id}`),
 
   cancelFavorite: (restaurant_id) =>
-    instance
-      .delete(`/auth/favorite/${restaurant_id}`)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err)),
+    instance.delete(`/auth/favorite/${restaurant_id}`),
 
   postComment: (data) =>
     instance.post(`/auth/restaurant/${data.restaurant_id}/comment`, {

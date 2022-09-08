@@ -14,8 +14,8 @@ const Join = () => {
   const passwordConfirm = useRef(null);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
     const formData = new FormData();
     const data = {
