@@ -20,7 +20,13 @@ instance.interceptors.request.use((config) => {
   }
 });
 
-// instance.interceptors.response.use(() => {});
+instance.interceptors.response.use((response) => {
+  if (response.headers["authorization"]) {
+    localStorage.removeItem("accessToken");
+    localStorage.setItem("accessToken", response.headers["authorization"]);
+  }
+  return response;
+});
 
 export const authAPI = {
   login: (email, password) => instance.post("api/login", { email, password }),
@@ -37,6 +43,7 @@ export const myPageAPI = {
   getMyComments: () => instance.get("/auth/member/mypage/comment"),
 
   getMyInfo: () => instance.get("/auth/member/mypage/update"),
+
   editMyInfo: (formData) =>
     instance.put("/auth/member/mypage/update", formData),
 };
@@ -59,17 +66,6 @@ export const detailPageAPI = {
       .delete(`/auth/favorite/${restaurant_id}`)
       .then((res) => console.log(res))
       .catch((err) => console.log(err)),
-
-  // getComments: async (restaurant_id) => {
-  //   await instance
-  //     .get(`/restaurant/${restaurant_id}/comment`)
-  //     .then((res) => {
-  //       console.log(res);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // },
 
   postComment: (data) =>
     instance.post(`/auth/restaurant/${data.restaurant_id}/comment`, {
