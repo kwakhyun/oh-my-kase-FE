@@ -13,7 +13,8 @@ Translate: 이정윤 에디터
 
 ## 📢 프로젝트 소개
 서울 내 오마카세 정보를 확인하고 후기를 공유할 수 있는 앱입니다.
-- [프로젝트 PPT 링크](https://www.miricanvas.com/v/1oruo5)
+- [프로젝트 PPT](https://www.miricanvas.com/v/1oruo5)
+- [프로젝트 배포 URL](http://oh-my-kase.s3-website.ap-northeast-2.amazonaws.com)
 <br>
 
 ## 🗓 프로젝트 기간
