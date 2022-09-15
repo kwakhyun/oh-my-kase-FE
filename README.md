@@ -12,11 +12,11 @@ Translate: 이정윤 에디터
 2021년 10월 6일
 
 ## 📢 프로젝트 소개
-서울 내 오마카세 정보를 확인하고 후기를 공유할 수 있는 앱입니다.
+서울 내 오마카세 정보를 확인하고 후기를 공유할 수 있는 앱입니다.<br>
+모바일 기준으로 개발한 프로젝트로 가로길이 767 pixels 이하에서 화면이 보입니다.
+- [API 명세서](https://www.notion.so/292f7430abf84789881c9fcdbb37bdfa?v=e177777b59454944b89398cdd19ed872)
 - [프로젝트 PPT](https://www.miricanvas.com/v/1oruo5)
 - [프로젝트 배포 URL](http://oh-my-kase.s3-website.ap-northeast-2.amazonaws.com)
-
-모바일 기준으로 개발한 프로젝트로 가로길이 767 pixels 이하에서 화면이 보입니다.
 <br>
 
 ## 🗓 프로젝트 기간
@@ -53,18 +53,21 @@ Translate: 이정윤 에디터
     - 세부적인 UI 오류 수정
     - 전체적인 코드 정리
     - jwt 토큰 refresh 적용
+    <br>
        
 ## 🛠 사용한 기술 스택
 - React
 - Redux Toolkit
 - React Query
 - styled-components
---------------------
+<br>
+
 ## 👥 팀원 소개
 - 곽현 ([kwakhyun](https://github.com/kwakhyun))
 - 준묵 ([dan-studio](https://github.com/dan-studio))
+<br>
 
-## Commit Convention
+## ✅ Commit Convention
 ### 타입은 태그와 제목으로 구성되고, 태그는 영어로 쓰되 첫 문자는 대문자로 합니다.
 ### "태그: 제목"의 형태이며, : 뒤에만 space가 있음에 유의합니다.
 
