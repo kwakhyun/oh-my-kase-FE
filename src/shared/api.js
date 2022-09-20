@@ -16,8 +16,9 @@ instance.interceptors.request.use((config) => {
   } else {
     config.headers.common["Authorization"] = accessToken;
     config.headers.common["refresh-token"] = refreshToken;
-    return config;
   }
+  
+  return config;
 });
 
 instance.interceptors.response.use((response) => {
