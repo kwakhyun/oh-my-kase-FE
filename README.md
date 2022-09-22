@@ -16,7 +16,10 @@ Translate: 이정윤 에디터
 모바일 기준으로 개발한 프로젝트로 가로길이 767 pixels 이하에서 화면이 보입니다.
 - [API 명세서](https://www.notion.so/292f7430abf84789881c9fcdbb37bdfa?v=e177777b59454944b89398cdd19ed872)
 - [프로젝트 PPT](https://www.miricanvas.com/v/1oruo5)
+- [프로젝트 시연 영상](https://youtu.be/GS2FOlhXKBY)
+###### 시연 영상은 버그 수정 패치 전 촬영 영상으로 UI 오류가 남아있습니다.
 - [프로젝트 배포 URL](http://oh-my-kase.s3-website.ap-northeast-2.amazonaws.com)
+###### 현재는 서버가 내려간 상태로 웹사이트에 접속해도 데이터가 없습니다.
 <br>
 
 ## 🗓 프로젝트 기간
