@@ -14,13 +14,12 @@ Translate: 이정윤 에디터
 ## 📢 프로젝트 소개
 서울 내 오마카세 정보를 확인하고 후기를 공유할 수 있는 앱입니다.<br>
 모바일 기준으로 개발한 프로젝트로 가로길이 767 pixels 이하에서 화면이 보입니다.
-- [API 명세서](https://www.notion.so/292f7430abf84789881c9fcdbb37bdfa?v=e177777b59454944b89398cdd19ed872)
 - [프로젝트 노션](https://www.notion.so/OhMyKase-aa3d5e62eefc4afeb3e3423a093dabb2)
 - [프로젝트 PPT](https://www.miricanvas.com/v/1oruo5)
 - [프로젝트 시연 영상](https://youtu.be/GS2FOlhXKBY)
 ###### 시연 영상은 버그 수정 패치 전 촬영 영상으로 UI 오류가 남아있습니다.
 - [프로젝트 배포 URL](http://oh-my-kase.s3-website.ap-northeast-2.amazonaws.com)
-###### 현재는 서버가 내려간 상태로 웹사이트에 접속해도 데이터가 없습니다.
+###### 현재는 서비스 중단 상태입니다.
 <br>
 
 ## 🗓 프로젝트 기간
@@ -66,7 +65,7 @@ Translate: 이정윤 에디터
 - styled-components
 <br>
 
-## 👥 팀원 소개
+## 👥 Front-end 팀원
 - 곽현 ([kwakhyun](https://github.com/kwakhyun))
 - 준묵 ([dan-studio](https://github.com/dan-studio))
 <br>
