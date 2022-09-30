@@ -12,7 +12,7 @@ Translate: 이정윤 에디터
 2021년 10월 6일
 
 ## 📢 프로젝트 소개
-서울 내 오마카세 정보를 확인하고 후기를 공유할 수 있는 앱입니다.<br>
+서울 내 오마카세 정보를 확인하고 후기를 공유할 수 있는 서비스입니다.<br>
 모바일 기준으로 개발한 프로젝트로 가로길이 767 pixels 이하에서 화면이 보입니다.
 - [프로젝트 노션](https://www.notion.so/OhMyKase-aa3d5e62eefc4afeb3e3423a093dabb2)
 - [프로젝트 PPT](https://www.miricanvas.com/v/1oruo5)
