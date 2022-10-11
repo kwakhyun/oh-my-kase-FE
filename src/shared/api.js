@@ -1,23 +1,20 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://3.34.48.111/api",
-
-  // withCredentials: true,
+  baseURL: process.env.REACT_APP_SERVER_URL,
 });
 
 instance.interceptors.request.use((config) => {
   const accessToken = localStorage.getItem("accessToken");
   const refreshToken = localStorage.getItem("refreshToken");
-
   if (!accessToken || !refreshToken) {
     config.headers.common["Authorization"] = null;
     config.headers.common["refresh-token"] = null;
   } else {
     config.headers.common["Authorization"] = accessToken;
     config.headers.common["refresh-token"] = refreshToken;
-    return config;
   }
+  return config;
 });
 
 instance.interceptors.response.use((response) => {

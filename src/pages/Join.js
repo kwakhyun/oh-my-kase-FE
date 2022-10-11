@@ -32,7 +32,7 @@ const Join = () => {
 
     if (validate()) {
       axios
-        .post("http://3.34.48.111/api/member/signup", formData)
+        .post(`${process.env.REACT_APP_SERVER_URL}/member/signup`, formData)
         .then((response) => {
           console.log(response);
           if (response.data.error === "DUPLICATE_EMAIL") {
