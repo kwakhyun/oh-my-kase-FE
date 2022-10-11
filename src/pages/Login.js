@@ -15,7 +15,7 @@ const Login = () => {
 
   const onLogin = () => {
     axios
-      .post("http://3.34.48.111/api/member/login", {
+      .post(`${process.env.REACT_APP_SERVER_URL}/member/login`, {
         email: email.current.value,
         password: password.current.value,
       })
