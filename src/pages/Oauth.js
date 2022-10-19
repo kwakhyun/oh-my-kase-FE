@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const Oauth = () => {
+const OAuth = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const search = location.search;
@@ -25,4 +25,4 @@ const Oauth = () => {
   return null;
 };
 
-export default Oauth;
+export default OAuth;
