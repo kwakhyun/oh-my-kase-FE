@@ -8,7 +8,7 @@ import Login from "./pages/Login";
 import Contact from "./pages/Contact";
 import { Route, Routes } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import Oauth from "./pages/Oauth";
+import OAuth from "./pages/OAuth";
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 768 });
@@ -34,7 +34,7 @@ function App() {
             <Route path="/join" element={<Join />} />
             <Route path="/login" element={<Login />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/oauth" element={<Oauth />} />
+            <Route path="/oauth" element={<OAuth />} />
           </Routes>
         </Mobile>
       </div>
