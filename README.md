@@ -15,10 +15,13 @@ Translate: 이정윤 에디터
 서울 내 오마카세 정보를 확인하고 후기를 공유할 수 있는 서비스입니다.<br>
 모바일 기준으로 개발한 프로젝트로 가로길이 767 pixels 이하에서 화면이 보입니다.
 - [프로젝트 노션](https://www.notion.so/OhMyKase-aa3d5e62eefc4afeb3e3423a093dabb2)
-- [프로젝트 시연 영상](https://youtu.be/GS2FOlhXKBY)
-###### 시연 영상은 버그 수정 패치 전 촬영 영상으로 UI 오류가 남아있습니다.
 - [프로젝트 배포 URL](http://oh-my-kase.s3-website.ap-northeast-2.amazonaws.com)
-###### 현재는 서비스 중단 상태입니다.
+#### 현재 백엔드 서버의 부재로 서비스 이용이 불가합니다.
+- 프로젝트 시연 영상
+
+https://user-images.githubusercontent.com/73919235/197389982-620cfc07-c3ff-4bfc-8197-9e2813eb4cdf.mp4
+#### 시연 영상은 버그 수정 패치 전 촬영 영상으로 UI 오류가 남아있습니다.
+
 <br>
 
 ## 🗓 프로젝트 기간
